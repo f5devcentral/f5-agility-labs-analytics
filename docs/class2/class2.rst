@@ -1,5 +1,5 @@
-Lab 2: Integration with Splunk
-==============================
+Class 2 - Integration with Splunk
+=================================
 
 Splunk is a 3rd-party Security Information and Event Management (SIEM) solution that 
 is used by a large number of organizations to assimilate information and event logs 
@@ -15,4 +15,5 @@ viewing/analyzing it on an individual BIG-IP.
    :maxdepth: 2
    :glob:
 
+   intro
    modules/module*

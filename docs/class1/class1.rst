@@ -1,5 +1,5 @@
-Lab 1 - Introduction to AVR
-===========================
+Class 1 - Introduction to AVR
+=============================
 
 The **Application Visibility and Reporting (AVR)** module provides detailed charts 
 and graphs to give you more insight into the performance of web applications, with 
@@ -31,4 +31,5 @@ these charts / reports and how to visualize them on your BIG-IP.
    :maxdepth: 2
    :glob:
 
+   intro
    modules/module*
