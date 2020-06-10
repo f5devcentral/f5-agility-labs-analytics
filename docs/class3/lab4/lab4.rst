@@ -7,7 +7,7 @@ In this lab we will configure our Telemetry Streaming JSON declaration to establ
 
 #. Open Postman.
 
-#. Open the collection `Telemetry with ElasticSearch and Kibana`. 
+#. Open the collection `Create ELK Consumer`. 
 
 #. Click the `ELK Consumer` request.
 

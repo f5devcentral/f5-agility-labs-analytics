@@ -31,7 +31,7 @@ The focus for this exercise is to deploy an application with the appropriate Tel
 
    .. image:: ./mod4_1.png
 
-#. Open the the Postman collection `AS3` 
+#. Open the the Postman collection `Deploy Application` 
 
 #. Click the `Create Application via AS3` request 
 
