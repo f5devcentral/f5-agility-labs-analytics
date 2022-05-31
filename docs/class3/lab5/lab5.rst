@@ -34,6 +34,7 @@ In this lab we will configure our Telemetry Streaming JSON declaration to establ
 #. Launch Postman 
 
 #. Open the Collection titled `Create AWS Cloudwatch Consumer`. Open the AWS Cloudwatch request. Open the Body tab of the request 
+
    .. image:: ./cw5.png
 
 #. We will need to edit the My_Consumer. Go back to the Cloud Accounts tab you left open. Copy and paste the region. Edit logGroup to match your log group. Edit logStream to match your log stream. Edit username to match the API Key. Edit the cipherText to match the API Secret. 
@@ -72,7 +73,7 @@ In this lab we will configure our Telemetry Streaming JSON declaration to establ
 
 **Exercise 5 – Manipulate the Search**
 
-#. On the left pane, select the subcategory Insights 
+#. On the left pane, select the subcategory Log Insights 
 
    .. image:: ./cw8.png
 
