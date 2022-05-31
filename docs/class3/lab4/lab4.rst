@@ -25,7 +25,7 @@ In this lab we will configure our Telemetry Streaming JSON declaration to establ
 
    * The Consumer class is the third party consumer we wish to send our captured data to. 
 
-.. note:: By sending this GET request to ``https://10.1.1.9/mgmt/shared/telemetry/declare`` with the correct credentials and current body we've established a connection between our consumer and our BIG-IP. 
+.. note:: By sending this POST request to ``https://10.1.1.9/mgmt/shared/telemetry/declare`` with the correct credentials and current body we've established a connection between our consumer and our BIG-IP. 
 
 .. note:: Additionally, you should see a Read Only collection in Postman.  These API calls are necessary to configure the Elastic database and provide a mapping of indexes between the BigIP and Elastic.  You do not need to send these commands as the ELK environment is already pre-configured.
 
@@ -37,7 +37,7 @@ In this lab we will configure our Telemetry Streaming JSON declaration to establ
 
 #. Type su for sudo user access. If prompted, the password is toor.  
 
-#. Change director to /home/ec2-user
+#. Change directory to /home/ec2-user
 
 #. Run ./baseline_menu.sh
 
