@@ -53,7 +53,7 @@ The focus for this exercise is to deploy an application with the appropriate Tel
 
    .. image:: ./200response.jpg
 
-.. note:: By sending this GET request to ``https://10.1.1.9/mgmt/shared/appsvcs/declare`` with the correct credentials and current body we've built an application declaratively via AS3. 
+.. note:: By sending this POST request to ``https://10.1.1.9/mgmt/shared/appsvcs/declare`` with the correct credentials and current body we've built an application declaratively via AS3. 
 
 .. note:: To learn more about AS3, visit https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/ 
 
