@@ -23,7 +23,7 @@ In this lab section we are introducing Postman, an API Development Environment t
 
 #. You should see a similar response. 
 
-   .. image:: ./as3rpm.jpg
+   .. image:: ./as3rpm.png
 
 .. note:: By sending this GET request to 'https://10.1.1.9/mgmt/shared/appsvcs/info' with the correct credentials, the response shows details of the AS3 API available on this BIG-IP. 
 
@@ -39,7 +39,7 @@ In this lab section we are introducing Postman, an API Development Environment t
 
 #. You should see a similar response. 
 
-   .. image:: ./tsrpm.jpg
+   .. image:: ./tsrpm.png
 
 .. note:: By sending this GET request to 'https://10.1.1.9/mgmt/shared/telemetry/info' with the correct credentials, the response shows details of the TS API available on this BIG-IP. 
 
