@@ -85,6 +85,6 @@ The focus for this exercise is to deploy an application with the appropriate Tel
 
    .. image:: ./ocbookmark.jpg
 
-#. Verify the application is working by clicking a few tabs and viewng products. 
+#. Verify the application is working by clicking a few tabs and viewing products. 
 
    .. image:: ./opencart.jpg
