@@ -185,8 +185,6 @@ This concludes Exercise 1.  **Be sure to leave your application running for use 
 
 ---
 
-**Go to [Exercise 2 - Exporting NGINX Plus spans and metrics using Open Telemetry](../lab2/lab2.md)**
-
-**Go to [Overview](../overview.md)**
+Go to `Exercise 2 - Exporting NGINX Plus spans and metrics using Open Telemetry <../lab2/lab2.html>`_`
 
 Go to `Overview <../overview.html>`_
