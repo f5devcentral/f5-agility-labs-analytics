@@ -51,7 +51,8 @@ With the file open in the viewer, locate and review the various OTel relevant sn
 
 ![Image](../images/Picture4.png)
 
-#### OTel SDK module import
+OTel SDK module import
+^^^^^^^^^^^^^^^^^^^^^^
 
 Import statements are used to reference and utilize previously created python modules.  The OpenTelemetry SDK includes several submodules which can be imported, (*see below*) depending upon the libraries utilized, services requiring instrumentation, and exporter(s) required.
 
@@ -133,7 +134,7 @@ Once you have tried the application, (*yes, it will still fail*), return to the 
 ![Image](../images/Picture14.png)
 
 Troubleshoot application
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 With the database connectivity issue resolved, you will note errors are still being recorded, (*see below*).
 
@@ -157,4 +158,4 @@ This concludes Exercise 1.  **Be sure to leave your application running for use 
 
 **Go to [Overview](../overview.md)**
 
-**Go to :doc: Overview ../overview`` **
+**Go to `Overview ../overview.html`_ **
