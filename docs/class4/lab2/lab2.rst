@@ -118,6 +118,6 @@ This concludes Exercise 2.
 
 ---
 
-Go to `Exercise 3 - Exporting BIG-IP metrics using the OTel consumer <../lab3/lab3.html>`_`
+Go to `Exercise 3 - Exporting BIG-IP metrics using the OTel consumer <../lab3/lab3.html>`_
 
 Go to `Overview <../overview.html>`_
