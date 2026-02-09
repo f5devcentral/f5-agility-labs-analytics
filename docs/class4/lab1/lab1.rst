@@ -11,7 +11,6 @@ Once the blueprint has finished deploying, access the Windows jump box by select
    :width: 750px
    :alt: Image 1
 
-
 Upon successful login to the jump box, you will arrive at the Windows server desktop, (see below).
 
 .. image:: ../images/Picture2.png
@@ -150,7 +149,6 @@ Select the '*Otel_Lab*' service from the 'Service' drop-down, '*Redis Connectivi
 
 You will likely note multiple errors.  To begin with, address the errors associated with the **Redis Connectivity** traces.  Review the trace/span entries in Jaeger along with the application file, (*labapp.py*) to identify the issue related to connecting to Redis.
 
-![Image](../images/Picture13.png)
 .. image:: ../images/Picture13.png
    :alt: Image 13
 
@@ -159,6 +157,7 @@ Update the application file in VS Code to correct the issue and save your change
 Once you have tried the application, (*yes, it will still fail*), return to the Jaeger UI and search for the latest traces by selecting *'**Find Traces**'*. If you have successfully corrected the issue you should see a similar output to the below example.  While there are still errors reporting, you should see a successful **Redis Connectivity** trace entry.
 
 ![Image](../images/Picture14.png)
+
 .. image:: ../images/Picture14.png
    :alt: Image 14
 
@@ -167,13 +166,11 @@ Troubleshoot application
 
 With the database connectivity issue resolved, you will note errors are still being recorded, (*see below*).
 
-![Image](../images/Picture15.png)
 .. image:: ../images/Picture15.png
    :alt: Image 15
 
 Review the trace/span entries to identify possible causes of the application issue.  Be sure to drill down, (*example below*) into spans to help identify the root cause(s).
 
-![Image](../images/Picture16.png)
 .. image:: ../images/Picture16.png
    :alt: Image 16
 
@@ -181,7 +178,6 @@ As with the previous issue, update the application file in VS Code to correct th
 
 If your corrections are successful, the browser session should be redirected to a random news site.  To verify all issues have been addressed, review the latest trace information in Jaeger.  If all issues have been remediated, you should see results similar to the below example.
 
-![Image](../images/Picture17.png)
 .. image:: ../images/Picture17.png
    :alt: Image 17
 
@@ -193,4 +189,4 @@ This concludes Exercise 1.  **Be sure to leave your application running for use 
 
 **Go to [Overview](../overview.md)**
 
-**Go to `Overview ../overview.html`_**
+**Go to `Overview <../overview.html>`_**
