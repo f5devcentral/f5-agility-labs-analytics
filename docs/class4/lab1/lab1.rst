@@ -26,7 +26,7 @@ Traces and Spans
 ^^^^^^^^^^^^^^^^^
 A trace is a collection of operations that represents a unique transaction handled by an application and its services. A span represents a single operation within a trace.  
 
-The image below (*courtesy of `Splunk <https://docs.splunk.com/Observability/apm/apm-spans-traces/traces-spans.html#:~:text=What%20are%20traces%20and%20spans,single%20operation%20within%20a%20trace.>`_*) shows a trace represented by a series of multicolored bars labeled with the letters A, B, C, D, and E. Each lettered bar represents a single span. The spans are organized to visually represent a hierarchical relationship in which span A is the parent span and the subsequent spans are its children.
+The image below (courtesy of `Splunk <https://help.splunk.com/en/splunk-observability-cloud/monitor-application-performance/manage-services-spans-and-traces-in-splunk-apm#what-are-traces-and-spans-0>`_) shows a trace represented by a series of multicolored bars labeled with the letters A, B, C, D, and E. Each lettered bar represents a single span. The spans are organized to visually represent a hierarchical relationship in which span A is the parent span and the subsequent spans are its children.
 
 .. image:: ../images/span.png
    :width: 750px
@@ -189,4 +189,4 @@ This concludes Exercise 1.  **Be sure to leave your application running for use 
 
 **Go to [Overview](../overview.md)**
 
-**Go to `Overview <../overview.html>`_**
+Go to `Overview <../overview.html>`_
