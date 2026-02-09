@@ -1,9 +1,10 @@
 
 Exercise 1 - App instrumentation walk-through and troubleshooting
-============================================================================
-### Deploy blueprint and connect to jumpbox
+=================================================================
+Deploy blueprint and connect to jumpbox
+---------------------------------------
 
-From the [UDF](https://udf.f5.com/blueprints) console, search for and deploy the blueprint entitled *AW26-Talking telemetry and observability with F5*. 
+From the `UDF <https://udf.f5.com/blueprints>`_ console, search for and deploy the blueprint entitled *AW26-Talking telemetry and observability with F5*. 
 Once the blueprint has finished deploying, access the Windows jump box by selecting the RDP access link, (*see below*).  The jump box will be used to complete all lab exercises.  Credentials for this lab can be viewed by accessing the system(s) **DETAILS** tab.
 
 ![Image](../images/Picture1.png)
@@ -12,14 +13,16 @@ Upon successful login to the jump box, you will arrive at the Windows server des
 
 ![Image](../images/Picture2.png)
 
-### Review sample application instrumentation
+Review sample application instrumentation
+------------------------------------------
 
-For a system to be observable, it must be instrumented. The code needs to emit traces, metrics, and/or logs.  To accomplish this, the [OpenTelemetry](https://opentelemetry.io/) project includes SDKs for a majority of modern programming languages.  For this exercise, a sample application, (***labapp.py***) has been instrumented, using the OpenTelemetry Python SDK, to send trace data to a locally running [Jaeger](https://www.jaegertracing.io/) instance.
+For a system to be observable, it must be instrumented. The code needs to emit traces, metrics, and/or logs.  To accomplish this, the `OpenTelemetry <https://opentelemetry.io>`_ project includes SDKs for a majority of modern programming languages.  For this exercise, a sample application, (***labapp.py***) has been instrumented, using the OpenTelemetry Python SDK, to send trace data to a locally running `Jaeger <https://www.jaegertracing.io>`_ instance.
 
-#### Traces and Spans
+Traces and Spans
+^^^^^^^^^^^^^^^^^
 A trace is a collection of operations that represents a unique transaction handled by an application and its services. A span represents a single operation within a trace.  
 
-The image below, (*courtesy of [Splunk](https://docs.splunk.com/Observability/apm/apm-spans-traces/traces-spans.html#:~:text=What%20are%20traces%20and%20spans,single%20operation%20within%20a%20trace.)*) shows a trace represented by a series of multicolored bars labeled with the letters A, B, C, D, and E. Each lettered bar represents a single span. The spans are organized to visually represent a hierarchical relationship in which span A is the parent span and the subsequent spans are its children.
+The image below (*courtesy of `Splunk <https://docs.splunk.com/Observability/apm/apm-spans-traces/traces-spans.html#:~:text=What%20are%20traces%20and%20spans,single%20operation%20within%20a%20trace.>`_*) shows a trace represented by a series of multicolored bars labeled with the letters A, B, C, D, and E. Each lettered bar represents a single span. The spans are organized to visually represent a hierarchical relationship in which span A is the parent span and the subsequent spans are its children.
 
 ![Image](../images/span.png)
 
@@ -27,7 +30,8 @@ A span might refer to another span as its parent, indicating a relationship betw
 
 This relationship could indicate that, for example, span A makes a service call that triggers the operation captured by span B. In this image, span C is also a child of span B, and so on.
 
-### Review the sample application
+Review the sample application
+-----------------------------
 
 ***Note:** Although a basic understanding of Python may be helpful, this lab assumes no previous coding experience*.
 
@@ -39,40 +43,46 @@ Navigate to and open Visual Studio (VS) Code from the Windows desktop, (see belo
 With VS Code open, use the navigation pane on the left and open the application file, (theLabApp/labapp.py).  When ran, the application will:
 
 1. Create a local web site located at http://10.1.10.4
-1. Connect to and populate a Redis database container with several key/value pairs
-1. Randomly select and retrieve a URL record from the Redis DB
-1. Redirect the site visitor to the selected URL
+2. Connect to and populate a Redis database container with several key/value pairs
+3. Randomly select and retrieve a URL record from the Redis DB
+4. Redirect the site visitor to the selected URL
 
 With the file open in the viewer, locate and review the various OTel relevant snippets.  
 
 ![Image](../images/Picture4.png)
 
 #### OTel SDK module import
+
 Import statements are used to reference and utilize previously created python modules.  The OpenTelemetry SDK includes several submodules which can be imported, (*see below*) depending upon the libraries utilized, services requiring instrumentation, and exporter(s) required.
 
 This application has imports to handle automatic instrumenting of Flask and Request, (*web services*) as well as Redis.  In addition, there are import statements for processors and OTel exporters.
 
 ![Image](../images/Picture5.png)
 
-#### Trace provider
+Trace provider
+^^^^^^^^^^^^^^
 The provider section, (*see below*) defines the source of traces that are generated by the application.  In this case, the provider service name has been set to '*Otel_Lab*'.  As the below image illustrates, traces sent to the visibility provider, (Jaeger) are categorized by the service name.
 
 ![Image](../images/Picture6.png)
 
-#### OTel exporters
+OTel exporters
+^^^^^^^^^^^^^^
 The sample application has been configured with a batch OTLP span exporter. Exporters define where the application should direct (*export*) observability data. Many observability providers have developed custom exporters allowing for direct ingestion of traces, metrics, and/or logs.  
 
 ![Image](../images/Picture7.png)
 
-#### Instrumentation
+Instrumentation
+^^^^^^^^^^^^^^^
 With the above OTel SDK sections defined in the code, the desired application libraries, calls and functions can be instrumented.  The OpenTelemetry SDK supports both automatic instrumentation as well as manual instrumentation.
 
-##### Automatic instrumentation
+Automatic instrumentation
++++++++++++++++++++++++++
 Many Python modules support automatic instrumentation.  For example, the sample application code makes use of the Redis module/library to connect to and update a Redis database.  By simply including the snippet shown below, relevant tracing data is automatically generated for Redis interactions.
 
 ![Image](../images/Picture8.png)
 
-##### Manual instrumentation
+Manual instrumentation
+++++++++++++++++++++++
 You will add in manual instrumentation when either automatic instrumentation is not available  or if you have a desire to configure your own tracing spans.  In the code snippet below, a new span will be generated on line 92.  Additionally, metadata such as custom attributes and status codes can be generated.
 
 ![Image](../images/Picture9.png)
@@ -81,15 +91,17 @@ The screenshot below illustrates how the above manually created instrumentation 
 
 ![Image](../images/Picture10.png)
 
----
-### Troubleshooting - *"Sorry...something must be misconfigured"*
+------------
+
+Troubleshooting - *"Sorry...something must be misconfigured"*
+--------------------------------------------------------------
 Now that you are equipped with a very limited understanding of how the sample application is instrumented for OpenTelemetry, you can start the application.
 
 From the VS Code UI, switch to the terminal window via the lower tab bar.  From the terminal window start the application by entering the following commands:
 
-```cd theLabApp```
+``cd theLabApp``
 
-```python3 labapp.py```
+``python3 labapp.py``
 
 The application will start and the exposed endpoint will be presented as shown below.  Any additional code changes will trigger an automatic application restart.
 
@@ -103,7 +115,8 @@ As you can see above, there is an issue(s) with the application.  If the applica
 
 For the remainder of this exercise, you will use Jaeger to identify and investigate any errors.  You will then update the application code to correct the identified errors.
 
-#### Troubleshoot Redis connectivity
+Troubleshoot Redis connectivity
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If not currently opened, open Google Chrome from the desktop and select the  Jaeger UI tab.  If the Jaeger tab is no longer visible, the console is located at http://10.1.20.4:16686.
 
@@ -119,7 +132,8 @@ Once you have tried the application, (*yes, it will still fail*), return to the 
 
 ![Image](../images/Picture14.png)
 
-#### Troubleshoot application
+Troubleshoot application
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 With the database connectivity issue resolved, you will note errors are still being recorded, (*see below*).
 
@@ -142,3 +156,5 @@ This concludes Exercise 1.  **Be sure to leave your application running for use 
 **Go to [Exercise 2 - Exporting NGINX Plus spans and metrics using Open Telemetry](../lab2/lab2.md)**
 
 **Go to [Overview](../overview.md)**
+
+**Go to :doc: Overview ../overview`` **
