@@ -17,43 +17,49 @@ From the VS Code UI use the navigation pane on the left and open the NGINX Plus 
 
 Several lines related to OTel integration have been "remmed out".  Let's review the lines and remove the leading '#' to enable to line item.
 
-- Line 2 - The [NGINX Open Telemetry module](https://docs.nginx.com/nginx/admin-guide/dynamic-modules/opentelemetry/) has been installed on the lab NGINX instance.  The module provides OTel distributed tracing support and must also be loaded via the NGINX configuration.  Remove the leading '#' to enable loading of the module.
+- Line 2 - The `NGINX Open Telemetry module <https://docs.nginx.com/nginx/admin-guide/dynamic-modules/opentelemetry/>`_ has been installed on the lab NGINX instance.  The module provides OTel distributed tracing support and must also be loaded via the NGINX configuration.  Remove the leading '#' to enable loading of the module.
 
-   ![Image](../images/Picture40.png)
    .. image:: ../images/Picture40.png
-   :alt: Image 40
+      :alt: Image 40
 
 - Line 10 - The '*otel_service_name*' directive sets the trace stream's service name.  All spans generated will be categorized and grouped under this service name, (see below). Remove the leading '#' to set the service name.
 
-    ![Image](../images/Picture41.png)
+   .. image:: ../images/Picture41.png
+      :alt: Image 41
 
 - Lines 11 thru 13 - The '*otel_exporter*' directive block is used to specify the address of the destination service. For this lab, we have specified the locally hosted Jaeger endpoint. Remove the leading '#' to set the export destination.
 
-   ![Image](../images/Picture42.png)
+   .. image:: ../images/Picture42.png
+      :alt: Image 42
+
 - Line 22 - The '*otel_trace*' directive flag determines whether tracing is enabled. Remove the leading '#' to enable tracing.  
 
-   ![Image](../images/Picture43.png)
+   .. image:: ../images/Picture43.png
+      :alt: Image 43
 
 - Line 25 - The '*otel_span_name*' directive sets the event span name. Remove the leading '#' to set the span name.
 - Line 26 - In additionn to the default attributes provided, the '*otel_span_attr*' directive can be used to assign custom attributes, (key/value). Remove the leading '#' to create a custom span attribute. 
 - Line 27 - The '*otel_trace_context*' directive determines how the trace context relates to other traces. Remove the leading '#' to set trace context.
 
-   ![Image](../images/Picture44.png)
+   .. image:: ../images/Picture44.png
+      :alt: Image 44
 
 With the above noted file lines updated, save the file and use the following command to verify and reload the NGINX configuration:
 
-```sudo nginx -t && sudo nginx -s reload```
+``sudo nginx -t && sudo nginx -s reload``
 
 Verify NGINX tracing
 ^^^^^^^^^^^^^^^^^^^^^
 
 Once you have reloaded NGINX, refresh the application (http://10.1.10.4) a few times then return to the Jaeger UI, refresh the page.  From the Jaeger UI select the '*NGINX*' service and search for the latest traces by selecting *'**Find Traces**'*, (see below).
 
-![Image](../images/Picture45.png)
+.. image:: ../images/Picture45.png
+   :alt: Image 45
 
 Review the various spans paying special attention to the NGINX span '*LB Frontend call*' tags.  In addition to the default tags provided, you should be able to find the custom span attribute configured via the NGINX configuration file, (see below).
 
-![Image](../images/Picture46.png)
+.. image:: ../images/Picture46.png
+   :alt: Image 46
 
 Configure NGINX metrics
 -----------------------
@@ -76,17 +82,18 @@ Specific to this exercise, the collector configuration file, (*example below*)  
  - Process records using the standard batch processor
  - Export metrics to a Prometheus backend
 
-![Image](../images/Picture18.png)
+.. image:: ../images/Picture18.png  
+   :alt: Image 18
 
 Before you can pull metrics from NGINX, you must first expose the NGINX status page via the NGINX configuration file.  From the VS Code UI use the navigation pane on the left and open the NGINX Plus configuration file, (*nginx.conf*).
 
 To expose the NGINX status page, navigate down to an remove the leading '*#*' from lines 35 - 37, (see below).
 
-![Image](../images/Picture47.png)
+.. image:: ../images/Picture47.png
 
 With the above noted file lines updated, save the file and use the following command to verify and reload the NGINX configuration:
 
-```sudo nginx -t && sudo nginx -s reload```
+``sudo nginx -t && sudo nginx -s reload``
 
 NGINX Metrics
 ^^^^^^^^^^^^^
@@ -95,22 +102,22 @@ Once you have reloaded NGINX, refresh the application (http://10.1.10.4) a few t
 
 If not currently opened, open Google Chrome from the desktop and select the Prometheus tab.  If the tab is no longer visible, the Prometheus UI is located at http://10.1.20.4:9090.
 
-![Image](../images/Picture24.png)
+.. image:: ../images/Picture24.png
 
 To perform a quick test on the system, select the *Graph* tab and enter '**f5_nginx_requests_total**' in the search bar; click on 'Execute'.  
 
 The system will query metrics for the NGINX requests total metric and return a relevant time chart, (*see below*).
 
-![Image](../images/Picture48.png)
+.. image:: ../images/Picture48.png
 
 You can now use the metrics explorer to view the available NGINX metrics (*see below*).
 
-![Image](../images/Picture49.png)
+.. image:: ../images/Picture49.png
 
 This concludes Exercise 2.
 
 ---
 
-**Go to [Exercise 3 - Exporting BIG-IP metrics using the OTel consumer](../lab3/lab3.md)**
+Go to `Exercise 3 - Exporting BIG-IP metrics using the OTel consumer <../lab3/lab3.html>`_`
 
-**Go to [Overview](../overview.md)**
+Go to `Overview <../overview.html>`_
