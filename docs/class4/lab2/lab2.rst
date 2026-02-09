@@ -3,7 +3,8 @@ Exercise 2 - Exporting NGINX Plus spans and metrics using Open Telemetry
 
 With our application now functioning correctly and delivering trace data to Jaeger, we'll now expand our observability to include our front-end load balancer, (NGINX Plus).  
 
-### Configure NGINX tracing 
+Configure NGINX tracing
+-----------------------
 
 The lab environment includes an NGINX Plus instance that has been configured to publish and provide load balancing to our previously deployed application, (thelabApp).  The application can be reached at *http://10.1.10.4*.  
 
@@ -11,13 +12,16 @@ NGINX uses a configuration file (nginx.conf) to define its behavior, including s
 
 From the VS Code UI use the navigation pane on the left and open the NGINX Plus configuration file, (*nginx.conf*).  Familiarize yourself with the configuration file contents, (see below).  
 
-![Image](../images/Picture39.png)
+.. image:: ../images/Picture39.png
+   :alt: Image 39
 
 Several lines related to OTel integration have been "remmed out".  Let's review the lines and remove the leading '#' to enable to line item.
 
 - Line 2 - The [NGINX Open Telemetry module](https://docs.nginx.com/nginx/admin-guide/dynamic-modules/opentelemetry/) has been installed on the lab NGINX instance.  The module provides OTel distributed tracing support and must also be loaded via the NGINX configuration.  Remove the leading '#' to enable loading of the module.
 
    ![Image](../images/Picture40.png)
+   .. image:: ../images/Picture40.png
+   :alt: Image 40
 
 - Line 10 - The '*otel_service_name*' directive sets the trace stream's service name.  All spans generated will be categorized and grouped under this service name, (see below). Remove the leading '#' to set the service name.
 
@@ -40,7 +44,9 @@ With the above noted file lines updated, save the file and use the following com
 
 ```sudo nginx -t && sudo nginx -s reload```
 
-#### Verify NGINX tracing
+Verify NGINX tracing
+^^^^^^^^^^^^^^^^^^^^^
+
 Once you have reloaded NGINX, refresh the application (http://10.1.10.4) a few times then return to the Jaeger UI, refresh the page.  From the Jaeger UI select the '*NGINX*' service and search for the latest traces by selecting *'**Find Traces**'*, (see below).
 
 ![Image](../images/Picture45.png)
@@ -49,7 +55,8 @@ Review the various spans paying special attention to the NGINX span '*LB Fronten
 
 ![Image](../images/Picture46.png)
 
-### Configure NGINX metrics
+Configure NGINX metrics
+-----------------------
 
 The OpenTelemetry Collector service provides a vendor-agnostic proxy to receive, process and export observability data.  The collector supports open-source observability data formats (e.g. Jaeger, Prometheus, Fluent Bit, etc.) sending to one or more open-source or commercial back-ends.
 
@@ -81,7 +88,9 @@ With the above noted file lines updated, save the file and use the following com
 
 ```sudo nginx -t && sudo nginx -s reload```
 
-#### Verify NGINX Metrics
+NGINX Metrics
+^^^^^^^^^^^^^
+
 Once you have reloaded NGINX, refresh the application (http://10.1.10.4) a few times to generate new traffic.  The NGINX OTel receiver is configured to pull metrics from the NGINX status page every 5 seconds.  Once pulled by th OTel collector, the metrics are processed and delivered to Prometheus for visualization.
 
 If not currently opened, open Google Chrome from the desktop and select the Prometheus tab.  If the tab is no longer visible, the Prometheus UI is located at http://10.1.20.4:9090.
