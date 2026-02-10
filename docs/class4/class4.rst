@@ -9,5 +9,5 @@ Expected time to complete: **1 Hour**
    :maxdepth: 1
    :glob:
 
-   intro
+   overview
    lab*/lab*
