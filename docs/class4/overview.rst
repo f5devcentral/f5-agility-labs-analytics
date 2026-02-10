@@ -1,7 +1,7 @@
 .. _top:
 
-F5 BD OTel Introductory Lab
-============================================================================
+Overview
+=========
 
 This self-guided lab is intended to provide a hands-on introduction to Open Telemetry (OTel) concepts and their implementation.  During this lab, attendees will utilize a [UDF](https://udf.f5.com) blueprint deploy the lab infrastructure shown below to:
  * Gain insight into how applications are instrumented utilizing the Open Telemetry sdk
