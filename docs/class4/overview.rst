@@ -3,12 +3,12 @@
 Overview
 =========
 
-This self-guided lab is intended to provide a hands-on introduction to Open Telemetry (OTel) concepts and their implementation.  During this lab, attendees will utilize a [UDF](https://udf.f5.com) blueprint deploy the lab infrastructure shown below to:
+This self-guided lab is intended to provide a hands-on introduction to Open Telemetry (OTel) concepts and their implementation.  During this lab, attendees will utilize a `UDF <https://udf.f5.com>`_ blueprint deploy the lab infrastructure shown below to:
  * Gain insight into how applications are instrumented utilizing the Open Telemetry sdk
 
  * Configure telemetry streaming of metrics from F5 BIG-IP utilizing the OTel collector gateway 
 
-.. image:: ../images/labenviron.png
+.. image:: images/labenviron.png
 
 As illustrated above, the lab environment consists of the following:
    * **F5 BIG-IP(s)** providing L4/L7 ADC Services and utilizing **F5 Telemetry Streaming** (TS) to stream telemetry data to an OTel collector gateway
