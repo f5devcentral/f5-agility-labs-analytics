@@ -51,7 +51,7 @@ With the above noted file lines updated, save the file and use the following com
 Verify NGINX tracing
 ^^^^^^^^^^^^^^^^^^^^^
 
-Once you have reloaded NGINX, refresh the application (http://10.1.10.4) a few times then return to the Jaeger UI, refresh the page.  From the Jaeger UI select the '*NGINX*' service and search for the latest traces by selecting *'**Find Traces**'*, (see below).
+Once you have reloaded NGINX, refresh the application (http://10.1.10.4) a few times then return to the Jaeger UI, refresh the page.  From the Jaeger UI select the '*NGINX*' service and search for the latest traces by selecting **Find Traces**, (see below).
 
 .. image:: ../images/Picture45.png
    :alt: Image 45
@@ -67,6 +67,7 @@ Configure NGINX metrics
 The OpenTelemetry Collector service provides a vendor-agnostic proxy to receive, process and export observability data.  The collector supports open-source observability data formats (e.g. Jaeger, Prometheus, Fluent Bit, etc.) sending to one or more open-source or commercial back-ends.
 
 The OTel collector is managed via a user-readable YAML configuration file.  At a minimum, the configuration must include the following three sections:
+
 - **Receivers** - section with information related to how the collector will receive observability data, (i.e. protocols, endpoint addresses, ports) 
 
 - **Processors** - section with configuration information related to data manipulation and insertion.  In this section, one can add/delete/modify data streams using filters.
@@ -78,6 +79,7 @@ From the VS Code UI use the navigation pane on the left and open the OTel collec
 The collector provides an integration with NGINX to ingest metrics.  The Collector fetches status metrics from the configured path in the NGINX receiver, (see below). From there the metrics are processed and exported to the specified exporter.  Familiarize yourself with the configuration file contents.  
 
 Specific to this exercise, the collector configuration file, (*example below*)  has been configured to:
+
  - Pull telemetry from a published NGINX status page
  - Process records using the standard batch processor
  - Export metrics to a Prometheus backend
@@ -95,8 +97,8 @@ With the above noted file lines updated, save the file and use the following com
 
 ``sudo nginx -t && sudo nginx -s reload``
 
-NGINX Metrics
-^^^^^^^^^^^^^
+Verify NGINX Metrics
+^^^^^^^^^^^^^^^^^^^^^
 
 Once you have reloaded NGINX, refresh the application (http://10.1.10.4) a few times to generate new traffic.  The NGINX OTel receiver is configured to pull metrics from the NGINX status page every 5 seconds.  Once pulled by th OTel collector, the metrics are processed and delivered to Prometheus for visualization.
 

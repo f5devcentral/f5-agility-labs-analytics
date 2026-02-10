@@ -23,6 +23,7 @@ As illustrated above, the lab environment consists of the following:
 
    * **Prometheus** providing visibility for BIG-IP metrics
 ---
+
 Go to `Exercise 1 - App instrumentation walk-through and troubleshooting <./lab1/lab1.html>`_
 
 Go to `Exercise 2 - Exporting NGINX Plus spans and metrics using Open Telemetry <./lab2/lab2.html>`_

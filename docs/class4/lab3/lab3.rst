@@ -7,6 +7,7 @@ During this exercise, you will configure a BIG-IP virtual edition, (using AS3 an
 The OpenTelemetry Collector service provides a vendor-agnostic proxy to receive, process and export observability data.  The collector supports open-source observability data formats (e.g. Jaeger, Prometheus, Fluent Bit, etc.) sending to one or more open-source or commercial back-ends.
 
 The OTel collector is managed via a user-readable YAML configuration file.  At a minimum, the configuration must include the following three sections:
+
 - **Receivers** - section with information related to how the collector will receive observability data, (i.e. protocols, endpoint addresses, ports) 
 
 - **Processors** - section with configuration information related to data manipulation and insertion.  In this section, one can add/delete/modify data streams using filters.
@@ -19,6 +20,7 @@ Review OTel Collector configuration
 From the VS Code UI use the navigation pane on the left and open the OTel collector gateway configuration file, (*collector-gateway.yml*).  Familiarize yourself with the configuration file contents.  
 
 For this specific exercise, the collector configuration file, (*example below*)  has been configured to:
+
  - Receive telemetry via OTLP over either HTTP or gRPC
  - Process records using the standard batch processor
  - Export metrics to a Prometheus backend
@@ -61,10 +63,12 @@ Wth the TS declaration posted, the BIG-IP will start to push basic system info m
 From the BIG-IP UI, select and open the '*theLabApp_vs*'.  Scroll down and switch the configuration option to *Advanced*, (see below).
 
 .. image:: ../images/Picture37.png
+   :width: 750px
 
 With the advanced configuration visible, scroll down and select the appropriate **HTTP Analytics**, **TCP Analytics**, and **Request Logging** profiles, (see below).  Select '*Update*' to save the configuration changes.
 
 .. image:: ../images/Picture38.png
+   :width: 750px
 
 Verify data delivery
 ^^^^^^^^^^^^^^^^^^^^^

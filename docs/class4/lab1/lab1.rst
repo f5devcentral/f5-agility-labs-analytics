@@ -39,10 +39,12 @@ This relationship could indicate that, for example, span A makes a service call 
 Review the sample application
 -----------------------------
 
-***Note:** Although a basic understanding of Python may be helpful, this lab assumes no previous coding experience*.
+**Note:** *Although a basic understanding of Python may be helpful, this lab assumes no previous coding experience*.
 
-Navigate to and open Visual Studio (VS) Code from the Windows desktop, (see below).  You will be using VS Code to review and edit the application file.  VS Code will be prompt you for user credentials as it creates a remote session with the application server, (theWorks). Credentials are available in the *theWorks* **DETAILS** tab.           
-(*Tip: If the login fails, wait 30 seconds and try again.*)
+Navigate to and open Visual Studio (VS) Code from the Windows desktop, (see below).  You will be using VS Code to review and edit the application file.  VS Code will be prompt you for user credentials as it creates a remote session with the application server, (theWorks). Credentials are available in the *theWorks* **DETAILS** tab.
+
+.. tip:: 
+   Tip: If the login fails, wait 30 seconds and try again.
 
 .. image:: ../images/Picture3.png
    :alt: Image 3
@@ -154,9 +156,7 @@ You will likely note multiple errors.  To begin with, address the errors associa
 
 Update the application file in VS Code to correct the issue and save your changes.  Upon saving, the application will automatically restart.  Test your application changes by navigating to the application endpoint at http://10.1.10.4.  
 
-Once you have tried the application, (*yes, it will still fail*), return to the Jaeger UI and search for the latest traces by selecting *'**Find Traces**'*. If you have successfully corrected the issue you should see a similar output to the below example.  While there are still errors reporting, you should see a successful **Redis Connectivity** trace entry.
-
-![Image](../images/Picture14.png)
+Once you have tried the application, (*yes, it will still fail*), return to the Jaeger UI and search for the latest traces by selecting **Find Traces**. If you have successfully corrected the issue you should see a similar output to the below example.  While there are still errors reporting, you should see a successful **Redis Connectivity** trace entry.
 
 .. image:: ../images/Picture14.png
    :alt: Image 14
