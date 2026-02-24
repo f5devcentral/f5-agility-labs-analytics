@@ -10,7 +10,7 @@
 
     ##Context
 
-        VIP: /Common/vs_java_https.
+        VIP: /Common/sslo.demo.f5
 
         Policy: /Common/pol_java_asm with Java/Struts signatures enabled.
 
@@ -22,10 +22,11 @@
 
 ```
         bash
-        curl -k -v \
-          "https://java.example.com/upload.action" \
-          -H 'Content-Type: ${(#_="multipart/form-data").(#context["com.opensymphony.xwork2.dispatcher.HttpServletResponse"].addHeader("X-Struts-POC","1"))}' \
+        curl -k -v \  
+          "https://sslo.demo.f5/upload.action" \  
+          -H 'Content-Type: ${(#_="multipart/form-data").(#context["com.opensymphony.xwork2.dispatcher.HttpServletResponse"].addHeader("X-Struts-POC","1"))}' \  
           --data-binary 'test'
+
 ```
 
         Verify that the request is blocked and logged by ASM/AWAF as a Java/Struts/OGNL RCE attempt.
@@ -38,7 +39,7 @@
 
         Screenshot of the specific WAF request log entry (showing attack signature, severity, blocking).
 
-        Short “exec summary” paragraph explaining what kind of attack was detected and how WAF mitigates it.
+        Short explanation on what kind of attack was detected and how WAF mitigates it.
 
     ##Hints
 
