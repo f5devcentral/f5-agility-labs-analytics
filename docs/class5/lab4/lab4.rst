@@ -46,3 +46,11 @@
         “Filter events by URL /upload.action and your test client IP.”
 
         “Look at the ‘Attack Type’ field in the event.”
+
+This concludes Exercise 4.
+
+---
+
+Go to `Exercise 5 - Exporting BIG-IP metrics using the OTel consumer <../lab5/lab5.html>`_
+
+Go to `Overview <../overview.html>`_
