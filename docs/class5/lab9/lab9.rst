@@ -1,78 +1,139 @@
-Ticket 8 – Identifying orphaned objects
-=======================================
+Ticket 9 – WAF false positives on file uploads
+==============================================
 
-Title: “What are these unused pools and nodes?”
------------------------------------------------
+Investigate enrollment upload blocking in WAF
+---------------------------------------------
 
-## Ticket description
+The enrollment application on Eastregion-bigip-01 is seeing repeated
+WAF alerts and blocked requests in the logs. A script is automatically
+running and generating uploads to the application, and the security
+team has noticed frequent "Attack signature detected" violations
+associated with these uploads.
 
-    During a routine review of the Centralregion-bigip-01 configuration,
-    operations suspects there may be unused (orphaned) objects left over
-    from previous testing or decommissioned applications.
+You have been asked to investigate why these enrollment uploads are
+being blocked by the WAF and determine whether they represent real
+attacks or false positives.
 
-    You have been asked to identify any orphaned pools and nodes on
-    Centralregion-bigip-01 so they can be documented and, if appropriate,
-    cleaned up later.
+Review application and WAF behavior
+-----------------------------------
 
-## Context
+App behavior
+^^^^^^^^^^^^
 
-    Device Name: Centralregion-bigip-01
+- Application URL: ``POST /enrollment/upload``
+- Host: ``asmupload.demo.f5:8888``
+- Form field: ``attachment`` (multipart/form-data file field)
+- Users upload txt files containing enrollment data (names, addresses).
+- These files are expected to be treated as arbitrary documents by the
+  application.
 
-    These objects are believed not to be referenced by any active virtual
-    servers.
+Review WAF events
+-----------------
 
-## Tasks
+Use the AI Assistant and enter the prompt:
 
-    Use the AI Assistant and enter the prompt:
-    "Show all pools and nodes on the Centralregion-bigip-01, and indicate which ones are not referenced by any virtual server."
+``Show recent ASM/AWAF events for POST /enrollment/upload on the EastRegion-bigip-01, including violations and parameters involved.``
 
-    From the returned information and the TMUI on Centralregion-bigip-01:
+From the returned information and the ASM/AWAF logs in TMUI:
 
-    - Navigate to **Local Traffic > Pools > Pool List** and confirm
-      whether bruce_wayne and oliver_twist appear in the configuration.
-    - Check whether either of these pools is assigned as the default pool
-      (or used in a policy) on any virtual server.
+- Locate one or more blocked requests for ``POST /enrollment/upload``.
+- Identify:
 
-    Next, navigate to **Local Traffic > Nodes > Node List** and:
+  - Which parameter is flagged (for example, ``attachment`` or a body parameter).
+  - Which attack signatures are triggered (SQL injection, XSS, or others).
+  - The violation contexts (for example, request/body).
 
-    - Confirm whether clark_kent and harry_potter appear in the node list.
-    - Verify whether any pool members reference these nodes, or whether
-      they are completely unused.
+Review the security policy configuration
+----------------------------------------
 
-    Summarize which of the above pools and nodes are truly orphaned
-    (that is, not referenced by any virtual server or pool).
+Open the security policy for this application and check:
 
-    Do **not** delete anything as part of this exercise; the goal is only
-    to locate and document orphaned objects.
+- How the ``attachment`` parameter is defined (if at all) under **Parameters**.
+- Whether ``attachment`` is configured as:
 
-## Deliverables
+  - A simple parameter (with attack signatures enabled), or
+  - A File Upload parameter with different handling.
 
-    A brief summary describing:
+- Whether attack signatures and metacharacter checks are enabled on this parameter.
 
-    - A clear list of which objects are confirmed to be orphaned on
-      Centralregion-bigip-01.
+Perform the following steps:
 
-## Hints
+1. In the BIG-IP UI, navigate to:
 
-    A pool is usually considered orphaned if no virtual server uses it
-    as a default pool and it is not referenced by other configuration
-    objects such as policies or iRules.
+   **Security > Application Security > Parameters > Parameters List**
 
-    A node is considered orphaned if no pool member points to it.
+2. Locate the parameter named ``attachment``:
 
-    Comparing object references (who uses what) is a key step when
-    cleaning up legacy configuration on BIG-IP devices.
+   - If it is not present, note that it is currently being treated
+     implicitly and not explicitly defined in the policy.
 
-    Suspected orphaned objects:
+3. If ``attachment`` exists, click on it to open its settings and verify:
 
-    - Pools: bruce_wayne, oliver_twist
-    - Nodes: clark_kent, harry_potter
+   - The **Parameter Type** (for example, *Explicit*, *Wildcard*).
+   - The **Data Type** (for example, *Alpha-Numeric*, *Binary*, etc.).
+   - Whether **Check attack signatures** is enabled.
+   - Whether **Check for mandatory** or other value checks are configured.
 
+4. Check whether ``attachment`` is configured as a **File Upload** parameter:
 
-This concludes Exercise 8.
+   - In the parameter settings, look for options that indicate file-upload
+     handling (for example, *File types*, *Maximum file size*).
+   - If it is not configured as a File Upload parameter, note that ASM is
+     likely inspecting the raw content as normal parameter data.
 
----
+5. Confirm whether any attack signatures or metacharacter checks are
+   specifically disabled or enabled for ``attachment``:
 
-Go to `Exercise 9 - Exporting BIG-IP metrics using the OTel consumer <../lab9/lab9.html>`_
+   - Review the **Attack Signatures** section within the parameter settings.
+   - Note any per-parameter signature overrides or staging settings that
+     affect how this parameter is inspected.
+
+Deliverables
+------------
+
+Provide a brief summary describing:
+
+- Which parameter and signatures are causing the uploads to be blocked.
+- Why these detections are considered false positives in the context of the
+  enrollment upload use case.
+- The specific policy change(s) you recommend to reduce these false positives
+  while maintaining appropriate security for the application.
+
+Hints
+-----
+
+- Look carefully at the parameter type for ``attachment`` and whether it is
+  treated as a normal parameter or as a File Upload parameter.
+- If ASM sees example SQL or XSS strings inside a document and treats them as
+  live input, it will naturally trigger attack signatures, even when the app
+  only stores or forwards the file.
+- Distinguishing between "data that will be executed" and "data that is just
+  stored in a file" is critical when tuning WAF policies for upload endpoints.
+
+WAF behavior
+^^^^^^^^^^^^
+
+- The parameter ``attachment`` is not explicitly configured as a File
+  Upload parameter in the ASM/AWAF policy.
+- ASM treats the body as generic parameter data and runs full attack
+  signature and metacharacter checks on the raw file content.
+- Resulting violations include:
+
+  - Attack signature detected (context: request/body).
+  - Possibly "Illegal metacharacter in value".
+- Requests are blocked, even though the uploaded file content is benign
+  and only contains test strings.
+
+Propose one or more safe mitigation strategies for this lab scenario, such as:
+
+- Configuring ``attachment`` as a File Upload parameter and disabling attack
+  signatures on its raw content while still enforcing size and type limitations.
+- Narrowing the scope of attack signatures to exclude file-upload bodies for
+  this specific URL/parameter.
+- Using additional security controls (for example, out-of-band malware scanning)
+  instead of relying on inline WAF signatures for file content.
+----
+
+Go to `Exercise 10 - One pool member is overloaded <../lab10/lab10.html>`_
 
 Go to `Overview <../overview.html>`_

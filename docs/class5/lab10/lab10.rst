@@ -1,78 +1,95 @@
-Ticket 8 – Identifying orphaned objects
-=======================================
+Ticket 2 – Uneven load balancing due to OneConnect
+==================================================
 
-Title: “What are these unused pools and nodes?”
------------------------------------------------
+Title: “One pool member is overloaded”
+--------------------------------------
 
 ## Ticket description
 
-    During a routine review of the Centralregion-bigip-01 configuration,
-    operations suspects there may be unused (orphaned) objects left over
-    from previous testing or decommissioned applications.
-
-    You have been asked to identify any orphaned pools and nodes on
-    Centralregion-bigip-01 so they can be documented and, if appropriate,
-    cleaned up later.
+    Operations has noticed that one application server in the pool
+    ``/Common/web-pool`` has far more connections and traffic than the other
+    members. Users are reporting intermittent slowness and occasional timeouts
+    when accessing the application.
 
 ## Context
 
-    Device Name: Centralregion-bigip-01
+    Device Name: East
 
-    These objects are believed not to be referenced by any active virtual
-    servers.
+    Virtual server: /Common/web_app_42
+
+    Service: HTTPS (port 443)
+
+    SNAT: Automap
+
+    OneConnect profile: /Common/max_reuse_1500 with a wide source mask
+    and high maximum reuse
+
+    Pool: /Common/web-pool with multiple application servers
 
 ## Tasks
 
-    Use the AI Assistant and enter the prompt:
-    "Show all pools and nodes on the Centralregion-bigip-01, and indicate which ones are not referenced by any virtual server."
+    Traditionally we would examine current connection and request distribution
+    for the pool members using the BIG-IP GUI and the CLI (for example,
+    ``tmsh show ltm pool /Common/web-pool members``).
 
-    From the returned information and the TMUI on Centralregion-bigip-01:
+    For this lab please use the AI Assistant and enter the prompt:
+    "Show pool statistics for app-1 pool on the CentralRegion-bigip-01"
 
-    - Navigate to **Local Traffic > Pools > Pool List** and confirm
-      whether bruce_wayne and oliver_twist appear in the configuration.
-    - Check whether either of these pools is assigned as the default pool
-      (or used in a policy) on any virtual server.
+    Compare these results to the TMUI interface on the CentralRegion-bigip-01
+    under Local Traffic > Pools > app-1. Do they match? Does the AI need
+    to be prompted again?
 
-    Next, navigate to **Local Traffic > Nodes > Node List** and:
+    In Insight go to Device Virtual Server under BIG-IP Device and from the
+    top select the device name and virtual server.
 
-    - Confirm whether clark_kent and harry_potter appear in the node list.
-    - Verify whether any pool members reference these nodes, or whether
-      they are completely unused.
+    Inspect the profiles assigned to /Common/web_app_42 and identify:
 
-    Summarize which of the above pools and nodes are truly orphaned
-    (that is, not referenced by any virtual server or pool).
+    - Which OneConnect profile is in use.
+    - The source mask and maximum reuse settings on that OneConnect profile.
+    - The SNAT configuration (Automap vs SNAT pool).
 
-    Do **not** delete anything as part of this exercise; the goal is only
-    to locate and document orphaned objects.
+    Explain why the combination of SNAT Automap and a OneConnect source mask
+    of 0.0.0.0 (or an equivalent wide mask) with a high reuse value can
+    result in very uneven load distribution across pool members.
+
+    Implement a configuration change to improve load distribution. Possible
+    approaches include, but are not limited to:
+
+    - Adjusting the OneConnect source mask to a more specific value.
+    - Using a SNAT pool with multiple addresses instead of Automap.
+    - Tuning maximum reuse if appropriate for the application.
+
+    After making the change, verify that traffic is distributed more evenly:
+
+    - Reset statistics as needed.
+    - Generate test traffic.
+    - Re-run ``tmsh show ltm pool /Common/web-pool members`` (or equivalent)
+      to confirm improved balance.
 
 ## Deliverables
 
-    A brief summary describing:
+    Pre-change evidence of skewed member usage (for example, a screenshot
+    or CLI output showing connection and request counts per member).
 
-    - A clear list of which objects are confirmed to be orphaned on
-      Centralregion-bigip-01.
+    Post-change evidence of more even load distribution.
+
+    A brief written explanation (2–3 sentences) describing:
+
+    - The root cause of the uneven distribution.
+    - How the chosen configuration change addressed the issue.
 
 ## Hints
 
-    A pool is usually considered orphaned if no virtual server uses it
-    as a default pool and it is not referenced by other configuration
-    objects such as policies or iRules.
+    Consider what the application servers see as the client IP address when
+    SNAT Automap is enabled.
 
-    A node is considered orphaned if no pool member points to it.
+    Review how the OneConnect source mask groups connections for reuse.
 
-    Comparing object references (who uses what) is a key step when
-    cleaning up legacy configuration on BIG-IP devices.
+    Remember that with a wide mask and SNAT Automap, many clients can appear
+    as a single source from the servers' perspective, leading to heavy reuse
+    of a small number of server-side connections.
+----
 
-    Suspected orphaned objects:
-
-    - Pools: bruce_wayne, oliver_twist
-    - Nodes: clark_kent, harry_potter
-
-
-This concludes Exercise 8.
-
----
-
-Go to `Exercise 9 - Exporting BIG-IP metrics using the OTel consumer <../lab9/lab9.html>`_
+Go to `Exercise 11 - TBD <../lab11/lab11.html>`_
 
 Go to `Overview <../overview.html>`_
