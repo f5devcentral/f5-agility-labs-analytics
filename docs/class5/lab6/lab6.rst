@@ -94,6 +94,6 @@ This concludes Exercise 6.
 
 ---
 
-Go to `Exercise 7 - Exporting BIG-IP metrics using the OTel consumer <../lab7/lab7.html>`_
+Go to `Exercise 7 - tbd <../lab7/lab7.html>`_
 
 Go to `Overview <../overview.html>`_
