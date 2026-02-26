@@ -1,96 +1,78 @@
+Ticket 3 – Identifying HTTP versions in use
+===========================================
 
-Exercise 3 - Exporting BIG-IP metrics using the OTel consumer
-============================================================================
+Title: “What HTTP version is this app really using?”
+----------------------------------------------------
 
-During this exercise, you will configure a BIG-IP virtual edition, (using AS3 and Telemetry Streaming) to send metrics to a locally installed Prometheus instance by way of an OpenTelemetry collector.
+## Ticket description
 
-The OpenTelemetry Collector service provides a vendor-agnostic proxy to receive, process and export observability data.  The collector supports open-source observability data formats (e.g. Jaeger, Prometheus, Fluent Bit, etc.) sending to one or more open-source or commercial back-ends.
+    Operations wants to better understand the HTTP versions in use across
+    the environment. They suspect that the Backup_app service is still using
+    HTTP/1.0, which might impact connection behavior and troubleshooting.
 
-The OTel collector is managed via a user-readable YAML configuration file.  At a minimum, the configuration must include the following three sections:
+    You have been asked to confirm what HTTP version is actually being used
+    between clients and BIG-IP, and between BIG-IP and the pool members.
 
-- **Receivers** - section with information related to how the collector will receive observability data, (i.e. protocols, endpoint addresses, ports) 
+## Context
 
-- **Processors** - section with configuration information related to data manipulation and insertion.  In this section, one can add/delete/modify data streams using filters.
+    Device Name: CentralRegion-bigip-01
 
-- **Exporters** - section including information related push or pull based backends/destinations
+    Virtual server: Backup_app
 
-Review OTel Collector configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Pool: app-1
 
-From the VS Code UI use the navigation pane on the left and open the OTel collector gateway configuration file, (*collector-gateway.yml*).  Familiarize yourself with the configuration file contents.  
+    Expectation: Most of the lab environment is using HTTP/1.0, but this
+    needs to be verified rather than assumed.
 
-For this specific exercise, the collector configuration file, (*example below*)  has been configured to:
+## Tasks
 
- - Receive telemetry via OTLP over either HTTP or gRPC
- - Process records using the standard batch processor
- - Export metrics to a Prometheus backend
+    Use the AI Assistant and enter the prompt:
+    "Show configuration details for the Backup_app virtual server on the CentralRegion-bigip-01, including attached profiles."
 
-.. image:: ../images/Picture18.png  
-   :alt: Image 18
+    From the returned information and the TMUI on CentralRegion-bigip-01:
 
-Once you have familiarized yourself with the OTel collector configuration, use Google Chrome to navigate to the lab BIG-IP UI.  Login using the credentials available on the UDF details tab and review the current BIG-IP configuration.
+    - Identify which HTTP profile is attached to the Backup_app virtual
+      server (if any).
+    - Note any HTTP profile settings that influence protocol versions
+      (for example, HTTP/1.0 vs HTTP/1.1 behavior, keep-alive settings).
 
-.. image:: ../images/Picture19.png
+    In Insight, review any available HTTP-related metrics or attributes
+    for Backup_app and its pool app-1 that indicate HTTP protocol behavior
+    (for example, headers, connection reuse, or profile details).
 
-Configure the BIG-IP for telemetry streaming
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Summarize whether Backup_app is effectively using HTTP/1.0 or a newer
+    version on the client side, and whether server-side connections to the
+    app-1 pool members behave differently.
 
-You will now configure the lab BIG-IP with the necessary resources to send metrics to the OTel collector receiver endpoint.  This can be easily accomplished by applying Applications Services 3 extension (AS3) and Telemetry Streaming (TS) declarations.  You will apply the declarations using curl commands from the VSCode editor.
+## Deliverables
 
-AS3 declaration
-+++++++++++++++
+    A brief summary describing:
 
-The F5 BIG-IP Application Services 3 Extension (referred to as BIG-IP AS3) is a flexible, low-overhead mechanism for managing application-specific configurations on a BIG-IP system. BIG-IP AS3 uses a declarative model, meaning you provide a JSON declaration rather than a set of imperative commands.  Review the provided AS3 declaration. The declaration will deploy remote logging resources, (publishers, virtual, profiles, etc.) required for remote logging capture and transmission. From the VS Code UI open a new terminal tab and use the following curl command to post the declaration.
+    - The HTTP profile attached to Backup_app, and any relevant settings
+      that affect HTTP version behavior.
+    - Your conclusion about the HTTP version behavior from the client to
+      the Backup_app virtual server.
+    - Any observations about server-side HTTP behavior to the app-1 pool
+      members (for example, whether it appears to be HTTP/1.0-style
+      request/response without reuse, or if keep-alive is used).
 
-``curl -u admin:F5labnet! -k -X POST "https://10.1.1.7/mgmt/shared/appsvcs/declare" -H "Content-Type:application/json" -d @/home/xuser/otel-lab/as3_declaration.json``
+## Hints
 
-.. image:: ../images/Picture20.png
+    Look at which HTTP profile is attached and whether it is a custom
+    profile or the default http profile.
 
-TS declaration
-++++++++++++++++++++++
+    Some HTTP/1.0-style behavior can be inferred from how connections are
+    opened and closed, and whether keep-alive is in use.
 
-F5 BIG-IP Telemetry Streaming (BIG-IP TS) enables you to declaratively aggregate, normalize, and forward statistics and events from the BIG-IP to a consumer application.  To use BIG-IP TS, you POST a single JSON declaration to BIG-IP TS’s declarative REST API endpoint.  Review the provided TS declaration.  The declaration configures the telemetry streaming service to push events to an OTel collector.  The OTel collector consumer is limited to delivering metrics.  The consumer is configured to use the OTLP protocol over gRPC with the port of 55681.  POST the provided declaration with the below command.
+    Comparing what BIG-IP is configured to do on both client and server
+    sides will help you understand where the HTTP version behavior is
+    coming from.
 
-``curl -u admin:F5labnet! -k -X POST "https://10.1.1.7/mgmt/shared/telemetry/declare" -H "Content-Type:application/json" -d @/home/xuser/otel-lab/ts_declaration.json``
-
-.. image:: ../images/Picture21.png
-
-Associate logging profiles with BIG-IP virutual server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Wth the TS declaration posted, the BIG-IP will start to push basic system info metrics to the OTel collector.  Additionally, you will enable AVR and LTM request logging system info is configured.  To do so, you will associate the relevant AS3 logging profiles with the application's virtual server configuration.  
-
-From the BIG-IP UI, select and open the '*theLabApp_vs*'.  Scroll down and switch the configuration option to *Advanced*, (see below).
-
-.. image:: ../images/Picture37.png
-   :width: 750px
-
-With the advanced configuration visible, scroll down and select the appropriate **HTTP Analytics**, **TCP Analytics**, and **Request Logging** profiles, (see below).  Select '*Update*' to save the configuration changes.
-
-.. image:: ../images/Picture38.png
-   :width: 750px
-
-Verify data delivery
-^^^^^^^^^^^^^^^^^^^^^
-
-The BIG-IP is now configured to send telemetry.  If not currently opened, open Google Chrome from the desktop and select the Prometheus tab.  If the tab is no longer visible, the Prometheus UI is located at http://10.1.20.4:9090.
-
-.. image:: ../images/Picture24.png
-
-To perform a quick test on the system, select the *Graph* tab and enter '**f5_system_memory**' in the search bar; click on 'Execute'.  
-
-The system will query metrics for the BIG-IP system memory metric and return a relevant time chart, (*see below*).
-
-**Note:** *It may take SEVERAL MINUTES for the metrics to begin appearing in Prometheus.*
-
-.. image:: ../images/Picture25.png
-
-You can use the metrics explorer to view the available BIG-IP metrics (*see below*).
-
-.. image:: ../images/Picture22.png
 
 This concludes Exercise 3.
 
 ---
+
+Go to `Exercise 3 - Exporting BIG-IP metrics using the OTel consumer <../lab3/lab3.html>`_
 
 Go to `Overview <../overview.html>`_
