@@ -1,6 +1,7 @@
 
-Exercise 1 - App instrumentation walk-through and troubleshooting
-=================================================================
+App instrumentation walk-through and troubleshooting
+====================================================
+
 Deploy blueprint and connect to jumpbox
 ---------------------------------------
 
