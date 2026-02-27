@@ -1,10 +1,11 @@
-Ticket 5 – Investigating a slow pool member
+Ticket 05 – Investigating a slow pool member
 ===========================================
 
 Title: “Why is one web server so slow?”
 ---------------------------------------
 
-## Ticket description
+Ticket Description
+~~~~~~~~~~~~~~~~~~
 
     Operations has reported that the application behind web_app_42 feels
     sluggish at times. Initial checks show that one of the pool members
@@ -13,7 +14,8 @@ Title: “Why is one web server so slow?”
     You have been asked to investigate the performance of the pool members
     behind web_app_42 and determine why one server is slower than the rest.
 
-## Context
+Context
+~~~~~~~
 
     Device Name: EastRegion-bigip-01
 
@@ -24,7 +26,8 @@ Title: “Why is one web server so slow?”
     Symptom: One pool member shows higher response times and/or fewer
     completed requests compared to the others.
 
-## Tasks
+Tasks
+~~~~~
 
     Use the AI Assistant and enter the prompt:
     "Show pool statistics for web-pool on the EastRegion-bigip-01."
@@ -54,7 +57,8 @@ Title: “Why is one web server so slow?”
     Document the additional checks you would perform (or ask the server
     team to perform) on the backend server itself to confirm your hypothesis.
 
-## Deliverables
+Deliverables
+~~~~~~~~~~~~
 
     A brief summary describing:
 
@@ -63,7 +67,8 @@ Title: “Why is one web server so slow?”
     - Your working hypothesis for the root cause and what you would
       investigate next on the backend server or in the application.
 
-## Hints
+Hints
+~~~~~
 
     Look at how many connections and requests each pool member is handling,
     and whether one member consistently shows different behavior.
@@ -75,10 +80,10 @@ Title: “Why is one web server so slow?”
     outlier that needs deeper investigation.
 
 
-This concludes Exercise 5.
+This concludes Ticket 05.
 
 ---
 
-Go to `Exercise 6 - tbd <../lab6/lab6.html>`_
+Go to `Ticket 06 - CMP demotion caused by iRule globals <../lab6/lab6.html>`_
 
 Go to `Overview <../overview.html>`_

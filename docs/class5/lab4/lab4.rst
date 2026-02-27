@@ -1,14 +1,18 @@
-# Ticket 4 – WAF blocking a known Apache Struts‑like probe
+Ticket 04 – WAF blocking a known Apache Struts‑like probe
+=========================================================
 
-# Title: “Security test shows WAF blocks Struts exploit attempt”
+Title: “Security test shows WAF blocks Struts exploit attempt”
+--------------------------------------------------------------
 
-    ##Ticket description
+Ticket Description
+~~~~~~~~~~~~~~~~~~
 
         Security team wants proof WAF detects Apache Struts/OGNL attacks.
 
         They ask you to run a safe test and show them the WAF event.
 
-    ##Context
+Context
+~~~~~~~
 
         VIP: /Common/sslo.demo.f5
 
@@ -16,41 +20,44 @@
 
         App URL: /upload.action.
 
-    ##Tasks
+Tasks
+~~~~~
 
-        Send a Struts‑style test request from the jumphost (or a lab script):
+    Send a Struts‑style test request from the jumphost (or a lab script):
 
-```
+    ```
         bash
         curl -k -v \  
           "https://sslo.demo.f5/upload.action" \  
           -H 'Content-Type: ${(#_="multipart/form-data").(#context["com.opensymphony.xwork2.dispatcher.HttpServletResponse"].addHeader("X-Struts-POC","1"))}' \  
           --data-binary 'test'
 
-```
+    ```
 
-        Verify that the request is blocked and logged by ASM/AWAF as a Java/Struts/OGNL RCE attempt.
+    Verify that the request is blocked and logged by ASM/AWAF as a Java/Struts/OGNL RCE attempt.
 
-        Collect the event details (signature ID, attack type, severity).
+    Collect the event details (signature ID, attack type, severity).
 
-        Prepare a short explanation targeted at a non‑F5 security person.
+    Prepare a short explanation targeted at a non‑F5 security person.
 
-    ##Deliverables
+Deliverables
+~~~~~~~~~~~~
 
-        Screenshot of the specific WAF request log entry (showing attack signature, severity, blocking).
+    Screenshot of the specific WAF request log entry (showing attack signature, severity, blocking).
 
-        Short explanation on what kind of attack was detected and how WAF mitigates it.
+    Short explanation on what kind of attack was detected and how WAF mitigates it.
 
-    ##Hints
+Hints
+~~~~~
 
-        “Filter events by URL /upload.action and your test client IP.”
+    “Filter events by URL /upload.action and your test client IP.”
 
-        “Look at the ‘Attack Type’ field in the event.”
+    “Look at the ‘Attack Type’ field in the event.”
 
-This concludes Exercise 4.
+This concludes Ticket 04.
 
 ---
 
-Go to `Exercise 5 - tbd <../lab5/lab5.html>`_
+Go to `Ticket 05 - Investigating a slow pool member <../lab5/lab5.html>`_
 
 Go to `Overview <../overview.html>`_
