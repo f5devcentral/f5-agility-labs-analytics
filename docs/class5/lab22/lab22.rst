@@ -1,75 +1,85 @@
-Ticket 22 – TBD 22
-=======================================
+Ticket 22 – Determine Last Application Outage
+=============================================
 
-Title: “TBD22”
------------------------------------------------
+Title: “When was the last outage for this new web server?”
+-----------------------------------------------------------
 
-## Ticket description
+Ticket Description
+~~~~~~~~~~~~~~~~~~
 
-    During a routine review of the Centralregion-bigip-01 configuration,
-    operations suspects there may be unused (orphaned) objects left over
-    from previous testing or decommissioned applications.
+  The team is evaluating a newer version of the web server
+  running on node 10.1.20.201. This node is a member of the
+  web_servers_pool pool on WestRegion-bigip-01.
 
-    You have been asked to identify any orphaned pools and nodes on
-    Centralregion-bigip-01 so they can be documented and, if appropriate,
-    cleaned up later.
+  Before moving forward with broader deployment, the team
+  wants to understand the stability of this node.
 
-## Context
+  How long has it been since this application experienced an outage?
 
-    Device Name: Centralregion-bigip-01
+Context
+~~~~~~~
 
-    These objects are believed not to be referenced by any active virtual
-    servers.
+  Device Name: WestRegion-bigip-01
 
-## Tasks
+  Pool Name: web_servers_pool
 
-    Use the AI Assistant and enter the prompt:
-    "Show all pools and nodes on the Centralregion-bigip-01, and indicate which ones are not referenced by any virtual server."
+  Pool Member: 10.1.20.201:80
 
-    From the returned information and the TMUI on Centralregion-bigip-01:
+Tasks
+~~~~~
 
-    - Navigate to **Local Traffic > Pools > Pool List** and confirm
-      whether bruce_wayne and oliver_twist appear in the configuration.
-    - Check whether either of these pools is assigned as the default pool
-      (or used in a policy) on any virtual server.
+  Navigate to:
 
-    Next, navigate to **Local Traffic > Nodes > Node List** and:
+    BIG-IP Device >> Device Pools
 
-    - Confirm whether clark_kent and harry_potter appear in the node list.
-    - Verify whether any pool members reference these nodes, or whether
-      they are completely unused.
+  From the Device dropdown, select:
 
-    Summarize which of the above pools and nodes are truly orphaned
-    (that is, not referenced by any virtual server or pool).
+    WestRegion-bigip-01
 
-    Do **not** delete anything as part of this exercise; the goal is only
-    to locate and document orphaned objects.
+  From the Pool dropdown, select:
 
-## Deliverables
+    web_servers_pool
 
-    A brief summary describing:
+  Locate the panel:
 
-    - A clear list of which objects are confirmed to be orphaned on
-      Centralregion-bigip-01.
+    Pool Member State – isAvailable
 
-## Hints
+  Use the Time Range dropdown in the upper-right corner of the dashboard
+  to review historical availability data.
 
-    A pool is usually considered orphaned if no virtual server uses it
-    as a default pool and it is not referenced by other configuration
-    objects such as policies or iRules.
+  Try adjusting the range to broader views such as:
 
-    A node is considered orphaned if no pool member points to it.
+  - Last 7 Days
+  - Last 30 Days
+  - Last 90 Days
 
-    Comparing object references (who uses what) is a key step when
-    cleaning up legacy configuration on BIG-IP devices.
+  Expand the time range until you can clearly identify the most recent outage.
 
-    Suspected orphaned objects:
+  Identify:
 
-    - Pools: bruce_wayne, oliver_twist
-    - Nodes: clark_kent, harry_potter
+  - The most recent time the pool member 10.1.20.201:80 was not available
+  - The duration of the outage (if visible)
+  - How long it has been since that outage occurred
 
 
-This concludes Exercise 8.
+Deliverables
+~~~~~~~~~~~~
+
+  A brief summary including:
+
+  - Date and time of the last outage
+  - Approximate duration of the outage
+  - Time elapsed since the outage
+  - Any observations about stability trends
+
+Hints
+~~~~~
+
+  - Try expanding the time range (Last 24 Hours, 7 Days, 30 Days).
+  - Look for state transitions from isAvailable to unavailable.
+  - Zoom in on the graph if necessary to see shorter outages.
+
+This concludes Ticket 22.
 
 ---
 
