@@ -7,8 +7,8 @@ Title: “Why Is My Application Not Performing the Same Across Regions?”
 Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
-  An application owner for the app, web-app-foo, has observed
-  inconsistent behavior across devices.
+  An application owner for the app, web-app-foo, has observed inconsistent behavior across devices.
+  
   They would like the configuration reviewed for any anomalies.
 
 Context
@@ -34,7 +34,8 @@ Tasks
   "Can you check the virtual servers named 'web-app-foo' and their associated objects across all BIG-IPs to verify that the configuration is the same?"
 
   Review the information returned. Do you see any differences?
-  What did the AI agent tell you?
+
+  Identify and explain the configuration differences that could impact application behavior.
 
 Deliverables
 ~~~~~~~~~~~~
@@ -52,6 +53,6 @@ This concludes Ticket 20.
 
 ---
 
-Go to `Ticket 21 - TBD21 <../lab21/lab21.html>`_
+Go to `Ticket 21 - Analyze Traffic Patterns for an Application <../lab21/lab21.html>`_
 
 Go to `Overview <../overview.html>`_
