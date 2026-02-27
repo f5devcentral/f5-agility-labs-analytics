@@ -74,6 +74,6 @@ This concludes Ticket 21.
 
 ---
 
-Go to `Ticket 22 - TBD22 <../lab22/lab22.html>`_
+Go to `Ticket 22 - Determine Last Application Outage <../lab22/lab22.html>`_
 
 Go to `Overview <../overview.html>`_
