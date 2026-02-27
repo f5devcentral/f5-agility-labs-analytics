@@ -1,12 +1,34 @@
-Ticket 2 – Need title
-==================================================
+Ticket 02 – Need title
+======================
 
-EMPTY
+Title: “”
+----------------------------------------------------------------------
 
-This concludes Exercise 2.
+Ticket Description
+~~~~~~~~~~~~~~~~~~
+
+ 
+Context
+~~~~~~~
+
+
+Tasks
+~~~~~
+
+
+Deliverables
+~~~~~~~~~~~~
+
+
+Hints
+~~~~~
+
+
+
+This concludes Ticket 02.
 
 ---
 
-Go to `Exercise 3 - TBD <../lab3/lab3.html>`_
+Go to `Ticket 03 - TBD <../lab3/lab3.html>`_
 
 Go to `Overview <../overview.html>`_

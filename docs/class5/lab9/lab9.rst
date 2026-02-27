@@ -1,8 +1,8 @@
-Ticket 9 – WAF false positives on file uploads
+Ticket 09 – WAF false positives on file uploads
 ==============================================
 
-Investigate enrollment upload blocking in WAF
----------------------------------------------
+Title: "Investigate enrollment upload blocking in WAF"
+------------------------------------------------------
 
 The enrollment application on Eastregion-bigip-01 is seeing repeated
 WAF alerts and blocked requests in the logs. A script is automatically
@@ -134,6 +134,6 @@ Propose one or more safe mitigation strategies for this lab scenario, such as:
   instead of relying on inline WAF signatures for file content.
 ----
 
-Go to `Exercise 10 - One pool member is overloaded <../lab10/lab10.html>`_
+Go to `Ticket 10 - Uneven load balancing due to OneConnect <../lab10/lab10.html>`_
 
 Go to `Overview <../overview.html>`_

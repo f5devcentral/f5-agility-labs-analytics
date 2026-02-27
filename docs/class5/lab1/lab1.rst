@@ -1,60 +1,64 @@
-Ticket 1 – Investigating unexpected 4xx responses
+Ticket 01 – Investigating unexpected 4xx responses
 =================================================
 
 Title: “Why is accounts_receivable returning 4xx errors?”
 ---------------------------------------------------------
 
-## Ticket description
+Ticket description
+~~~~~~~~~~~~~~~~~~
 
-    Users of the accounts receivable application are intermittently
-    receiving HTTP 4xx errors when accessing the service. Some users
-    report seeing 400, 401, 403, or 404 responses at different times.
+  Users of the accounts receivable application are intermittently
+  receiving HTTP 4xx errors when accessing the service. Some users
+  report seeing 400, 401, 403, or 404 responses at different times.
 
-    You have been asked to investigate why the
-    accounts_receivable_https_vs virtual server is returning these 4xx
-    status codes and to determine whether this behavior is expected for
-    the lab scenario.
+  You have been asked to investigate why the
+  accounts_receivable_https_vs virtual server is returning these 4xx
+  status codes and to determine whether this behavior is expected for
+  the lab scenario.
 
-## Context
+Context
+~~~~~~~
 
-    Device Name: Eastregion-bigip-01
+  Device Name: Eastregion-bigip-01
 
-    Virtual server: accounts_receivable_https_vs
+  Virtual server: accounts_receivable_https_vs
 
-    Pool: app-3
+  Pool: app-3
 
-## Tasks
+Tasks
+~~~~~
 
-    Use the AI Assistant and enter the prompt:
-    "Show configuration details for the accounts_receivable_https_vs virtual server on the Eastregion-bigip-01, including its default pool and any attached profiles or iRules."
+  Use the AI Assistant and enter the prompt:
+  "Show configuration details for the accounts_receivable_https_vs virtual server on the Eastregion-bigip-01, including its default pool and any attached profiles or iRules."
 
-    From the returned information and the TMUI on Eastregion-bigip-01:
+  From the returned information and the TMUI on Eastregion-bigip-01:
 
-    - Confirm that the default pool for accounts_receivable_https_vs is
-      app-3.
-    - Identify which port(s) the app-3 pool members are listening on
-      (for example, 8080).
-    - Check whether any iRules, local traffic policies, or WAF policies
-      attached to the virtual server could influence HTTP status codes.
+  - Confirm that the default pool for accounts_receivable_https_vs is
+    app-3.
+  - Identify which port(s) the app-3 pool members are listening on
+    (for example, 8080).
+  - Check whether any iRules, local traffic policies, or WAF policies
+    attached to the virtual server could influence HTTP status codes.
 
-    In Insight, review any available HTTP metrics or logs associated with
-    accounts_receivable_https_vs and app-3 that show:
+  In Insight, review any available HTTP metrics or logs associated with
+  accounts_receivable_https_vs and app-3 that show:
 
-    - The distribution of 4xx status codes (400, 401, 403, 404).
-    - Whether certain paths (for example, /401, /403, /404, /400) are
-      consistently associated with specific 4xx responses.
-    - Whether requests to the pool members on port 8080 are returning
-      403 by design.
+  - The distribution of 4xx status codes (400, 401, 403, 404).
+  - Whether certain paths (for example, /401, /403, /404, /400) are
+    consistently associated with specific 4xx responses.
+  - Whether requests to the pool members on port 8080 are returning
+    403 by design.
 
-    Based on this information, determine:
+  Based on this information, determine:
 
-    - Which 4xx responses are expected behavior due to the backend
-      configuration and the traffic script rotating through specific
-      paths.
-    - Whether any 4xx responses indicate a real problem, or whether they
-      are intentionally generated for this lab exercise.
+  - Which 4xx responses are expected behavior due to the backend
+    configuration and the traffic script rotating through specific
+    paths.
+  - Whether any 4xx responses indicate a real problem, or whether they
+    are intentionally generated for this lab exercise.
 
-## Deliverables
+Deliverables
+~~~~~~~~~~~~
 
     A brief summary describing:
 
@@ -63,7 +67,8 @@ Title: “Why is accounts_receivable returning 4xx errors?”
     - Your conclusion on whether the observed 4xx errors for this ticket
       are indicative of a misconfiguration.
 
-## Hints
+Hints
+~~~~~
 
     Pay attention to how the application or backend service running on
     port 8080 is configured to respond to different paths — it may be
@@ -74,10 +79,10 @@ Title: “Why is accounts_receivable returning 4xx errors?”
     and 403 for port 8080).
 
 
-This concludes Exercise 1.
+This concludes Ticket 01.
 
 ---
 
-Go to `Exercise 2 - Exporting BIG-IP metrics using the OTel consumer <../lab2/lab2.html>`_
+Go to `Ticket 02 - Exporting BIG-IP metrics using the OTel consumer <../lab2/lab2.html>`_
 
 Go to `Overview <../overview.html>`_

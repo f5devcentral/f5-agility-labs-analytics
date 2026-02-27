@@ -1,10 +1,10 @@
-Ticket 2 – Uneven load balancing due to OneConnect
+Ticket 10 – Uneven load balancing due to OneConnect
 ==================================================
 
 Title: “One pool member is overloaded”
 --------------------------------------
 
-## Ticket description
+Ticket Description
 
     Operations has noticed that one application server in the pool
     ``/Common/web-pool`` has far more connections and traffic than the other
