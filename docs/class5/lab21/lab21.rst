@@ -1,75 +1,76 @@
-Ticket 21 – TBD 21
-=======================================
+Ticket 21 – Analyze Traffic Patterns for an Application
+========================================================
 
-Title: “TBD21”
------------------------------------------------
+Title: “When is our application experiencing peak traffic?”
+------------------------------------------------------------
 
-## Ticket description
+Ticket Description
+~~~~~~~~~~~~~~~~~~
 
-    During a routine review of the Centralregion-bigip-01 configuration,
-    operations suspects there may be unused (orphaned) objects left over
-    from previous testing or decommissioned applications.
+  The application owner for primary-app-site-1 has requested
+  insight into traffic patterns for their HTTPS virtual server.
+  They would like to understand when traffic volume is highest
+  in order to plan scaling and maintenance windows.
 
-    You have been asked to identify any orphaned pools and nodes on
-    Centralregion-bigip-01 so they can be documented and, if appropriate,
-    cleaned up later.
+Context
+~~~~~~~
 
-## Context
+  Device Name: CentralRegion-bigip-01
 
-    Device Name: Centralregion-bigip-01
+  Virtual Server Name: primary-app-site-1-https-vip
 
-    These objects are believed not to be referenced by any active virtual
-    servers.
+  Protocol: HTTPS (TCP 443)
 
-## Tasks
+Tasks
+~~~~~
 
-    Use the AI Assistant and enter the prompt:
-    "Show all pools and nodes on the Centralregion-bigip-01, and indicate which ones are not referenced by any virtual server."
+  Determine what times of day and days of the week show the most
+  traffic for the virtual server primary-app-site-1-https-vip
+  on CentralRegion-bigip-01.
 
-    From the returned information and the TMUI on Centralregion-bigip-01:
+  Navigate to:
 
-    - Navigate to **Local Traffic > Pools > Pool List** and confirm
-      whether bruce_wayne and oliver_twist appear in the configuration.
-    - Check whether either of these pools is assigned as the default pool
-      (or used in a policy) on any virtual server.
+  BIG-IP Fleet >> Virtual Servers >> 
 
-    Next, navigate to **Local Traffic > Nodes > Node List** and:
+  From the virtual server dropdown, select:
 
-    - Confirm whether clark_kent and harry_potter appear in the node list.
-    - Verify whether any pool members reference these nodes, or whether
-      they are completely unused.
+    primary-app-site-1-https-vip
 
-    Summarize which of the above pools and nodes are truly orphaned
-    (that is, not referenced by any virtual server or pool).
+  Review the following panels:
 
-    Do **not** delete anything as part of this exercise; the goal is only
-    to locate and document orphaned objects.
+  - VS Data Rate
+  - VS Connection Rate
 
-## Deliverables
+  Analyze connection and throughput patterns over time
+  to determine peak usage periods.
 
-    A brief summary describing:
+  After reviewing the data, answer the following:
 
-    - A clear list of which objects are confirmed to be orphaned on
-      Centralregion-bigip-01.
+  - What are the peak hours of the day?
+  - What are the peak days of the week?
+  - Are the traffic patterns consistent or highly variable?
 
-## Hints
+Deliverables
+~~~~~~~~~~~~
 
-    A pool is usually considered orphaned if no virtual server uses it
-    as a default pool and it is not referenced by other configuration
-    objects such as policies or iRules.
+  A brief summary describing the traffic trends:
 
-    A node is considered orphaned if no pool member points to it.
+  - Peak time(s) of day
+  - Peak day(s) of week
+  - Observed traffic behavior (weekday spikes, weekend drops, steady patterns, etc.)
+  - Recommended maintenance window based on traffic analysis
 
-    Comparing object references (who uses what) is a key step when
-    cleaning up legacy configuration on BIG-IP devices.
+Hints
+~~~~~
 
-    Suspected orphaned objects:
+  Pay close attention to:
 
-    - Pools: bruce_wayne, oliver_twist
-    - Nodes: clark_kent, harry_potter
+  - Request rate trends
+  - Throughput (bps)
+  - Connection counts
+  - Historical time-based views
 
-
-This concludes Exercise 8.
+This concludes Ticket 21.
 
 ---
 
