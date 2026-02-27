@@ -1,17 +1,19 @@
-Ticket 10 – Uneven load balancing due to OneConnect
-==================================================
+Ticket 10   – Uneven load balancing due to OneConnect
+===================================================
 
 Title: “One pool member is overloaded”
 --------------------------------------
 
 Ticket Description
+~~~~~~~~~~~~~~~~~~
 
     Operations has noticed that one application server in the pool
     ``/Common/web-pool`` has far more connections and traffic than the other
     members. Users are reporting intermittent slowness and occasional timeouts
     when accessing the application.
 
-## Context
+Context
+~~~~~~~
 
     Device Name: East
 
@@ -26,7 +28,8 @@ Ticket Description
 
     Pool: /Common/web-pool with multiple application servers
 
-## Tasks
+Tasks
+~~~~~
 
     Traditionally we would examine current connection and request distribution
     for the pool members using the BIG-IP GUI and the CLI (for example,
@@ -66,7 +69,8 @@ Ticket Description
     - Re-run ``tmsh show ltm pool /Common/web-pool members`` (or equivalent)
       to confirm improved balance.
 
-## Deliverables
+Deliverables
+~~~~~~~~~~~~
 
     Pre-change evidence of skewed member usage (for example, a screenshot
     or CLI output showing connection and request counts per member).
@@ -78,7 +82,8 @@ Ticket Description
     - The root cause of the uneven distribution.
     - How the chosen configuration change addressed the issue.
 
-## Hints
+Hints
+~~~~~
 
     Consider what the application servers see as the client IP address when
     SNAT Automap is enabled.
@@ -88,7 +93,10 @@ Ticket Description
     Remember that with a wide mask and SNAT Automap, many clients can appear
     as a single source from the servers' perspective, leading to heavy reuse
     of a small number of server-side connections.
-----
+
+This concludes Ticket 10.
+
+---
 
 Go to `Exercise 11 - TBD <../lab11/lab11.html>`_
 
