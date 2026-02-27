@@ -83,6 +83,6 @@ This concludes Ticket 22.
 
 ---
 
-Go to `Ticket 23 - TBD23 <../lab23/lab23.html>`_
+Go to `Ticket 23 - Review Connection Count Standard Deviation (VS) <../lab23/lab23.html>`_
 
 Go to `Overview <../overview.html>`_

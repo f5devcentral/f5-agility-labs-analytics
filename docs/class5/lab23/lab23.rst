@@ -1,78 +1,117 @@
-Ticket 23 – TBD 23
-=======================================
+Ticket 23 – Review Connection Count Standard Deviation (VS)
+============================================================
 
-Title: “TBD23”
------------------------------------------------
+Title: “Why are some virtual servers showing connection count deviations?”
+----------------------------------------------------------------------------
 
-## Ticket description
+Ticket Description
+~~~~~~~~~~~~~~~~~~
 
-    During a routine review of the Centralregion-bigip-01 configuration,
-    operations suspects there may be unused (orphaned) objects left over
-    from previous testing or decommissioned applications.
+  The operations team has noticed fluctuations in connection
+  counts across several virtual servers.
 
-    You have been asked to identify any orphaned pools and nodes on
-    Centralregion-bigip-01 so they can be documented and, if appropriate,
-    cleaned up later.
+  An alert has been triggered under Anomaly Detection for
+  Connection Count Deviation.
 
-## Context
+  Before taking any action, the team wants to review the
+  deviation data and understand which Virtual Servers are
+  outside of expected thresholds.
 
-    Device Name: Centralregion-bigip-01
-
-    These objects are believed not to be referenced by any active virtual
-    servers.
-
-## Tasks
-
-    Use the AI Assistant and enter the prompt:
-    "Show all pools and nodes on the Centralregion-bigip-01, and indicate which ones are not referenced by any virtual server."
-
-    From the returned information and the TMUI on Centralregion-bigip-01:
-
-    - Navigate to **Local Traffic > Pools > Pool List** and confirm
-      whether bruce_wayne and oliver_twist appear in the configuration.
-    - Check whether either of these pools is assigned as the default pool
-      (or used in a policy) on any virtual server.
-
-    Next, navigate to **Local Traffic > Nodes > Node List** and:
-
-    - Confirm whether clark_kent and harry_potter appear in the node list.
-    - Verify whether any pool members reference these nodes, or whether
-      they are completely unused.
-
-    Summarize which of the above pools and nodes are truly orphaned
-    (that is, not referenced by any virtual server or pool).
-
-    Do **not** delete anything as part of this exercise; the goal is only
-    to locate and document orphaned objects.
-
-## Deliverables
-
-    A brief summary describing:
-
-    - A clear list of which objects are confirmed to be orphaned on
-      Centralregion-bigip-01.
-
-## Hints
-
-    A pool is usually considered orphaned if no virtual server uses it
-    as a default pool and it is not referenced by other configuration
-    objects such as policies or iRules.
-
-    A node is considered orphaned if no pool member points to it.
-
-    Comparing object references (who uses what) is a key step when
-    cleaning up legacy configuration on BIG-IP devices.
-
-    Suspected orphaned objects:
-
-    - Pools: bruce_wayne, oliver_twist
-    - Nodes: clark_kent, harry_potter
+  Your task is to review the deviation dashboard and identify
+  the most impacted Virtual Servers.
 
 
-This concludes Exercise 8.
+Context
+~~~~~~~
+
+  Location: Home Dashboard
+
+  Section: System Report Cards
+
+  Category: Anomaly Detection
+
+  Metric: Connection Count – Standard Deviation Change (VS)
+
+
+Tasks
+~~~~~
+
+  Navigate to:
+
+    Home >> System Report Cards
+
+  Locate the card:
+
+    Anomaly Detection
+
+  Click on:
+
+    Anomaly Detection
+
+  Within the expanded panel, locate:
+
+    Connection Count Deviation
+
+  Click:
+
+    View Details
+
+  Scroll down to the Virtual Servers table.
+
+  Review each Virtual Server and identify:
+
+  - Status (Critical, Warning, Good)
+  - Expected Connections
+  - Current Connections
+  - Deviation value and percentage
+
+  Pay attention to severity coloring:
+
+  - Red indicates Critical deviation
+  - Yellow indicates Warning
+  - Green indicates Normal/Good
+
+  Select a Virtual Server in a "Critical" state (or any Virtual Server).
+  The graph above will update based on your selection.
+  
+  Review the Connection Count Deviation Analysis graph on top.
+
+  Observe:
+
+  - Actual connection count
+  - Expected connection count
+  - Upper threshold
+  - Lower threshold
+
+  Use the time range selector (1h, 6h, 1d, 1w) in the upper-right
+  corner of the dashboard to review different time windows.
+
+
+Deliverables
+~~~~~~~~~~~~
+
+  A brief summary including:
+
+  - The total number of Virtual Servers listed
+  - How many are Critical
+  - How many are Warning
+  - How many are Good
+  - The Virtual Server with the largest deviation percentage
+  - Any patterns you observe in the deviation data
+
+
+Hints
+~~~~~
+
+  - Hover over points in the graph to see exact values.
+  - Try changing the time range to see if deviations are persistent.
+  - Sort the Virtual Server table by deviation percentage.
+  - Focus first on Critical (red) entries, then Warning (yellow).
+
+This concludes Ticket 23.
 
 ---
 
-Go to `Ticket 24 - TBD24 <../lab24/lab24.html>`_
+Go to `Ticket 24 - Review Pool Availability Ratio Deviation <../lab24/lab24.html>`_
 
 Go to `Overview <../overview.html>`_
