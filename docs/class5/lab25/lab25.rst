@@ -87,6 +87,6 @@ This concludes Ticket 25.
 
 ---
 
-Go to `Ticket 26 - TBD26 <../lab26/lab26.html>`_
+Go to `Ticket 26 - Review Top Resource Consumers <../lab26/lab26.html>`_
 
 Go to `Overview <../overview.html>`_
