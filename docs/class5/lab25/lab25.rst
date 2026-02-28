@@ -1,5 +1,5 @@
-Ticket 25 – Identify Busiest Client IP from WAF Events (AI Assistant)
-=====================================================================
+Ticket 25 – Identify Busiest Client IP from WAF Events
+======================================================
 
 Title: “What is the busiest client IP address on CentralRegion-bigip-01 related to WAF events?”
 -----------------------------------------------------------------------------------------------
