@@ -1,4 +1,4 @@
-Ticket 26 – Review Top Resource Consumers (30-Day Analysis)
+Ticket 26 – Review Top Resource Consumers
 ============================================================
 
 Title: “What applications have consumed the most resources over the last 30 days?”
