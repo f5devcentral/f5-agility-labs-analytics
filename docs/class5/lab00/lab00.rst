@@ -54,7 +54,7 @@ How to use this lab
         Evidence (screenshot or command output).
 
 
-This concludes the Introduction.  
+Please proceed to the first ticket.
 
 ---
 
