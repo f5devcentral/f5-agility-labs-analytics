@@ -20,21 +20,6 @@ Environment:
 
    Access info: mgmt IP/URL, credentials, jumphost info.
 
-Deploy blueprint and connect to jumpbox
----------------------------------------
-
-From the `UDF <https://udf.f5.com/blueprints>`_ console, search for and deploy the blueprint entitled *AppWorld 2026 - F5 Insight for ADSP*. 
-Once the blueprint has finished deploying, access F5 Insight by selecting the GUI access link, (*see below*).  Credentials for this lab can be viewed by accessing the guest(s) **DOCUMENTATION** tab.
-
-.. image:: ../images/Picture1.png
-   :width: 750px
-   :alt: Image 1
-
-Upon successful login to F5 Insight, you will arrive at the home page, (see below).
-
-.. image:: ../images/Picture2.png
-   :width: 650px
-   :alt: Image 2
 
 How to use this lab
 ---------------------------------------
