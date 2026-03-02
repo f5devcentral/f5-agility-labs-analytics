@@ -1,89 +1,119 @@
-Ticket 05 – Investigating a slow pool member
-===========================================
+Ticket 05 – Review Pool Availability Ratio Deviation
+=====================================================
 
-Title: “Why is one web server so slow?”
----------------------------------------
+Title: “Are any application pools experiencing availability degradation?”
+---------------------------------------------------------------------------
 
 Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
-    Operations has reported that the application behind web_app_42 feels
-    sluggish at times. Initial checks show that one of the pool members
-    is responding significantly more slowly than the others.
+  The operations team wants to verify that application pools
+  are maintaining expected availability levels.
 
-    You have been asked to investigate the performance of the pool members
-    behind web_app_42 and determine why one server is slower than the rest.
+  An anomaly category exists for Pool Availability Ratio
+  Deviation under Anomaly Detection.
+
+  Before escalating any potential issue, the team needs a
+  clear understanding of current pool health and whether
+  any pools have deviated from expected availability ratios.
+
+  Your task is to review the Pool Availability dashboard
+  and determine if any pools are outside expected thresholds.
+
 
 Context
 ~~~~~~~
 
-    Device Name: EastRegion-bigip-01
+  Location: Home Dashboard
 
-    Virtual server: web_app_42
+  Section: System Report Cards
 
-    Pool: web-pool (attached to web_app_42)
+  Category: Anomaly Detection
 
-    Symptom: One pool member shows higher response times and/or fewer
-    completed requests compared to the others.
+  Metric: Pool Availability Ratio Deviation
+
 
 Tasks
 ~~~~~
 
-    Use the AI Assistant and enter the prompt:
-    "Show pool statistics for web-pool on the EastRegion-bigip-01."
+  Navigate to:
 
-    Compare these results to the TMUI interface on EastRegion-bigip-01
-    under Local Traffic > Pools > web-pool. Do they match? Does the AI
-    need to be prompted again?
+    Home >> System Report Cards
 
-    Identify which specific pool member is slower based on the available
-    metrics (for example, current connections, total requests, or any
-    response-time-related statistics that Insight exposes for this pool).
+  Locate the card:
 
-    In Insight, review any available metrics or attributes for the slow
-    member, such as:
+    Anomaly Detection
 
-    - Error rates or HTTP status codes.
-    - Connection counts or resets.
-    - Health monitor status and history for that member.
+  Click on:
 
-    Based on the data you see, form a hypothesis for why this pool member
-    is slower. Consider possibilities such as:
+    Anomaly Detection
 
-    - Resource constraints on the server (CPU, memory).
-    - Application-level issues (slow responses for certain URLs).
-    - Network-related issues (packet loss, retransmissions).
+  Within the expanded panel, locate:
 
-    Document the additional checks you would perform (or ask the server
-    team to perform) on the backend server itself to confirm your hypothesis.
+    Pool Availability Deviation
+
+  Click:
+
+    View Details
+
+  Scroll down to the Pools table.
+
+  Review each Pool and identify:
+
+  - Status (Critical, Warning, Good)
+  - Expected Availability Ratio
+  - Current Availability Ratio
+  - Deviation value and percentage
+
+  Pay attention to severity coloring:
+
+  - Red indicates Critical deviation
+  - Yellow indicates Warning
+  - Green indicates Normal/Good
+
+  Select any Pool from the list.
+  The graph above will update based on your selection.
+
+  Review the Pool Availability Ratio Deviation Analysis graph.
+
+  Observe:
+
+  - Actual availability ratio
+  - Expected availability ratio
+  - Upper threshold
+  - Lower threshold
+
+  Determine whether the actual value crossed either threshold.
+
+  Use the time range selector (1h, 6h, 1d, 1w) in the upper-right
+  corner of the dashboard to review different time windows.
+
 
 Deliverables
 ~~~~~~~~~~~~
 
-    A brief summary describing:
+  A brief summary including:
 
-    - Which pool member in web-pool is slower and how you determined this.
-    - The key statistics or metrics that led you to this conclusion.
-    - Your working hypothesis for the root cause and what you would
-      investigate next on the backend server or in the application.
+  - The total number of Pools listed
+  - How many are Critical
+  - How many are Warning
+  - How many are Good
+  - Whether any pool crossed defined thresholds
+  - Any patterns you observe in availability trends
+
 
 Hints
 ~~~~~
 
-    Look at how many connections and requests each pool member is handling,
-    and whether one member consistently shows different behavior.
+  - If all pools show 1.00 availability, verify that no deviation exists.
+  - Hover over graph points to see exact values.
+  - Try expanding the time range to confirm stability over time.
+  - Compare Expected vs Actual lines carefully.
 
-    Health monitor status might be green even when an application on a
-    server is slow, so you may need to look beyond simple up/down state.
-
-    Comparing metrics across members is often the fastest way to spot an
-    outlier that needs deeper investigation.
-
-
-This concludes Ticket 05.
+This concludes Ticket 24.
 
 ---
 
-Go to `Ticket 06 - CMP demotion caused by iRule globals <../lab6/lab6.html>`_
+Go to `Ticket 06 - Identifying Orphaned Objects <../lab06/lab06.html>`_
 
 Go to `Overview <../overview.html>`_

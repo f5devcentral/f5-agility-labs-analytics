@@ -1,4 +1,4 @@
-Ticket 21 – Analyze Traffic Patterns for an Application
+Ticket 02 – Analyze Traffic Patterns for an Application
 ========================================================
 
 Title: “When is our application experiencing peak traffic?”
@@ -84,6 +84,6 @@ This concludes Ticket 21.
 
 ---
 
-Go to `Ticket 22 - Determine Last Application Outage <../lab22/lab22.html>`_
+Go to `Ticket 03 - Determine Last Application Outage <../lab03/lab03.html>`_
 
 Go to `Overview <../overview.html>`_

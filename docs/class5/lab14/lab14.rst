@@ -1,4 +1,4 @@
-Ticket 25 – Identify Busiest Client IP from WAF Events
+Ticket 14 – Identify Busiest Client IP from WAF Events
 ======================================================
 
 Title: “What is the busiest client IP address on CentralRegion-bigip-01 related to WAF events?”
@@ -86,6 +86,6 @@ This concludes Ticket 25.
 
 ---
 
-Go to `Ticket 26 - Review Top Resource Consumers <../lab26/lab26.html>`_
+Go to `Ticket TBD - TBD <../lab14/lab14.html>`_
 
 Go to `Overview <../overview.html>`_

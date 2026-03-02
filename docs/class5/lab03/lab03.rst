@@ -1,83 +1,91 @@
-Ticket 03 – Identifying HTTP versions in use
-===========================================
+Ticket 03 – Determine Last Application Outage
+=============================================
 
-Title: “What HTTP version is this app really using?”
-----------------------------------------------------
+Title: “When was the last outage for this new web server?”
+-----------------------------------------------------------
 
 Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
-  Operations wants to better understand the HTTP versions in use across
-  the environment. They suspect that the Backup_app service is still using
-  HTTP/1.0, which might impact connection behavior and troubleshooting.
+  The team is evaluating a newer version of the web server
+  running on node 10.1.20.201. This node is a member of the
+  web_servers_pool pool on WestRegion-bigip-01.
 
-  You have been asked to confirm what HTTP version is actually being used
-  between clients and BIG-IP, and between BIG-IP and the pool members.
+  Before moving forward with broader deployment, the team
+  wants to understand the stability of this node.
+
+  How long has it been since this application experienced an outage?
 
 Context
 ~~~~~~~
 
-  Device Name: CentralRegion-bigip-01
+  Device Name: WestRegion-bigip-01
 
-  Virtual server: Backup_app
+  Pool Name: web_servers_pool
 
-  Pool: app-1
-
-  Expectation: Most of the lab environment is using HTTP/1.0, but this
-  needs to be verified rather than assumed.
+  Pool Member: 10.1.20.201:80
 
 Tasks
 ~~~~~
 
-  Use the AI Assistant and enter the prompt:
-  "Show configuration details for the Backup_app virtual server on the CentralRegion-bigip-01, including attached profiles."
+  Navigate to:
 
-  From the returned information and the TMUI on CentralRegion-bigip-01:
+    Dashboards >> BIG-IP Device >> Device Pools
 
-  - Identify which HTTP profile is attached to the Backup_app virtual
-    server (if any).
-  - Note any HTTP profile settings that influence protocol versions
-    (for example, HTTP/1.0 vs HTTP/1.1 behavior, keep-alive settings).
+  From the Device dropdown, select:
 
-  In Insight, review any available HTTP-related metrics or attributes
-  for Backup_app and its pool app-1 that indicate HTTP protocol behavior
-  (for example, headers, connection reuse, or profile details).
+    WestRegion-bigip-01
 
-  Summarize whether Backup_app is effectively using HTTP/1.0 or a newer
-  version on the client side, and whether server-side connections to the
-  app-1 pool members behave differently.
+  From the Pool dropdown, select:
+
+    web_servers_pool
+
+  Locate the panel:
+
+    Pool Member State – isAvailable
+
+  Click the "Expand panel" button on top right of that panel
+
+  Use the Time Range dropdown in the upper-right corner of the dashboard
+  to review historical availability data.
+
+  Try adjusting the range to broader views such as:
+
+  - Last 24 hours
+  - Last 7 Days
+  - Last 30 Days
+  - Last 90 Days
+
+  Click the "Expand Panel" button in the upper-right corner of the panel to enlarge the view.
+
+  Identify:
+
+  - The most recent time the pool member 10.1.20.201:80 was not available
+  - The duration of the outage (if visible)
+  - How long it has been since that outage occurred
+
 
 Deliverables
 ~~~~~~~~~~~~
 
-    A brief summary describing:
+  A brief summary including:
 
-    - The HTTP profile attached to Backup_app, and any relevant settings
-      that affect HTTP version behavior.
-    - Your conclusion about the HTTP version behavior from the client to
-      the Backup_app virtual server.
-    - Any observations about server-side HTTP behavior to the app-1 pool
-      members (for example, whether it appears to be HTTP/1.0-style
-      request/response without reuse, or if keep-alive is used).
+  - Date and time of the last outage
+  - Approximate duration of the outage
+  - Time elapsed since the outage
+  - Any observations about stability trends
 
 Hints
 ~~~~~
 
-    Look at which HTTP profile is attached and whether it is a custom
-    profile or the default http profile.
+  - Try expanding the time range (Last 24 Hours, 7 Days, 30 Days).
+  - Look for state transitions from isAvailable to unavailable.
+  - Zoom in on the graph if necessary to see shorter outages.
 
-    Some HTTP/1.0-style behavior can be inferred from how connections are
-    opened and closed, and whether keep-alive is in use.
-
-    Comparing what BIG-IP is configured to do on both client and server
-    sides will help you understand where the HTTP version behavior is
-    coming from.
-
-
-This concludes Ticket 03.
+This concludes Ticket 22.
 
 ---
 
-Go to `Ticket 4 - WAF blocking a known Apache Struts‑like probe <../lab4/lab4.html>`_
+Go to `Ticket 04 - Review Connection Count Standard Deviation <../lab04/lab04.html>`_
 
 Go to `Overview <../overview.html>`_
