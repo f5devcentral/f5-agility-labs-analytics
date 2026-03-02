@@ -1,22 +1,22 @@
-Ticket 26 – Review Top Resource Consumers
-============================================================
+Ticket 26 – Explore the Top N Dashboard
+========================================
 
-Title: “What applications have consumed the most resources over the last 30 days?”
-------------------------------------------------------------------------------------
+Title: “What insights can you quickly gather from the Top N view?”
+-------------------------------------------------------------------
 
 Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
-  Leadership is preparing for quarterly capacity planning
-  and wants to understand which applications have consumed
-  the most system resources over the past 30 days.
+  The Top N dashboard provides a consolidated view of the
+  most active and resource-intensive objects on a BIG-IP.
 
-  Instead of reviewing individual dashboards, you will use
-  the Top N view to identify long-term resource consumers
-  across CPU, bandwidth, SSL, and availability metrics.
+  This ticket is designed to familiarize you with what
+  information is available and how it can be used to quickly
+  identify busy applications, high resource consumers,
+  and potential availability concerns.
 
-  Your task is to analyze 30-day Top N data and summarize
-  which applications are driving the most sustained load.
+  Your goal is to explore the Top N dashboard and understand
+  the types of operational insights it provides.
 
 
 Context
@@ -24,9 +24,9 @@ Context
 
   Navigation Path:
 
-    BIG-IP >> Device Overview >> Top N
+    Dashboards >> BIG-IP Device >> Top N
 
-  Time Range: Last 30 Days
+  Time Range: <= 30 Days
 
 
 Tasks
@@ -34,7 +34,7 @@ Tasks
 
   Navigate to:
 
-    BIG-IP >> Device Overview >> Top N
+    Dashboards >> BIG-IP Device >> Top N
 
   From the Device dropdown at the top of the page,
   select a BIG-IP.
@@ -43,64 +43,49 @@ Tasks
 
     Last 30 Days
 
-  Review the following panels:
+  Scroll through the page and review the available panels,
+  including but not limited to:
 
-    Top 10 VIPs By CPU Utilization
-    Top 10 VIPs By WAF CPU Utilization
-    Top 10 VIPs By Bandwidth
-    Top 10 VIPs By SSL TPS Utilization
-    Top 10 Pools By Active Connections
+  - Top 10 VIPs By CPU Utilization
+  - Top 10 Process By CPU
+  - Analysis, Control, Data Plane Utilization
+  - Top 10 VIPs By WAF CPU Utilization
+  - Top 10 Pools By Active Connections
+  - Top 10 VIPs By Bandwidth
+  - Top 10 VIPs By SSL TPS Utilization
+  - Top 10 Virtual Servers By Low Availability [14d]
+  - Top 10 Pools By Low Availability [14d]
 
-  Identify:
+  As you review each panel, consider:
 
-  - The VIP with the highest sustained CPU utilization
-  - The VIP with the highest sustained bandwidth usage
-  - The VIP with the highest SSL TPS utilization
-  - Any pools consistently high in active connections
+  - Which objects appear repeatedly across panels?
+  - Which panels show resource usage versus availability?
+  - Which panels would be useful during an incident?
+  - Which panels would be useful for capacity planning?
 
-  Review system-level resource panels:
-
-    Top 10 Process By CPU
-    Analysis, Control, Data Plane Utilization
-
-  Determine:
-
-  - Whether TMM has been the dominant CPU consumer
-  - Whether control plane utilization appears stable
-  - Whether any sustained spikes are visible
-
-  Review availability panels:
-
-    Top 10 Virtual Servers By Low Availability [14d]
-    Top 10 Pools By Low Availability [14d]
-
-  Determine whether any applications have experienced
-  recurring availability degradation.
+  Try adjusting the Time Range to a shorter window
+  (for example, Last 15 Minutes) and observe how the
+  rankings change.
 
 
 Deliverables
 ~~~~~~~~~~~~
 
-  A 30-day operational summary including:
+  Briefly answer the following:
 
-  - The most resource-intensive VIP (CPU)
-  - The highest bandwidth consumer
-  - The highest SSL TPS consumer
-  - Any pool consistently driving high connection volume
-  - Any availability concerns over the last 14–30 days
-  - Whether overall system utilization appears healthy
-    or trending toward capacity concerns
+  - Which VIP appears most frequently across Top N panels?
+  - Which panel did you find most useful and why?
+  - Did any objects show degraded availability?
+  - What types of operational questions could this dashboard help answer?
 
 
 Hints
 ~~~~~
 
-  - Sustained high CPU is more important than short spikes.
-  - High bandwidth does not always correlate with high CPU.
-  - Compare SSL-heavy VIPs with CPU-heavy VIPs.
-  - Availability trends over 14 days can reveal recurring issues.
-  - Look for consistency across panels — the same VIP
-    appearing repeatedly is significant.
+  - You can deselect entries in graph legends to simplify views.
+  - Compare short time ranges to long time ranges.
+  - Not every “Top” entry indicates a problem — some reflect normal load.
+  - Look for patterns, not just single spikes.
 
 This concludes Ticket 26.
 
