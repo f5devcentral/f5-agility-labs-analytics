@@ -7,13 +7,13 @@ Title: “Why is one web server so slow?”
 Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
-  Operations has reported that the application behind web_app_42
+  Operations has reported that the application behind *web_app_42*
   feels sluggish at times. Initial checks indicate that one of
   the pool members is responding significantly more slowly than
   the others.
 
   You have been asked to investigate the performance of the
-  pool members behind web_app_42 and determine why one server
+  pool members behind *web_app_42* and determine why one server
   appears slower than the rest.
 
 
@@ -35,12 +35,12 @@ Tasks
 
   Use the AI Assistant and enter the following prompt:
 
-    Show pool statistics for web-pool on EastRegion-bigip-01.
+    **Show pool statistics for web-pool on EastRegion-bigip-01.
 
   Compare these results to the TMUI interface on EastRegion-bigip-01
   under:
 
-    Local Traffic >> Pools >> web-pool
+    **Local Traffic >> Pools >> web-pool
 
   Determine whether the AI results match the TMUI data.
   If necessary, refine the prompt.
