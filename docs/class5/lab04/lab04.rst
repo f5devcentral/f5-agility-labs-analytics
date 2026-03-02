@@ -24,13 +24,13 @@ Ticket Description
 Context
 ~~~~~~~
 
-  Location: Home Dashboard
+  **Location:** Home Dashboard
 
-  Section: System Report Cards
+  **Section:** System Report Cards
 
-  Category: Anomaly Detection
+  **Category:** Anomaly Detection
 
-  Metric: Connection Count – Standard Deviation Change (VS)
+  **Metric:** Connection Count – Standard Deviation Change (VS)
 
 
 Tasks
@@ -38,23 +38,23 @@ Tasks
 
   Navigate to:
 
-    Home >> System Report Cards
+    **Home >> System Report Cards
 
   Locate the card:
 
-    Anomaly Detection
+    **Anomaly Detection
 
   Click on:
 
-    Anomaly Detection
+   **Anomaly Detection
 
   Within the expanded panel, locate:
 
-    Connection Count Deviation
+    **Connection Count Deviation
 
   Click:
 
-    View Details
+    **View Details
 
   Scroll down to the Virtual Servers table.
 
@@ -108,8 +108,8 @@ Hints
   - Sort the Virtual Server table by deviation percentage.
   - Focus first on Critical (red) entries, then Warning (yellow).
 
-This concludes Ticket 23.
----
+This concludes Ticket 4.
+
 
 Go to `Ticket 05 - Review Pool Availability Ratio Deviation <../lab05/lab05.html>`_
 

@@ -19,13 +19,13 @@ Context
   Virtual Server Name: web-app-foo
 
   App Servers and Ports:
-
+```
   * 10.1.20.100:80
   * 10.1.20.101:80
   * 10.1.20.102:80
   * 10.1.20.201:80
   * 10.1.20.202:80
-
+```
 Tasks
 ~~~~~
 
@@ -38,7 +38,7 @@ Tasks
   Review the information returned.
 
   Do you see any configuration differences between
-  EastRegion-bigip-01 and WestRegion-bigip-01?
+  *EastRegion-bigip-01* and *WestRegion-bigip-01*?
 
   If differences are identified, validate them by navigating to:
 
@@ -65,8 +65,8 @@ Hints
 
   Pay specific attention to the pool members configured on each device.
 
-This concludes Ticket 20.
----
+This concludes Ticket 7.
+
 
 Go to `Ticket 08 - Identifying HTTP Versions in Use <../lab08/lab08.html>`_
 

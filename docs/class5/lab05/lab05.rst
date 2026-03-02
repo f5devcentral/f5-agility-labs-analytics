@@ -24,13 +24,13 @@ Ticket Description
 Context
 ~~~~~~~
 
-  Location: Home Dashboard
+  **Location:** Home Dashboard
 
-  Section: System Report Cards
+  **Section:** System Report Cards
 
-  Category: Anomaly Detection
+  **Category:** Anomaly Detection
 
-  Metric: Pool Availability Ratio Deviation
+  **Metric:** Pool Availability Ratio Deviation
 
 
 Tasks
@@ -38,25 +38,25 @@ Tasks
 
   Navigate to:
 
-    Home >> System Report Cards
+    **Home >> System Report Cards
 
   Locate the card:
 
-    Anomaly Detection
+    **Anomaly Detection
 
   Click on:
 
-    Anomaly Detection
+    **Anomaly Detection
 
   Within the expanded panel, locate:
 
-    Pool Availability Deviation
+    **Pool Availability Deviation
 
   Click:
 
-    View Details
+    **View Details
 
-  Scroll down to the Pools table.
+  Scroll down to the *Pools* table.
 
   Review each Pool and identify:
 
@@ -71,10 +71,10 @@ Tasks
   - Yellow indicates Warning
   - Green indicates Normal/Good
 
-  Select any Pool from the list.
+  Select any *Pool* from the list.
   The graph above will update based on your selection.
 
-  Review the Pool Availability Ratio Deviation Analysis graph.
+  Review the *Pool Availability Ratio Deviation Analysis* graph.
 
   Observe:
 
@@ -110,8 +110,8 @@ Hints
   - Try expanding the time range to confirm stability over time.
   - Compare Expected vs Actual lines carefully.
 
-This concludes Ticket 24.
----
+This concludes Ticket 5.
+
 
 Go to `Ticket 06 - Identifying Orphaned Objects <../lab06/lab06.html>`_
 

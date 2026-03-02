@@ -22,11 +22,11 @@ Context
 
   Device Name: EastRegion-bigip-01
 
-  Virtual Server: accounts_receivable_https_vs
+  **Virtual Server:** accounts_receivable_https_vs
 
-  Pool: app-3
+  **Pool:** app-3
 
-  Observed Behavior:
+  **Observed Behavior:**
 
   - Traffic that hits any pool member listening on port 8080
     generates an HTTP 403 response.
@@ -40,16 +40,16 @@ Tasks
 ~~~~~
 
   Use the AI Assistant and enter the following prompt:
-
+```
     Show configuration details for the
     accounts_receivable_https_vs virtual server
     on EastRegion-bigip-01, including its default
     pool and any attached profiles or iRules.
-
+```
   From the returned information and the TMUI on EastRegion-bigip-01:
 
   - Confirm that the default pool for
-    accounts_receivable_https_vs is app-3.
+    *accounts_receivable_https_vs* is *app-3.*
   - Identify which port(s) the app-3 pool members are
     listening on (for example, 8080).
   - Check whether any iRules, local traffic policies,
@@ -102,8 +102,8 @@ Hints
     responses is an important troubleshooting skill.
 
 
-This concludes this lab.
----
+This concludes Ticket 09.
+
 
 Go to `Ticket 10 - Investigating a Slow Pool Member <../lab10/lab10.html>`_
 

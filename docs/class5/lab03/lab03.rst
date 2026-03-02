@@ -19,30 +19,30 @@ Ticket Description
 Context
 ~~~~~~~
 
-  Device Name: WestRegion-bigip-01
+  **Device Name:** WestRegion-bigip-01
 
-  Pool Name: web_servers_pool
+  **Pool Name:** web_servers_pool
 
-  Pool Member: 10.1.20.201:80
+  **Pool Member:** 10.1.20.201:80
 
 Tasks
 ~~~~~
 
   Navigate to:
 
-    Dashboards >> BIG-IP Device >> Device Pools
+    **Dashboards >> BIG-IP Device >> Device Pools**
 
   From the Device dropdown, select:
 
-    WestRegion-bigip-01
+    **WestRegion-bigip-01**
 
   From the Pool dropdown, select:
 
-    web_servers_pool
+    **web_servers_pool**
 
   Locate the panel:
 
-    Pool Member State – isAvailable
+    **Pool Member State – isAvailable**
 
   Click the "Expand panel" button on top right of that panel
 
@@ -82,8 +82,7 @@ Hints
   - Look for state transitions from isAvailable to unavailable.
   - Zoom in on the graph if necessary to see shorter outages.
 
-This concludes Ticket 22.
----
+This concludes Ticket 3.
 
 Go to `Ticket 04 - Review Connection Count Standard Deviation <../lab04/lab04.html>`_
 

@@ -85,6 +85,6 @@ Hints
 This concludes Ticket 14.
 
 Thank you for taking our lab!
----
+
 
 Go to `Overview <../overview.html>`_

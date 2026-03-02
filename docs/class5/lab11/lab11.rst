@@ -8,7 +8,7 @@ Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
   Operations has noticed that one application server in
-  /Common/web-pool has significantly more connections and
+  */Common/web-pool* has significantly more connections and
   traffic than the other members. Users are reporting
   intermittent slowness and occasional timeouts when
   accessing the application.
@@ -38,16 +38,15 @@ Context
 Tasks
 ~~~~~
 
-  Traditionally, you would examine connection and request
-  distribution using the BIG-IP GUI or CLI, for example:
-```
-    tmsh show ltm pool /Common/web-pool members
-```
+Traditionally, you would examine connection and request distribution using the BIG-IP GUI or CLI, for example:
+
+    `tmsh show ltm pool /Common/web-pool members
+
   For this lab, use the AI Assistant and enter the following prompt:
-```
-    Show pool statistics for /Common/web-pool on
+
+    `Show pool statistics for /Common/web-pool on
     EastRegion-bigip-01.
-```
+
   Compare these results to the TMUI interface on
   EastRegion-bigip-01 under:
 
@@ -60,7 +59,7 @@ Tasks
     **BIG-IP Device >> Device Virtual Server**
 
   Select the appropriate device and virtual server
-  (/Common/web_app_42).
+  */Common/web_app_42*.
 
   Inspect the assigned profiles and identify:
 
@@ -114,7 +113,7 @@ Hints
 
 
 This concludes Ticket 11.
----
+
 
 Go to `Exercise 12 - CMP Demotion Caused by iRule Globals <../lab12/lab12.html>`_
 

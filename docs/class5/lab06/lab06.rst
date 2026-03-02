@@ -19,7 +19,7 @@ Ticket Description
 Context
 ~~~~~~~
 
-  Device Name: CentralRegion-bigip-01
+  **Device Name:** CentralRegion-bigip-01
 
   These objects are believed not to be referenced by any active
   virtual servers.
@@ -89,8 +89,8 @@ Hints
   - Nodes: clark_kent, harry_potter
 
 
-This concludes Ticket 08.
----
+This concludes Ticket 06.
+
 
 Go to `Ticket 07 - Verify Application Configuration Consistency Across BIG-IPs <../lab07/lab07.html>`_
 
