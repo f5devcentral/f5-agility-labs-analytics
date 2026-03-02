@@ -1,7 +1,9 @@
 
-Introduction - “F5 BIG‑IP Troubleshooting Lab: LTM & ASM/AWAF Tickets”
+Introduction 
 ====================================================
-
+F5 BIG‑IP Troubleshooting Lab: LTM & ASM/AWAF Tickets
+---------------------------------------
+---
 Audience: Intermediate F5 admins familiar with basic VS/pool/WAF concepts.
 ---------------------------------------
 Objectives:
@@ -52,10 +54,8 @@ How to use this lab
         Evidence (screenshot or command output).
 
 
-This concludes Getting Started.  
+This concludes the Introduction.  
 
 ---
 
 Go to `Ticket 1 <../lab1/lab1.html>`_
-
-Go to `Overview <../overview.html>`_
