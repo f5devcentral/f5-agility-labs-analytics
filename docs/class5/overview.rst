@@ -60,6 +60,6 @@ As illustrated above, the lab environment consists of the following:
 
 ---
 
-Go to `Getting Started <./lab00/lab00.html>`_
+Go to `Introduction <./lab00/lab00.html>`_
 
 `Back to Top <top_>`_
