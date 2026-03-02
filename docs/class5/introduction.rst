@@ -3,10 +3,10 @@ Introduction
 ====================================================
 F5 BIG‑IP Troubleshooting Lab: LTM & ASM/AWAF Tickets
 ---------------------------------------
----
+
 Audience: Intermediate F5 admins familiar with basic VS/pool/WAF concepts.
 ---------------------------------------
-Objectives:
+**Objectives:**
 
    Use BIG‑IP tools (GUI, tmsh, logs) to troubleshoot L4–L7 issues.
 
@@ -14,7 +14,7 @@ Objectives:
 
    Interpret WAF events (false positives vs real attacks).
 
-Environment:
+**Environment:**
 
    Diagram: Client ↔ BIG‑IP ↔ Web servers, with WAF on one or more VIPs.
 
@@ -24,23 +24,23 @@ Environment:
 How to use this lab
 ---------------------------------------
 
-    Scenario: You are a Tier‑2 engineer receiving tickets from users or Tier‑1.
+    **Scenario:** You are a Tier‑2 engineer receiving tickets from users or Tier‑1.
 
     Tools expected:
 
-        tmsh, System › Logs › Local Traffic / Application, tcpdump/ssldump, curl from BIG‑IP, browser.
+        * tmsh, System › Logs › Local Traffic / Application, tcpdump/ssldump, curl from BIG‑IP, browser.
 
     Student deliverables per ticket:
 
-        Root cause explanation.
+        * Root cause explanation.
 
-        Exact fix proposed.
+        * Exact fix proposed.
 
-        Evidence (screenshot or command output).
+        * Evidence (screenshot or command output).
 
 
 Please proceed to the first ticket.
 
 ---
 
-Go to `Ticket 1 <../lab01/lab01.html>`_
+Go to `Ticket 1 <./lab01/lab01.html>`_
