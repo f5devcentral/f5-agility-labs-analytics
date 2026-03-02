@@ -19,29 +19,19 @@ Ticket Description
   the types of operational insights it provides.
 
 
-Context
-~~~~~~~
-
-  Navigation Path:
-
-    Dashboards >> BIG-IP Device >> Top N
-
-  Time Range: <= 30 Days
-
-
 Tasks
 ~~~~~
 
   Navigate to:
 
-    Dashboards >> BIG-IP Device >> Top N
+    **Dashboards >> BIG-IP Device >> Top N**
 
   From the Device dropdown at the top of the page,
   select a BIG-IP.
 
   Change the Time Range (upper-right corner) to:
 
-    Last 30 Days
+    **Last 30 Days**
 
   Scroll through the page and review the available panels,
   including but not limited to:
@@ -87,7 +77,7 @@ Hints
   - Not every “Top” entry indicates a problem — some reflect normal load.
   - Look for patterns, not just single spikes.
 
-This concludes Ticket 26.
+This concludes Ticket 1.
 ---
 
 Go to `Ticket 02 - Analyze Traffic Patterns for an Application <../lab02/lab02.html>`_
