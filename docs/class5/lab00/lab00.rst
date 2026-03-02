@@ -54,8 +54,8 @@ How to use this lab
         Evidence (screenshot or command output).
 
 
-This concludes the Introduction.  
+Please proceed to the first ticket.
 
 ---
 
-Go to `Ticket 1 <../lab1/lab1.html>`_
+Go to `Ticket 1 <../lab1/lab01.html>`_
