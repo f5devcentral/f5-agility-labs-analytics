@@ -51,8 +51,6 @@ This lab is intended to provide a hands-on introduction to F5 Insight for ADSP. 
   
  * Troubleshoot application health and propose solutions
 
-.. image:: images/labenviron.png
-
 As illustrated above, the lab environment consists of the following:
    * **F5 BIG-IP(s)** providing L4/L7 ADC Services 
 
