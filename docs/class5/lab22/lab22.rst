@@ -30,7 +30,7 @@ Tasks
 
   Navigate to:
 
-    BIG-IP Device >> Device Pools
+    Dashboards >> BIG-IP Device >> Device Pools
 
   From the Device dropdown, select:
 
@@ -44,16 +44,19 @@ Tasks
 
     Pool Member State – isAvailable
 
+  Click the "Expand panel" button on top right of that panel
+
   Use the Time Range dropdown in the upper-right corner of the dashboard
   to review historical availability data.
 
   Try adjusting the range to broader views such as:
 
+  - Last 24 hours
   - Last 7 Days
   - Last 30 Days
   - Last 90 Days
 
-  Expand the time range until you can clearly identify the most recent outage.
+  Click the "Expand Panel" button in the upper-right corner of the panel to enlarge the view.
 
   Identify:
 

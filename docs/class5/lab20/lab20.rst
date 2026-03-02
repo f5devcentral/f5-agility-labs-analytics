@@ -29,13 +29,28 @@ Context
 Tasks
 ~~~~~
 
-  Use the AI Assistant and enter the prompt:
+  Use the AI Assistant and enter the following prompt:
 
-  "Can you check the virtual servers named 'web-app-foo' and their associated objects across all BIG-IPs to verify that the configuration is the same?"
+    Can you check the virtual servers named 'web-app-foo'
+    and their associated objects across all BIG-IPs
+    to verify that the configuration is the same?
 
-  Review the information returned. Do you see any differences?
+  Review the information returned.
 
-  Identify and explain the configuration differences that could impact application behavior.
+  Do you see any configuration differences between
+  EastRegion-bigip-01 and WestRegion-bigip-01?
+
+  If differences are identified, validate them by navigating to:
+
+    Dashboard >> BIG-IP Device >> Device Virtual Server
+    
+    Dashboard >> BIG-IP Device >> Device Pools
+
+  Compare the configuration of web-app-foo
+  on each device.
+
+  Identify and explain the configuration differences
+  that could impact application behavior.
 
 Deliverables
 ~~~~~~~~~~~~
@@ -43,6 +58,7 @@ Deliverables
   A brief summary describing the issue found:
 
   - A list of discrepancies found for web-app-foo
+  - An explanation of how each discrepancy could impact behavior
 
 Hints
 ~~~~~

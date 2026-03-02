@@ -47,8 +47,7 @@ Tasks
   Identify the busiest client IP address and record:
 
   - Client IP Address
-  - Request Count
-  - Percentage of total WAF events
+  - WAF Events Count
 
   Review the Additional Context section (if shown) and capture:
 
@@ -64,7 +63,7 @@ Tasks
 Deliverables
 ~~~~~~~~~~~~
 
-  A brief summary including:
+  Briefly answer the following:
 
   - Busiest client IP address
   - Request count and percentage of total WAF events
