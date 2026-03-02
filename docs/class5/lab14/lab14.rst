@@ -83,7 +83,6 @@ Hints
     the last 24 hours before interpreting results.
 
 This concludes Ticket 25.
-
 ---
 
 Go to `Ticket TBD - TBD <../lab14/lab14.html>`_

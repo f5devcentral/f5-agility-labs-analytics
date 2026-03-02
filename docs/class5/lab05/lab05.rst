@@ -111,7 +111,6 @@ Hints
   - Compare Expected vs Actual lines carefully.
 
 This concludes Ticket 24.
-
 ---
 
 Go to `Ticket 06 - Identifying Orphaned Objects <../lab06/lab06.html>`_

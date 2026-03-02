@@ -90,7 +90,6 @@ Hints
 
 
 This concludes Ticket 08.
-
 ---
 
 Go to `Ticket 07 - Verify Application Configuration Consistency Across BIG-IPs <../lab07/lab07.html>`_

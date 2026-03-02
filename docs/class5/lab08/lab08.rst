@@ -84,7 +84,6 @@ Hints
 
 
 This concludes Ticket 03.
-
 ---
 
 Go to `Ticket 09 - Investigating Unexpected 4xx Responses <../lab09/lab09.html>`_

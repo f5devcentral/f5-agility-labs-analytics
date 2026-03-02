@@ -114,7 +114,6 @@ Hints
 
 
 This concludes Ticket 10.
-
 ---
 
 Go to `Exercise 12 - CMP Demotion Caused by iRule Globals <../lab12/lab12.html>`_

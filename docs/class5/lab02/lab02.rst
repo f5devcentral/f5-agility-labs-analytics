@@ -81,7 +81,6 @@ Hints
   - Historical time-based views
 
 This concludes Ticket 21.
-
 ---
 
 Go to `Ticket 03 - Determine Last Application Outage <../lab03/lab03.html>`_

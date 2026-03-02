@@ -66,7 +66,6 @@ Hints
   Pay specific attention to the pool members configured on each device.
 
 This concludes Ticket 20.
-
 ---
 
 Go to `Ticket 08 - Identifying HTTP Versions in Use <../lab08/lab08.html>`_

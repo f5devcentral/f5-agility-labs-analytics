@@ -83,7 +83,6 @@ Hints
   - Zoom in on the graph if necessary to see shorter outages.
 
 This concludes Ticket 22.
-
 ---
 
 Go to `Ticket 04 - Review Connection Count Standard Deviation <../lab04/lab04.html>`_

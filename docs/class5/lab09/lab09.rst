@@ -103,7 +103,6 @@ Hints
 
 
 This concludes this lab.
-
 ---
 
 Go to `Ticket 10 - Investigating a Slow Pool Member <../lab10/lab10.html>`_

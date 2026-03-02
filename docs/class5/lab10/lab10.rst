@@ -88,7 +88,6 @@ Hints
 
 
 This concludes Ticket 05.
-
 ---
 
 Go to `Ticket 11 - Uneven Load Balancing Due to OneConnect <../lab11/lab11.html>`_

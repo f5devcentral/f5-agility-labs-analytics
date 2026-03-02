@@ -109,7 +109,6 @@ Hints
   - Focus first on Critical (red) entries, then Warning (yellow).
 
 This concludes Ticket 23.
-
 ---
 
 Go to `Ticket 05 - Review Pool Availability Ratio Deviation <../lab05/lab05.html>`_
