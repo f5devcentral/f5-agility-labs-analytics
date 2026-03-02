@@ -53,14 +53,13 @@ Deliverables
 
   - Screenshot of the specific WAF request log entry
     (showing attack signature, severity, and blocking status).
-  - Prepare a short explanation suitable for a non-F5
-  security audience describing what occurred.
+  - Prepare a short explanation suitable for a non-F5 security audience describing what occurred.
 
 
 Hints
 ~~~~~
 
-  - Filter events by URL /upload.action and your test client IP.
+  - Filter events by URL ``/upload.action`` and your test client IP.
   - Review the “Attack Type” field in the event details.
   - Confirm that the policy pol_java_asm has relevant
     Java/Struts signatures enabled.

@@ -35,12 +35,12 @@ Tasks
 
   Use the AI Assistant and enter the following prompt:
 
-    **Show pool statistics for web-pool on EastRegion-bigip-01.
+    `Show pool statistics for web-pool on EastRegion-bigip-01.
 
   Compare these results to the TMUI interface on EastRegion-bigip-01
   under:
 
-    **Local Traffic >> Pools >> web-pool
+    **Local Traffic >> Pools >> web-pool**
 
   Determine whether the AI results match the TMUI data.
   If necessary, refine the prompt.

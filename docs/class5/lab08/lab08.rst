@@ -35,11 +35,11 @@ Tasks
 
   Use the AI Assistant and enter the following prompt:
 
-    Show configuration details for the *Backup_app*
-    virtual server on *CentralRegion-bigip-01*,
-    including attached profiles.
+  `Show configuration details for the *Backup_app*
+  virtual server on *CentralRegion-bigip-01*,
+  including attached profiles.
 
-  From the returned information and the TMUI on CentralRegion-bigip-01:
+  From the returned information and the TMUI on **CentralRegion-bigip-01:**
 
   - Identify which HTTP profile is attached to the Backup_app
     virtual server (if any).
@@ -50,7 +50,7 @@ Tasks
   for Backup_app and its pool app-1 that indicate HTTP protocol behavior
   (for example, headers, connection reuse, or profile details).
 
-  Summarize whether Backup_app is effectively using HTTP/1.0 or a newer
+  Summarize whether *Backup_app* is effectively using HTTP/1.0 or a newer
   version on the client side, and whether server-side connections to the
   app-1 pool members behave differently.
 
