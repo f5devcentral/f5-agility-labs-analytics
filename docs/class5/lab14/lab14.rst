@@ -22,11 +22,11 @@ Ticket Description
 Context
 ~~~~~~~
 
-  Device Name: CentralRegion-bigip-01
+  **Device Name:** CentralRegion-bigip-01
 
-  Data Type: WAF Events
+  **Data Type:** WAF Events
 
-  Time Range: Last 24 Hours
+  **Time Range:** Last 24 Hours
 
 
 Tasks
@@ -37,9 +37,9 @@ Tasks
     AI Assistant
 
   Use the following prompt:
-
+```
     Can you tell me what the busiest client ip address is on CentralRegion-bigip-01 related to WAF events?
-
+```
   Review the AI Assistant response and locate the table:
 
     Busiest Client IP Address on CentralRegion-bigip-01
@@ -82,7 +82,9 @@ Hints
   - If the platform supports it, validate the time window is set to
     the last 24 hours before interpreting results.
 
-This concludes Ticket 25.
+This concludes Ticket 14.
+
+Thank you for taking our lab!
 ---
 
 Go to `Overview <../overview.html>`_

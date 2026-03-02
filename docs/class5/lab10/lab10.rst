@@ -20,13 +20,13 @@ Ticket Description
 Context
 ~~~~~~~
 
-  Device Name: EastRegion-bigip-01
+  **Device Name:** EastRegion-bigip-01
 
-  Virtual Server: web_app_42
+  **Virtual Server:** web_app_42
 
-  Pool: web-pool (attached to web_app_42)
+  **Pool:** web-pool (attached to web_app_42)
 
-  Symptom: One pool member shows higher response times and/or
+  **Symptom:** One pool member shows higher response times and/or
   fewer completed requests compared to the others.
 
 
@@ -87,7 +87,7 @@ Hints
   - Identifying an outlier is often the first step in troubleshooting.
 
 
-This concludes Ticket 05.
+This concludes Ticket 10.
 ---
 
 Go to `Ticket 11 - Uneven Load Balancing Due to OneConnect <../lab11/lab11.html>`_

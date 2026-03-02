@@ -17,11 +17,11 @@ Ticket Description
 Context
 ~~~~~~~
 
-  VIP: /Common/sslo.demo.f5
+  **VIP:** /Common/sslo.demo.f5
 
-  Policy: /Common/pol_java_asm (Java/Struts signatures enabled)
+  **Policy:** /Common/pol_java_asm (Java/Struts signatures enabled)
 
-  Application URL: /upload.action
+  **Application URL:** /upload.action
 
 
 Tasks
@@ -47,17 +47,14 @@ Tasks
   - The severity
   - Whether the request was blocked
 
-  Prepare a short explanation suitable for a non-F5
-  security audience describing what occurred.
-
-
+  
 Deliverables
 ~~~~~~~~~~~~
 
   - Screenshot of the specific WAF request log entry
     (showing attack signature, severity, and blocking status).
-  - Short explanation of what type of attack was detected
-    and how the WAF mitigated it.
+  - Prepare a short explanation suitable for a non-F5
+  security audience describing what occurred.
 
 
 Hints
@@ -69,7 +66,7 @@ Hints
     Java/Struts signatures enabled.
 
 
-This concludes Ticket 04.
+This concludes Ticket 13.
 ---
 
 Go to `Ticket 14 - Identify Busiest Client IP from WAF Events <../lab14/lab14.html>`_

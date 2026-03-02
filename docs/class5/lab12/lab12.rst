@@ -19,11 +19,11 @@ Ticket Description
 Context
 ~~~~~~~
 
-  Device Name: WestRegion-bigip-01
+  **Device Name:** WestRegion-bigip-01
 
-  Virtual Server: web-app-https
+  **Virtual Server:** web-app-https
 
-  Observation: CMP is demoted for this virtual server, so traffic
+  **Observation:** CMP is demoted for this virtual server, so traffic
   is processed by a single TMM/CPU rather than being distributed
   across available TMM instances.
 
@@ -36,11 +36,11 @@ Tasks
 ~~~~~
 
   Use the AI Assistant and enter the following prompt:
-
+```
     Show full configuration details for the web-app-https
     virtual server on WestRegion-bigip-01, including
     assigned iRules and CMP state.
-
+```
   From the returned information and the TMUI on WestRegion-bigip-01:
 
   - Verify the CMP state for the web-app-https virtual server.
@@ -94,7 +94,7 @@ Hints
     removing the CMP-unsafe iRule.
 
 
-This concludes Ticket 06.
+This concludes Ticket 12.
 ---
 
 Go to `Ticket 13 - WAF Blocking a Known Apache Struts-Like Probe <../lab13/lab13.html>`_
