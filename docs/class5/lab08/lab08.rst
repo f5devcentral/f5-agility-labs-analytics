@@ -20,13 +20,13 @@ Ticket Description
 Context
 ~~~~~~~
 
-  Device Name: CentralRegion-bigip-01
+  **Device Name:** CentralRegion-bigip-01
 
-  Virtual Server: Backup_app
+  **Virtual Server:** Backup_app
 
-  Pool: app-1
+  **Pool:** app-1
 
-  Expectation: Most of the lab environment is using HTTP/1.0,
+  **Expectation:** Most of the lab environment is using HTTP/1.0,
   but this needs to be verified rather than assumed.
 
 
@@ -35,8 +35,8 @@ Tasks
 
   Use the AI Assistant and enter the following prompt:
 
-    Show configuration details for the Backup_app
-    virtual server on CentralRegion-bigip-01,
+    Show configuration details for the *Backup_app*
+    virtual server on *CentralRegion-bigip-01*,
     including attached profiles.
 
   From the returned information and the TMUI on CentralRegion-bigip-01:
@@ -83,8 +83,8 @@ Hints
   behavior is coming from.
 
 
-This concludes Ticket 03.
----
+This concludes Ticket 08.
+
 
 Go to `Ticket 09 - Investigating Unexpected 4xx Responses <../lab09/lab09.html>`_
 

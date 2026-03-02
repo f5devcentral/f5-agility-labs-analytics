@@ -78,7 +78,7 @@ Hints
   - Look for patterns, not just single spikes.
 
 This concludes Ticket 1.
----
+
 
 Go to `Ticket 02 - Analyze Traffic Patterns for an Application <../lab02/lab02.html>`_
 

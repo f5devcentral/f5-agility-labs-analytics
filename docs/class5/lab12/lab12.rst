@@ -95,7 +95,7 @@ Hints
 
 
 This concludes Ticket 12.
----
+
 
 Go to `Ticket 13 - WAF Blocking a Known Apache Struts-Like Probe <../lab13/lab13.html>`_
 

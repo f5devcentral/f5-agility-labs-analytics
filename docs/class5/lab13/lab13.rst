@@ -67,7 +67,7 @@ Hints
 
 
 This concludes Ticket 13.
----
+
 
 Go to `Ticket 14 - Identify Busiest Client IP from WAF Events <../lab14/lab14.html>`_
 
