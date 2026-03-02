@@ -14,7 +14,7 @@ F5 Insight offers customizable visualizations and dashboards to help you surface
  - Set a foundation for the utilization of open-source tools and their benefits.
 
 
-Expected time to complete: **200 Hour** 
+Expected time to complete: **2 Hours** 
 
 .. toctree::
    :maxdepth: 1

@@ -1,4 +1,4 @@
-Ticket 21 – Analyze Traffic Patterns for an Application
+Ticket 02 – Analyze Traffic Patterns for an Application
 ========================================================
 
 Title: “When is our application experiencing peak traffic?”
@@ -15,34 +15,44 @@ Ticket Description
 Context
 ~~~~~~~
 
-  Device Name: CentralRegion-bigip-01
+  **Device Name:** CentralRegion-bigip-01
 
-  Virtual Server Name: primary-app-site-1-https-vip
+  **Virtual Server Name:** primary-app-site-1-https-vip
 
-  Protocol: HTTPS (TCP 443)
+  **Protocol: HTTPS (TCP 443)**
 
 Tasks
 ~~~~~
 
-  Determine what times of day and days of the week show the most
-  traffic for the virtual server primary-app-site-1-https-vip
-  on CentralRegion-bigip-01.
+  Determine which times of day and which days of the week
+  show the highest traffic for the virtual server
+  primary-app-site-1-https-vip on CentralRegion-bigip-01.1.
 
   Navigate to:
 
-  BIG-IP Fleet >> Virtual Servers >> 
+    **Dashboards >> BIG-IP Fleet >> Virtual Servers**
 
-  From the virtual server dropdown, select:
+  From "Data Center" leave the default value as:
+    
+    **default**
+  
+  From "Devices" leave the default value as:
+  
+    **bigip/CentralRegion-bigip-01**
 
-    primary-app-site-1-https-vip
+  From the "Virtual Server" dropdown, verify only below is selected:
+
+    **primary-app-site-1-https-vip**
+
+  Click the *"Apply Filters"* button.
 
   Review the following panels:
 
   - VS Data Rate
   - VS Connection Rate
 
-  Analyze connection and throughput patterns over time
-  to determine peak usage periods.
+  Use the Time Range dropdown in the upper-right corner
+  to expand the view to at least the Last 7 Days.
 
   After reviewing the data, answer the following:
 
@@ -70,10 +80,8 @@ Hints
   - Connection counts
   - Historical time-based views
 
-This concludes Ticket 21.
+This concludes Ticket 2.
 
----
-
-Go to `Ticket 22 - TBD22 <../lab22/lab22.html>`_
+Go to `Ticket 03 - Determine Last Application Outage <../lab03/lab03.html>`_
 
 Go to `Overview <../overview.html>`_

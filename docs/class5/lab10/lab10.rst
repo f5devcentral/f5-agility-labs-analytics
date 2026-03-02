@@ -1,95 +1,95 @@
-Ticket 2 – Uneven load balancing due to OneConnect
-==================================================
+Ticket 10 – Investigating a Slow Pool Member
+============================================
 
-Title: “One pool member is overloaded”
---------------------------------------
+Title: “Why is one web server so slow?”
+---------------------------------------
 
-## Ticket description
+Ticket Description
+~~~~~~~~~~~~~~~~~~
 
-    Operations has noticed that one application server in the pool
-    ``/Common/web-pool`` has far more connections and traffic than the other
-    members. Users are reporting intermittent slowness and occasional timeouts
-    when accessing the application.
+  Operations has reported that the application behind *web_app_42*
+  feels sluggish at times. Initial checks indicate that one of
+  the pool members is responding significantly more slowly than
+  the others.
 
-## Context
+  You have been asked to investigate the performance of the
+  pool members behind *web_app_42* and determine why one server
+  appears slower than the rest.
 
-    Device Name: East
 
-    Virtual server: /Common/web_app_42
+Context
+~~~~~~~
 
-    Service: HTTPS (port 443)
+  **Device Name:** EastRegion-bigip-01
 
-    SNAT: Automap
+  **Virtual Server:** web_app_42
 
-    OneConnect profile: /Common/max_reuse_1500 with a wide source mask
-    and high maximum reuse
+  **Pool:** web-pool (attached to web_app_42)
 
-    Pool: /Common/web-pool with multiple application servers
+  **Symptom:** One pool member shows higher response times and/or
+  fewer completed requests compared to the others.
 
-## Tasks
 
-    Traditionally we would examine current connection and request distribution
-    for the pool members using the BIG-IP GUI and the CLI (for example,
-    ``tmsh show ltm pool /Common/web-pool members``).
+Tasks
+~~~~~
 
-    For this lab please use the AI Assistant and enter the prompt:
-    "Show pool statistics for app-1 pool on the CentralRegion-bigip-01"
+  Use the AI Assistant and enter the following prompt:
 
-    Compare these results to the TMUI interface on the CentralRegion-bigip-01
-    under Local Traffic > Pools > app-1. Do they match? Does the AI need
-    to be prompted again?
+    `Show pool statistics for web-pool on EastRegion-bigip-01.
 
-    In Insight go to Device Virtual Server under BIG-IP Device and from the
-    top select the device name and virtual server.
+  Compare these results to the TMUI interface on EastRegion-bigip-01
+  under:
 
-    Inspect the profiles assigned to /Common/web_app_42 and identify:
+    **Local Traffic >> Pools >> web-pool**
 
-    - Which OneConnect profile is in use.
-    - The source mask and maximum reuse settings on that OneConnect profile.
-    - The SNAT configuration (Automap vs SNAT pool).
+  Determine whether the AI results match the TMUI data.
+  If necessary, refine the prompt.
 
-    Explain why the combination of SNAT Automap and a OneConnect source mask
-    of 0.0.0.0 (or an equivalent wide mask) with a high reuse value can
-    result in very uneven load distribution across pool members.
+  Identify which specific pool member appears slower based on
+  available metrics (for example, current connections, total
+  requests, or response-time-related statistics exposed in Insight).
 
-    Implement a configuration change to improve load distribution. Possible
-    approaches include, but are not limited to:
+  In Insight, review additional metrics for the slower member,
+  such as:
 
-    - Adjusting the OneConnect source mask to a more specific value.
-    - Using a SNAT pool with multiple addresses instead of Automap.
-    - Tuning maximum reuse if appropriate for the application.
+  - Error rates or HTTP status codes
+  - Connection counts or resets
+  - Health monitor status and history
 
-    After making the change, verify that traffic is distributed more evenly:
+  Based on the data observed, form a hypothesis for why this
+  pool member is slower. Consider possibilities such as:
 
-    - Reset statistics as needed.
-    - Generate test traffic.
-    - Re-run ``tmsh show ltm pool /Common/web-pool members`` (or equivalent)
-      to confirm improved balance.
+  - Resource constraints on the server (CPU, memory)
+  - Application-level issues (slow responses for certain URLs)
+  - Network-related issues (packet loss, retransmissions)
 
-## Deliverables
+  Document the additional checks you would perform (or request
+  from the server team) on the backend server to validate your hypothesis.
 
-    Pre-change evidence of skewed member usage (for example, a screenshot
-    or CLI output showing connection and request counts per member).
 
-    Post-change evidence of more even load distribution.
+Deliverables
+~~~~~~~~~~~~
 
-    A brief written explanation (2–3 sentences) describing:
+  A brief summary describing:
 
-    - The root cause of the uneven distribution.
-    - How the chosen configuration change addressed the issue.
+  - Which pool member in web-pool is slower and how you determined this
+  - The key statistics or metrics that led to your conclusion
+  - Your working hypothesis for the root cause
+  - What you would investigate next on the backend server or application
 
-## Hints
 
-    Consider what the application servers see as the client IP address when
-    SNAT Automap is enabled.
+Hints
+~~~~~
 
-    Review how the OneConnect source mask groups connections for reuse.
+  - Compare connections and request counts across pool members.
+  - Health monitor status may remain green even if an application
+    is responding slowly.
+  - Identifying an outlier is often the first step in troubleshooting.
 
-    Remember that with a wide mask and SNAT Automap, many clients can appear
-    as a single source from the servers' perspective, leading to heavy reuse
-    of a small number of server-side connections.
-----
 
-Go to `Exercise 11 - TBD <../lab11/lab11.html>`_
+This concludes Ticket 10.
+
+
+Go to `Ticket 11 - Uneven Load Balancing Due to OneConnect <../lab11/lab11.html>`_
 
 Go to `Overview <../overview.html>`_
