@@ -42,7 +42,7 @@ components:
 
 
 Overview
-=========
+--------------
 
 This lab is intended to provide a hands-on introduction to F5 Insight for ADSP.  During this lab, attendees will utilize a `UDF <https://udf.f5.com>`_ blueprint deploy the lab infrastructure shown below to:
  * Discover how applications are operating
