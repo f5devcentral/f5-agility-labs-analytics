@@ -1,33 +1,65 @@
 .. _top:
 
+Getting Started
+===============
+
+Please follow the instructions provided by the instructor to start your
+lab and access your jump host.
+
+.. NOTE::
+	 All work for this lab will be performed exclusively from your web browser. No installation or interaction with your local system is
+	 required.
+
+Lab Topology
+------------
+
+The following components have been included in your lab environment:
+
+- 4 x F5 BIG-IP VE (v17.5 and v21.0)
+- 1 x F5 Insight
+- 1 x Ubuntu Noble - NGINX web services and Traffic Generation
+
+Lab Components
+--------------
+
+The following table lists VLANS, IP Addresses and Credentials for all
+components:
+
+.. list-table::
+    :widths: 20 40 40
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - **Component**
+      - **VLAN/IP Address(es)**
+      - **Credentials**
+    * - Sample Host
+      - - **Management:** 10.1.1.9
+        - **FrontEnd:** 10.1.10.0/24
+        - **BackEnd:** 10.1.20.0/24
+      - ``admin``/``AgilityIsFun123!``
+
+
+
 Overview
 =========
 
-This self-guided lab is intended to provide a hands-on introduction to Open Telemetry (OTel) concepts and their implementation.  During this lab, attendees will utilize a `UDF <https://udf.f5.com>`_ blueprint deploy the lab infrastructure shown below to:
- * Gain insight into how applications are instrumented utilizing the Open Telemetry sdk
+This lab is intended to provide a hands-on introduction to F5 Insight for ADSP.  During this lab, attendees will utilize a `UDF <https://udf.f5.com>`_ blueprint deploy the lab infrastructure shown below to:
+ * Discover how applications are operating
 
- * Configure telemetry streaming of metrics from F5 BIG-IP utilizing the OTel collector gateway 
+ * Discover how to improve application health
 
 .. image:: images/labenviron.png
 
 As illustrated above, the lab environment consists of the following:
-   * **F5 BIG-IP(s)** providing L4/L7 ADC Services and utilizing **F5 Telemetry Streaming** (TS) to stream telemetry data to an OTel collector gateway
+   * **F5 BIG-IP(s)** providing L4/L7 ADC Services 
 
-   * **NGINX Plus** providing L4/L7 ADC Services and utilizing Open Telemetry to stream telemetry data to an OTel collector gateway
+   * **NGINX Plus** providing web services
 
-   * **Sample Application** consisting of a simple python frontend application and a Redis backend database
+   * **Traffic Generator** configured to generate application traffic simulating users
 
-   * **Open Telemetry Collector** configured to receive and proxy telemetry from both the BIG-IP and sample applications to the observability platforms
-
-   * **Jaeger** providing visibility for application tracing
-
-   * **Prometheus** providing visibility for BIG-IP metrics
 ---
 
-Go to `Exercise 1 - App instrumentation walk-through and troubleshooting <./lab1/lab1.html>`_
-
-Go to `Exercise 2 - Exporting NGINX Plus spans and metrics using Open Telemetry <./lab2/lab2.html>`_
-
-Go to `Exercise 3 - Exporting BIG-IP metrics using the OTel consumer <./lab3/lab3.html>`_
+Go to `Getting Started <./lab00/lab00.html>`_
 
 `Back to Top <top_>`_

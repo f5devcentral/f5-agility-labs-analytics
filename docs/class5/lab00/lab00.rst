@@ -1,5 +1,5 @@
 
-App instrumentation walk-through and troubleshooting
+Getting Started
 ====================================================
 
 Deploy blueprint and connect to jumpbox
