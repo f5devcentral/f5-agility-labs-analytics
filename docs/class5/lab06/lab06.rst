@@ -30,15 +30,13 @@ Tasks
 
   Use the AI Assistant and enter the following prompt:
 
-    Show all pools and nodes on CentralRegion-bigip-01,
+    `Show all pools and nodes on CentralRegion-bigip-01,
     and indicate which ones are not referenced by any
     virtual server.
 
   From the returned information and the TMUI on CentralRegion-bigip-01:
 
-  - Navigate to:
-
-      Local Traffic >> Pools >> Pool List
+  - Navigate to: **Local Traffic >> Pools >> Pool List**
 
     Confirm whether bruce_wayne and oliver_twist
     appear in the configuration.
@@ -46,9 +44,7 @@ Tasks
   - Verify whether either pool is assigned as a default pool
     (or referenced in a policy) on any virtual server.
 
-  Next, navigate to:
-
-      Local Traffic >> Nodes >> Node List
+  Next, navigate to: **Local Traffic >> Nodes >> Node List**
 
   - Confirm whether clark_kent and harry_potter
     appear in the node list.

@@ -36,25 +36,15 @@ Context
 Tasks
 ~~~~~
 
-  Navigate to:
+  Navigate to: **Home >> System Report Cards**
 
-    **Home >> System Report Cards
+  Locate the card: **Anomaly Detection**
 
-  Locate the card:
+  Click on: **Anomaly Detection**
 
-    **Anomaly Detection
+  Within the expanded panel, locate: **Pool Availability Deviation**
 
-  Click on:
-
-    **Anomaly Detection
-
-  Within the expanded panel, locate:
-
-    **Pool Availability Deviation
-
-  Click:
-
-    **View Details
+  Click: **View Details**
 
   Scroll down to the *Pools* table.
 

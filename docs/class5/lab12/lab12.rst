@@ -36,11 +36,11 @@ Tasks
 ~~~~~
 
   Use the AI Assistant and enter the following prompt:
-```
-    Show full configuration details for the web-app-https
+
+    `Show full configuration details for the web-app-https
     virtual server on WestRegion-bigip-01, including
     assigned iRules and CMP state.
-```
+
   From the returned information and the TMUI on WestRegion-bigip-01:
 
   - Verify the CMP state for the web-app-https virtual server.
@@ -74,24 +74,24 @@ Tasks
 Deliverables
 ~~~~~~~~~~~~
 
-  A brief summary describing:
+A brief summary describing:
 
-  - The CMP state of web-app-https and how you verified it
-  - Which iRule (and which specific lines) are responsible
-    for CMP demotion
-  - How you would rewrite the iRule to be CMP-compatible
-    while preserving its intended behavior
+- The CMP state of web-app-https and how you verified it
+- Which iRule (and which specific lines) are responsible
+  for CMP demotion
+- How you would rewrite the iRule to be CMP-compatible
+  while preserving its intended behavior
 
 
 Hints
 ~~~~~
 
-  - Even a single ``::variable`` usage is enough to demote CMP.
-  - Attaching both CMP-safe and CMP-unsafe iRules to the same
-    virtual server does not “average out” — the CMP-unsafe behavior
-    still causes demotion.
-  - Compare CMP mode and TMM distribution before and after
-    removing the CMP-unsafe iRule.
+- Even a single ``::variable`` usage is enough to demote CMP.
+- Attaching both CMP-safe and CMP-unsafe iRules to the same
+  virtual server does not “average out” — the CMP-unsafe behavior
+  still causes demotion.
+- Compare CMP mode and TMM distribution before and after
+  removing the CMP-unsafe iRule.
 
 
 This concludes Ticket 12.

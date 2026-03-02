@@ -40,12 +40,12 @@ Tasks
 ~~~~~
 
   Use the AI Assistant and enter the following prompt:
-```
-    Show configuration details for the
-    accounts_receivable_https_vs virtual server
-    on EastRegion-bigip-01, including its default
-    pool and any attached profiles or iRules.
-```
+
+  `Show configuration details for the
+  accounts_receivable_https_vs virtual server
+  on EastRegion-bigip-01, including its default
+  pool and any attached profiles or iRules.
+
   From the returned information and the TMUI on EastRegion-bigip-01:
 
   - Confirm that the default pool for
@@ -62,11 +62,7 @@ Tasks
 
   - The distribution of 4xx status codes
     (400, 401, 403, 404).
-  - Whether certain paths (for example, /401, /403,
-/404, /400) are consistently associated with specific
-    4xx responses.
-  - Whether requests to pool members on port 8080
-    are returning 403 by design.
+  - Whether certain paths (for example, /401, /403, /404, /400) are consistently associated with specific 4xx responses.
 
   Based on this information, determine:
 
@@ -79,27 +75,27 @@ Tasks
 Deliverables
 ~~~~~~~~~~~~
 
-  A brief summary describing:
+A brief summary describing:
 
-  - How the accounts_receivable_https_vs virtual server
-    and app-3 pool are configured to return 4xx responses
-  - Which 4xx codes and paths are intentionally generated
-    (for example, /401 → 401, /403 → 403, /404 → 404,
+- How the accounts_receivable_https_vs virtual server
+  and app-3 pool are configured to return 4xx responses
+- Which 4xx codes and paths are intentionally generated
+  (for example, /401 → 401, /403 → 403, /404 → 404,
 /400 → 400, and 403 for port 8080)
-  - Your conclusion on whether the observed 4xx errors
-    are expected (lab-driven) or indicative of a misconfiguration
+- Your conclusion on whether the observed 4xx errors
+  are expected (lab-driven) or indicative of a misconfiguration
 
 
 Hints
 ~~~~~
 
-  - Review how the backend application on port 8080
-    is configured to respond to different paths.
-  - If a traffic script rotates through /401, /403,
+- Review how the backend application on port 8080
+  is configured to respond to different paths.
+- If a traffic script rotates through /401, /403,
 /404, and /400, seeing those 4xx codes in logs is
-    likely expected behavior.
-  - Distinguishing between expected and unexpected 4xx
-    responses is an important troubleshooting skill.
+  likely expected behavior.
+- Distinguishing between expected and unexpected 4xx
+  responses is an important troubleshooting skill.
 
 
 This concludes Ticket 09.

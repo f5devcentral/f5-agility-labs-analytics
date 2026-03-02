@@ -1,8 +1,10 @@
 Ticket 14 – Identify Busiest Client IP from WAF Events
 ======================================================
 
+
 Title: “What is the busiest client IP address on CentralRegion-bigip-01 related to WAF events?”
 -----------------------------------------------------------------------------------------------
+
 
 Ticket Description
 ~~~~~~~~~~~~~~~~~~
@@ -34,15 +36,15 @@ Tasks
 
   Navigate to:
 
-    AI Assistant
+  **AI Assistant
 
   Use the following prompt:
-```
-    Can you tell me what the busiest client ip address is on CentralRegion-bigip-01 related to WAF events?
-```
+
+    `Can you tell me what the busiest client ip address is on CentralRegion-bigip-01 related to WAF events?
+
   Review the AI Assistant response and locate the table:
 
-    Busiest Client IP Address on CentralRegion-bigip-01
+    Busiest Client IP Address on **CentralRegion-bigip-01
 
   Identify the busiest client IP address and record:
 
@@ -63,24 +65,24 @@ Tasks
 Deliverables
 ~~~~~~~~~~~~
 
-  Briefly answer the following:
+Briefly answer the following:
 
-  - Busiest client IP address
-  - Request count and percentage of total WAF events
-  - Total WAF events in the last 24 hours
-  - Any violation types observed
-  - Any attack type observed (if present)
-  - Any additional observations from the AI response
+- Busiest client IP address
+- Request count and percentage of total WAF events
+- Total WAF events in the last 24 hours
+- Any violation types observed
+- Any attack type observed (if present)
+- Any additional observations from the AI response
 
 
 Hints
 ~~~~~
 
-  - If the response looks incomplete, verify your prompt matches
-    the ticket exactly and try again.
-  - If the AI returns multiple IPs, focus on the highest request count.
-  - If the platform supports it, validate the time window is set to
-    the last 24 hours before interpreting results.
+- If the response looks incomplete, verify your prompt matches
+  the ticket exactly and try again.
+- If the AI returns multiple IPs, focus on the highest request count.
+- If the platform supports it, validate the time window is set to
+  the last 24 hours before interpreting results.
 
 This concludes Ticket 14.
 
