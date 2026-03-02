@@ -33,11 +33,11 @@ components:
     * - **Component**
       - **VLAN/IP Address(es)**
       - **Credentials**
-    * - Sample Host
-      - - **Management:** 10.1.1.9
+    * - F5 Insight
+      - - **Management:** 10.1.1.4
         - **FrontEnd:** 10.1.10.0/24
         - **BackEnd:** 10.1.20.0/24
-      - ``admin``/``AgilityIsFun123!``
+      - ``admin``/``HelloUDF``
 
 
 
@@ -48,6 +48,8 @@ This lab is intended to provide a hands-on introduction to F5 Insight for ADSP. 
  * Discover how applications are operating
 
  * Discover how to improve application health
+  
+ * Troubleshoot application health and propose solutions
 
 .. image:: images/labenviron.png
 
