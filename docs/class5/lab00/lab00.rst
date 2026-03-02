@@ -58,4 +58,4 @@ This concludes the Introduction.
 
 ---
 
-Go to `Ticket 1 <../lab1/lab1.html>`_
+Go to `Ticket 1 <../lab1/lab01.html>`_
