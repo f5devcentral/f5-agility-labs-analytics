@@ -85,6 +85,4 @@ Hints
 This concludes Ticket 25.
 ---
 
-Go to `Ticket TBD - TBD <../lab14/lab14.html>`_
-
 Go to `Overview <../overview.html>`_
