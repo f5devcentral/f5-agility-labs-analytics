@@ -32,6 +32,10 @@ Navigate to:
 
   **Dashboards >> BIG-IP Fleet >> Virtual Servers**
 
+.. image:: ./images/image4.png
+    :width: 500px
+    :alt: Fleet Dashboard navigation
+
 From "Data Center" leave the default value as:
   
   **default**

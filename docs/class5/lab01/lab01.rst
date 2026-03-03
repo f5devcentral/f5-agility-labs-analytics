@@ -26,6 +26,10 @@ Navigate to:
 
   **Dashboards >> BIG-IP Device >> Top N**
 
+.. image:: ./images/image3.png
+    :width: 500px
+    :alt: Top N Dashboard navigation
+
 From the Device dropdown at the top of the page,
 select a BIG-IP.  You may choose any BIG-IP for this exercise.
 
