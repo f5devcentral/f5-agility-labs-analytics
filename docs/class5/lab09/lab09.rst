@@ -20,7 +20,7 @@ is expected for the lab scenario.
 Context
 ~~~~~~~
 
-Device Name: EastRegion-bigip-01
+**Device Name:** EastRegion-bigip-01
 
 **Virtual Server:** accounts_receivable_https_vs
 
@@ -28,12 +28,12 @@ Device Name: EastRegion-bigip-01
 
 **Observed Behavior:**
 
-- Traffic that hits any pool member listening on port 8080
-  generates an HTTP 403 response.
-- Traffic that hits the paths /401, /403, /404, or /400
-  returns the corresponding 4xx status code.
-- A traffic script rotates through those paths to generate
-  a variety of 4xx responses.
+  - Traffic that hits any pool member listening on port 8080
+    generates an HTTP 403 response.
+  - Traffic that hits the paths /401, /403, /404, or /400
+    returns the corresponding 4xx status code.
+  - A traffic script rotates through those paths to generate
+    a variety of 4xx responses.
 
 
 Tasks
@@ -41,10 +41,7 @@ Tasks
 
 Use the AI Assistant and enter the following prompt:
 
-`Show configuration details for the
-accounts_receivable_https_vs virtual server
-on EastRegion-bigip-01, including its default
-pool and any attached profiles or iRules.
+  ``Show configuration details for the accounts_receivable_https_vs virtual server on EastRegion-bigip-01, including its default pool and any attached profiles or iRules.``
 
 From the returned information and the TMUI on EastRegion-bigip-01:
 
@@ -60,15 +57,15 @@ In Insight, review available HTTP metrics or logs
 associated with accounts_receivable_https_vs and app-3
 that show:
 
-- The distribution of 4xx status codes.
-- Whether certain paths are consistently associated with specific 4xx responses.
+  - The distribution of 4xx status codes.
+  - Whether certain paths are consistently associated with specific 4xx responses.
 
 Based on this information, determine:
 
-- Which 4xx responses are expected behavior due to
-  the backend configuration and rotating traffic script.
-- Whether any 4xx responses indicate a real issue,
-  or are intentionally generated for this lab exercise.
+  - Which 4xx responses are expected behavior due to
+    the backend configuration and rotating traffic script.
+  - Whether any 4xx responses indicate a real issue,
+    or are intentionally generated for this lab exercise.
 
 
 Deliverables
@@ -76,23 +73,17 @@ Deliverables
 
 A brief summary describing:
 
-- How the accounts_receivable_https_vs virtual server
-  and app-3 pool are configured to return 4xx responses
-- Which 4xx codes and paths are intentionally generated
-  (for example, /401 → 401, /403 → 403, /404 → 404,
-/400 → 400, and 403 for port 8080)
-- Your conclusion on whether the observed 4xx errors
-  are expected (lab-driven) or indicative of a misconfiguration
+  - How the accounts_receivable_https_vs virtual server and app-3 pool are configured to return 4xx responses
+  - Which 4xx codes and paths are intentionally generated (for example, /401 → 401, /403 → 403, /404 → 404, /400 → 400, and 403 for port 8080) 
+  - Your conclusion on whether the observed 4xx errors are expected (lab-driven) or indicative of a misconfiguration
 
 
 Hints
 ~~~~~
 
-- Review how the backend application on port 8080
-  is configured to respond to different paths.
+- Review how the backend application on port 8080 is configured to respond to different paths.
 - If a traffic script rotates through /401, /403, /404, and /400, seeing those 4xx codes in logs is likely expected behavior.
-- Distinguishing between expected and unexpected 4xx
-  responses is an important troubleshooting skill.
+- Distinguishing between expected and unexpected 4xx responses is an important troubleshooting skill.
 
 
 This concludes Ticket 09.

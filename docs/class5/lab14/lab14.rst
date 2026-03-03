@@ -48,15 +48,15 @@ Review the AI Assistant response and locate the table:
 
 Identify the busiest client IP address and record:
 
-- Client IP Address
-- WAF Events Count
+  - Client IP Address
+  - WAF Events Count
 
 Review the Additional Context section (if shown) and capture:
 
-- Total WAF events in last 24 hours
-- The policy or application associated (if listed)
-- Any violations detected (count and type)
-- Any attack type detected (if listed)
+  - Total WAF events in last 24 hours
+  - The policy or application associated (if listed)
+  - Any violations detected (count and type)
+  - Any attack type detected (if listed)
 
 Confirm the response includes a note indicating this data is based
 on WAF/security events (not full traffic telemetry).
@@ -67,12 +67,12 @@ Deliverables
 
 Briefly answer the following:
 
-- Busiest client IP address
-- Request count and percentage of total WAF events
-- Total WAF events in the last 24 hours
-- Any violation types observed
-- Any attack type observed (if present)
-- Any additional observations from the AI response
+  - Busiest client IP address
+  - Request count and percentage of total WAF events
+  - Total WAF events in the last 24 hours
+  - Any violation types observed
+  - Any attack type observed (if present)
+  - Any additional observations from the AI response
 
 
 Hints
