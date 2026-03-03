@@ -30,16 +30,13 @@ Tasks
 
 Use the AI Assistant and enter the following prompt:
 
-  ``Can you check the virtual servers named 'web-app-foo'
-and their associated objects across all BIG-IPs
-to verify that the configuration is the same?``
+  ``Can you check the virtual servers named 'web-app-foo' and their associated objects across all BIG-IPs to verify that the configuration is the same?``
 
 Review the information returned.  Do you see any configuration differences between *EastRegion-bigip-01* and *WestRegion-bigip-01*?
 
 If differences are identified, validate them by navigating to: **Dashboard >> BIG-IP Device >> Device Virtual Server and Dashboard >> BIG-IP Device >> Device Pools**
 
-Compare the configuration of *web-app-foo*
-on each device.
+Compare the configuration of *web-app-foo* on each device:
 
   Identify and explain the configuration differences that could impact application behavior.
 

@@ -94,7 +94,6 @@ Deliverables
     - The root cause of the uneven distribution
     - How the configuration change resolved the issue
 
-
 Hints
 ~~~~~
 
@@ -106,9 +105,7 @@ Hints
   can appear as a single source, leading to heavy
   reuse of a small number of server-side connections.
 
-
 This concludes Ticket 11.
-
 
 Go to `Exercise 12 - CMP Demotion Caused by iRule Globals <../lab12/lab12.html>`_
 

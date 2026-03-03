@@ -26,7 +26,7 @@ The following table lists VLANS, IP Addresses and Credentials for all
 components:
 
 .. list-table::
-   :widths: 20 40 40
+   :widths: 20 40 30
    :header-rows: 1
    :stub-columns: 1
 
@@ -35,10 +35,6 @@ components:
      - **Credentials**
    * - F5 Insight
      - **Management:** 10.1.1.4
-
-       **FrontEnd:** n/a
-
-       **BackEnd:** 10.1.20.0/24
      - ``admin``/``HelloUDF``
    * - East BIG-IP
      - **Management:** 10.1.1.5
@@ -61,14 +57,13 @@ components:
 
        **BackEnd:** 10.1.20.7/24
      - ``admin``/``f5Twister!``
-   * - SECURITY BIG-IP
+   * - Security BIG-IP
      - **Management:** 10.1.1.8
 
        **FrontEnd:** 10.1.10.8/24
 
        **BackEnd:** 10.1.20.8/24
      - ``admin``/``f5Twister!``
-
 
 Overview
 --------------
@@ -87,7 +82,7 @@ As illustrated above, the lab environment consists of the following:
 
    * **Traffic Generator** configured to generate application traffic simulating users
 
-Deploy blueprint and connect to jumpbox
+Deploy blueprint and connect to F5 Insight
 ---------------------------------------
 
 From the `UDF <https://udf.f5.com/blueprints>`_ console, search for and deploy the blueprint entitled *AppWorld 2026 - F5 Insight for ADSP*. 
