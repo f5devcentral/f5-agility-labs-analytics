@@ -18,13 +18,13 @@ F5 Insight Lab
     
     2. Using your lab number appended to the end of the following link, go to:``https://appworldinsight.com/grab/AppWorld26-000`` where "000" is your lab number.
 
-    3. Enter your passphrase which will be App+World+26-000 where "000" is your lab number. image7.png <<<<
+    3. Enter your passphrase which will be App+World+26-000 where "000" is your lab number. 
 
       .. image:: ./images/image7.png
         :width: 500px
         :alt: Login screen
 
-    4. Once logged in copy the API key to your copy buffer.  ``**Do not share this key with anyone else or use this key for any purpose outside of this lab.**``  
+    4. Once logged in copy the API key to your copy buffer.  **``Do not share this key with anyone else or use this key for any purpose outside of this lab.``**  
 
     5. Go to F5 Insight to **Manage** and then **LLM Insights**
 
