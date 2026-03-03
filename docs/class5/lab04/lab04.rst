@@ -40,7 +40,7 @@ Navigate to: **Home >> System Report Cards**
 
 Locate the card: **Anomaly Detection** and click on: **Anomaly Detection**
 
-  .. image:: ./images/image6.png
+  .. image:: ../images/image6.png
     :width: 500px
     :alt: Anomaly Detection Dashboard navigation
 

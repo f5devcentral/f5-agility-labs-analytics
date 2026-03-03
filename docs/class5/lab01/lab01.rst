@@ -26,7 +26,7 @@ Navigate to:
 
   **Dashboards >> BIG-IP Device >> Top N**
 
-.. image:: ./images/image3.png
+.. image:: ../images/image3.png
     :width: 500px
     :alt: Top N Dashboard navigation
 
