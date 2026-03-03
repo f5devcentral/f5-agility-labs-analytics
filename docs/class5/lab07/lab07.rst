@@ -14,9 +14,9 @@ They would like the configuration reviewed for any anomalies.
 Context
 ~~~~~~~
 
-Device Names: EastRegion-bigip-01, WestRegion-bigip-01
+**Device Names:** EastRegion-bigip-01, WestRegion-bigip-01
 
-Virtual Server Name: web-app-foo
+**Virtual Server Name:** web-app-foo
 
 App Servers and Ports:
     * 10.1.20.100:80
