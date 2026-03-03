@@ -20,7 +20,7 @@ is expected for the lab scenario.
 Context
 ~~~~~~~
 
-Device Name: EastRegion-bigip-01
+**Device Name:** EastRegion-bigip-01
 
 **Virtual Server:** accounts_receivable_https_vs
 
@@ -76,23 +76,17 @@ Deliverables
 
 A brief summary describing:
 
-- How the accounts_receivable_https_vs virtual server
-  and app-3 pool are configured to return 4xx responses
-- Which 4xx codes and paths are intentionally generated
-  (for example, /401 → 401, /403 → 403, /404 → 404,
-/400 → 400, and 403 for port 8080)
-- Your conclusion on whether the observed 4xx errors
-  are expected (lab-driven) or indicative of a misconfiguration
+- How the accounts_receivable_https_vs virtual server and app-3 pool are configured to return 4xx responses
+- Which 4xx codes and paths are intentionally generated (for example, /401 → 401, /403 → 403, /404 → 404, /400 → 400, and 403 for port 8080) 
+- Your conclusion on whether the observed 4xx errors are expected (lab-driven) or indicative of a misconfiguration
 
 
 Hints
 ~~~~~
 
-- Review how the backend application on port 8080
-  is configured to respond to different paths.
+- Review how the backend application on port 8080 is configured to respond to different paths.
 - If a traffic script rotates through /401, /403, /404, and /400, seeing those 4xx codes in logs is likely expected behavior.
-- Distinguishing between expected and unexpected 4xx
-  responses is an important troubleshooting skill.
+- Distinguishing between expected and unexpected 4xx responses is an important troubleshooting skill.
 
 
 This concludes Ticket 09.
