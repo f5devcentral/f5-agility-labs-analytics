@@ -81,6 +81,21 @@ As illustrated above, the lab environment consists of the following:
    * **NGINX** providing web services
 
    * **Traffic Generator** configured to generate application traffic simulating users
+   
+   * **F5 Insight** with basic configuration complete
+
+What is F5 Insight?
+---------------------------------------
+
+**Key Features in GA Release**
+  * Guided Onboarding – Streamlined setup experience.
+  * F5 Compliant Dashboards – 20+ pre-built dashboards with 400+ panels.
+  * Home Page – Rules-based anomaly detection and BIG-IP metrics cards.
+  * AI Assistant – 10+ scenarios with inline dynamic charts; Using customer provided LLM (OpenAI, Anthropic and Local models ).
+  * SSLO and iRule Telemetry Log Ingestion – Dedicated dashboards and AIDF integration.
+  * Disaster Recovery – Cross data center disaster recovery with Active-Standby configuration. 
+  * Fully Functional Licensing – Complete licensing integration with JWT token support.
+  * AIDF integration as an opt-in feature.
 
 Deploy blueprint and connect to F5 Insight
 ---------------------------------------
