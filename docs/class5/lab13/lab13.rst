@@ -27,7 +27,7 @@ Context
 Tasks
 ~~~~~
 
-From the jumphost (or using the provided lab script), send
+From the Insight guest web shell (or using the provided lab script), send
 the following Struts-style test request:
 
 .. code-block:: bash
@@ -38,9 +38,7 @@ the following Struts-style test request:
       --data-binary 'test'
 
 Verify that the request is blocked and logged by ASM/AWAF
-as a Java/Struts/OGNL RCE attempt.
-
-In the WAF event logs, identify:
+as a Java/Struts/OGNL RCE attempt.  In the WAF event logs, identify:
 
   - The attack signature ID
   - The attack type
@@ -59,6 +57,7 @@ Deliverables
 Hints
 ~~~~~
 
+- Security BIG-IP
 - Filter events by URL ``/upload.action`` and your test client IP.
 - Review the “Attack Type” field in the event details.
 - Confirm that the policy pol_java_asm has relevant

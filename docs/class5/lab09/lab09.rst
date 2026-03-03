@@ -12,7 +12,7 @@ receiving HTTP 4xx errors when accessing the service. Some users
 report seeing 400, 401, 403, or 404 responses at different times.
 
 You have been asked to investigate why the
-accounts_receivable_https_vs virtual server is returning
+*accounts_receivable_https_vs* virtual server is returning
 these 4xx status codes and determine whether this behavior
 is expected for the lab scenario.
 

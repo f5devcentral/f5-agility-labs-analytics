@@ -44,17 +44,14 @@ Traditionally, you would examine connection and request distribution using the B
 
 For this lab, use the AI Assistant and enter the following prompt:
 
-  ``Show pool statistics for /Common/web-pool on
-EastRegion-bigip-01.``
+  ``Show pool statistics for /Common/web-pool on EastRegion-bigip-01.``
 
 Compare these results to the TMUI interface on
 EastRegion-bigip-01 under:
 
   **Local Traffic >> Pools >> web-pool**
 
-Determine whether the AI results match the TMUI data.
-
-In Insight, navigate to:
+Determine whether the AI results match the TMUI data.  In Insight, navigate to:
 
   **BIG-IP Device >> Device Virtual Server**
 

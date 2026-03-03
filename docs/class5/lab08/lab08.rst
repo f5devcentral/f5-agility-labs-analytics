@@ -70,19 +70,13 @@ A brief summary describing:
 Hints
 ~~~~~
 
-- Look at which HTTP profile is attached and whether it is a custom
-profile or the default http profile.
+- Look at which HTTP profile is attached and whether it is a custom profile or the default http profile.
 
-- Some HTTP/1.0-style behavior can be inferred from how connections
-are opened and closed, and whether keep-alive is in use.
+- Some HTTP/1.0-style behavior can be inferred from how connections are opened and closed, and whether keep-alive is in use.
 
-- Comparing what BIG-IP is configured to do on both client and
-server sides will help you understand where the HTTP version
-behavior is coming from.
-
+- Comparing what BIG-IP is configured to do on both client and server sides will help you understand where the HTTP version behavior is coming from.
 
 This concludes Ticket 08.
-
 
 Go to `Ticket 09 - Investigating Unexpected 4xx Responses <../lab09/lab09.html>`_
 

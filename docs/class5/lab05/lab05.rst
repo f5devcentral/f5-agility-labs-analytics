@@ -34,45 +34,44 @@ Context
 Tasks
 ~~~~~
 
-- Navigate to: **Home >> System Report Cards**
+1. Navigate to: **Home >> System Report Cards**
 
-- Locate the card: **Anomaly Detection**
+2. Locate the card: **Anomaly Detection**
 
-- Click on: **Anomaly Detection**
+3. Click on: **Anomaly Detection**
 
-- Within the expanded panel, locate: **Pool Availability Deviation**
+4. Within the expanded panel, locate: **Pool Availability Deviation**
 
-- Click: **View Details**
+5. Click: **View Details**
 
-- Scroll down to the **Pools** table.
+6. Scroll down to the **Pools** table.
 
-- Review each Pool and identify:
+7. Review each Pool and identify:
 
   - Status (Critical, Warning, Good)
   - Expected Availability Ratio
   - Current Availability Ratio
   - Deviation value and percentage
 
-- Pay attention to severity coloring:
+8. Pay attention to severity coloring:
 
   - Red indicates Critical deviation
   - Yellow indicates Warning
   - Green indicates Normal/Good
 
-- Select any *Pool* from the list.  The graph above will update based on your selection.
+9. Select any *Pool* from the list.  The graph above will update based on your selection.
 
-- Review the *Pool Availability Ratio Deviation Analysis* graph.
-
-- Observe:
+10. Review the *Pool Availability Ratio Deviation Analysis* graph.
+11. Observe:
 
   - Actual availability ratio
   - Expected availability ratio
   - Upper threshold
   - Lower threshold
 
-- Determine whether the actual value crossed either threshold.
+12. Determine whether the actual value crossed either threshold.
 
-- Use the time range selector (1h, 6h, 1d, 1w) in the upper-right corner of the dashboard to review different time windows.
+13. Use the time range selector (1h, 6h, 1d, 1w) in the upper-right corner of the dashboard to review different time windows.
 
 
 Deliverables
