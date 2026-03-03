@@ -38,15 +38,11 @@ Tasks
 
 Navigate to: **Home >> System Report Cards**
 
-Locate the card: **Anomaly Detection**
+Locate the card: **Anomaly Detection** and click on: **Anomaly Detection**
 
-Click on: **Anomaly Detection**
+Within the expanded panel, locate: **Connection Count Deviation Analysis**
 
-Within the expanded panel, locate: **Connection Count Deviation**
-
-Click: **View Details**
-
-Scroll down to the Virtual Servers table.
+Scroll down to the **Virtual Servers** table.
 
 Review each Virtual Server and identify:
 
