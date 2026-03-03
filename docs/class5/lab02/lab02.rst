@@ -15,11 +15,11 @@ Ticket Description
 Context
 ~~~~~~~
 
-  **Device Name:** CentralRegion-bigip-01
+**Device Name:** CentralRegion-bigip-01
 
-  **Virtual Server Name:** primary-app-site-1-https-vip
+**Virtual Server Name:** primary-app-site-1-https-vip
 
-  **Protocol:** HTTPS (TCP 443)
+**Protocol:** HTTPS (TCP 443)
 
 Tasks
 ~~~~~
@@ -57,7 +57,7 @@ to expand the view to at least the Last 7 Days.
 Deliverables
 ~~~~~~~~~~~~
 
-  A brief summary describing the traffic trends:
+A brief summary describing the traffic trends:
 
   - Peak time(s) of day
   - Peak day(s) of week
@@ -67,7 +67,7 @@ Deliverables
 Hints
 ~~~~~
 
-  Pay close attention to:
+Pay close attention to:
 
   - Request rate trends
   - Throughput (bps)
