@@ -12,7 +12,7 @@ receiving HTTP 4xx errors when accessing the service. Some users
 report seeing 400, 401, 403, or 404 responses at different times.
 
 You have been asked to investigate why the
-accounts_receivable_https_vs virtual server is returning
+*accounts_receivable_https_vs* virtual server is returning
 these 4xx status codes and determine whether this behavior
 is expected for the lab scenario.
 
@@ -45,13 +45,13 @@ Use the AI Assistant and enter the following prompt:
 
 From the returned information and the TMUI on EastRegion-bigip-01:
 
-- Confirm that the default pool for
-  *accounts_receivable_https_vs* is *app-3.*
-- Identify which port(s) the app-3 pool members are
-  listening on (for example, 8080).
-- Check whether any iRules, local traffic policies,
-  or WAF policies attached to the virtual server
-  could influence HTTP status codes.
+  - Confirm that the default pool for
+    *accounts_receivable_https_vs* is *app-3.*
+  - Identify which port(s) the app-3 pool members are
+    listening on (for example, 8080).
+  - Check whether any iRules, local traffic policies,
+    or WAF policies attached to the virtual server
+    could influence HTTP status codes.
 
 In Insight, review available HTTP metrics or logs
 associated with accounts_receivable_https_vs and app-3

@@ -46,14 +46,11 @@ Next, navigate to: **Local Traffic >> Nodes >> Node List**
 
   - Confirm whether clark_kent and harry_potter
     appear in the node list.
-  - Verify whether any pool members reference these nodes,
-  or whether they are completely unused.
+  - Verify whether any pool members reference these nodes, or whether they are completely unused.
 
 Summarize which of the above pools and nodes are truly
 orphaned (that is, not referenced by any virtual server
-or pool).
-
-Do not delete anything as part of this exercise.
+or pool).  Do not delete anything as part of this exercise.
 The goal is only to locate and document orphaned objects.
 
 
@@ -69,13 +66,13 @@ A brief summary describing:
 Hints
 ~~~~~
 
-  - A pool is considered orphaned if no virtual server
-    uses it as a default pool and it is not referenced
-    by policies or iRules.
-  - A node is considered orphaned if no pool member
-    references it.
-  - Comparing object references (who uses what) is a key
-    step when cleaning up legacy configuration.
+- A pool is considered orphaned if no virtual server
+  uses it as a default pool and it is not referenced
+  by policies or iRules.
+- A node is considered orphaned if no pool member
+  references it.
+- Comparing object references (who uses what) is a key
+  step when cleaning up legacy configuration.
 
 Suspected orphaned objects:
 
