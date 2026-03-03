@@ -26,39 +26,48 @@ The following table lists VLANS, IP Addresses and Credentials for all
 components:
 
 .. list-table::
-    :widths: 20 40 40
-    :header-rows: 1
-    :stub-columns: 1
+   :widths: 20 40 40
+   :header-rows: 1
+   :stub-columns: 1
 
-    * - **Component**
-      - **VLAN/IP Address(es)**
-      - **Credentials**
-    * - F5 Insight
-      - - **Management:** 10.1.1.4
-        - **FrontEnd:** n/a
-        - **BackEnd:** 10.1.20.0/24
-      - ``admin``/``HelloUDF``
-  - * - East BIG-IP
-      - - **Management:** 10.1.1.5
-        - **FrontEnd:** 10.1.10.5/24
-        - **BackEnd:** 10.1.20.5/24
-      - ``admin``/``f5Twister!``
-  - * - Central BIG-IP
-      - - **Management:** 10.1.1.6
-        - **FrontEnd:** 10.1.10.6/24
-        - **BackEnd:** 10.1.20.6/24
-      - ``admin``/``f5Twister!``
-  - * - West BIG-IP
-      - - **Management:** 10.1.1.7
-        - **FrontEnd:** 10.1.10.7/24
-        - **BackEnd:** 10.1.20.7/24
-      - ``admin``/``f5Twister!``
-  - * - SECURITY BIG-IP
-      - - **Management:** 10.1.1.8
-        - **FrontEnd:** 10.1.10.8/24
-        - **BackEnd:** 10.1.20.8/24
-      - ``admin``/``f5Twister!``
+   * - **Component**
+     - **VLAN/IP Address(es)**
+     - **Credentials**
+   * - F5 Insight
+     - **Management:** 10.1.1.4
 
+       **FrontEnd:** n/a
+
+       **BackEnd:** 10.1.20.0/24
+     - ``admin``/``HelloUDF``
+   * - East BIG-IP
+     - **Management:** 10.1.1.5
+
+       **FrontEnd:** 10.1.10.5/24
+
+       **BackEnd:** 10.1.20.5/24
+     - ``admin``/``f5Twister!``
+   * - Central BIG-IP
+     - **Management:** 10.1.1.6
+
+       **FrontEnd:** 10.1.10.6/24
+
+       **BackEnd:** 10.1.20.6/24
+     - ``admin``/``f5Twister!``
+   * - West BIG-IP
+     - **Management:** 10.1.1.7
+
+       **FrontEnd:** 10.1.10.7/24
+
+       **BackEnd:** 10.1.20.7/24
+     - ``admin``/``f5Twister!``
+   * - SECURITY BIG-IP
+     - **Management:** 10.1.1.8
+
+       **FrontEnd:** 10.1.10.8/24
+
+       **BackEnd:** 10.1.20.8/24
+     - ``admin``/``f5Twister!``
 
 
 Overview
