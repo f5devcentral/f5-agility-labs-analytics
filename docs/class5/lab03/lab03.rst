@@ -8,8 +8,8 @@ Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
   The team is evaluating a newer version of the web server
-  running on node 10.1.20.201. This node is a member of the
-  web_servers_pool pool on WestRegion-bigip-01.
+  running on node *10.1.20.201*. This node is a member of the
+  *web_servers_pool* pool on *WestRegion-bigip-01*.
 
   Before moving forward with broader deployment, the team
   wants to understand the stability of this node.
@@ -28,41 +28,41 @@ Context
 Tasks
 ~~~~~
 
-  Navigate to:
+Navigate to:
 
-    **Dashboards >> BIG-IP Device >> Device Pools**
+  **Dashboards >> BIG-IP Device >> Device Pools**
 
-  From the Device dropdown, select:
+From the Device dropdown, select:
 
-    **WestRegion-bigip-01**
+  **WestRegion-bigip-01**
 
-  From the Pool dropdown, select:
+From the Pool dropdown, select:
 
-    **web_servers_pool**
+  **web_servers_pool**
 
-  Locate the panel:
+Locate the panel:
 
-    **Pool Member State – isAvailable**
+  **Pool Member State – isAvailable**
 
-  Click the "Expand panel" button on top right of that panel
+Click the "Expand panel" button on top right of that panel
 
-  Use the Time Range dropdown in the upper-right corner of the dashboard
-  to review historical availability data.
+Use the Time Range dropdown in the upper-right corner of the dashboard
+to review historical availability data.
 
-  Try adjusting the range to broader views such as:
+Try adjusting the range to broader views such as:
 
-  - Last 24 hours
-  - Last 7 Days
-  - Last 30 Days
-  - Last 90 Days
+- Last 24 hours
+- Last 7 Days
+- Last 30 Days
+- Last 90 Days
 
-  Click the "Expand Panel" button in the upper-right corner of the panel to enlarge the view.
+Click the "Expand Panel" button in the upper-right corner of the panel to enlarge the view.
 
-  Identify:
+Identify:
 
-  - The most recent time the pool member 10.1.20.201:80 was not available
-  - The duration of the outage (if visible)
-  - How long it has been since that outage occurred
+- The most recent time the pool member *10.1.20.201:80*  was not available
+- The duration of the outage (if visible)
+- How long it has been since that outage occurred
 
 
 Deliverables
