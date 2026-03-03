@@ -73,10 +73,8 @@ Deliverables
 A brief summary describing:
 
 - The CMP state of web-app-https and how you verified it
-- Which iRule (and which specific lines) are responsible
-for CMP demotion
-- How you would rewrite the iRule to be CMP-compatible
-while preserving its intended behavior
+- Which iRule (and which specific lines) are responsible for CMP demotion
+- How you would rewrite the iRule to be CMP-compatible while preserving its intended behavior
 
 
 Hints
