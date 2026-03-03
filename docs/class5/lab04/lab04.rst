@@ -50,16 +50,16 @@ Scroll down to the Virtual Servers table.
 
 Review each Virtual Server and identify:
 
-- Status (Critical, Warning, Good)
-- Expected Connections
-- Current Connections
-- Deviation value and percentage
+  - Status (Critical, Warning, Good)
+  - Expected Connections
+  - Current Connections
+  - Deviation value and percentage
 
 Pay attention to severity coloring:
 
-- Red indicates Critical deviation
-- Yellow indicates Warning
-- Green indicates Normal/Good
+  - Red indicates Critical deviation
+  - Yellow indicates Warning
+  - Green indicates Normal/Good
 
 Select a Virtual Server in a "Critical" state (or any Virtual Server).
 The graph above will update based on your selection.
@@ -68,10 +68,10 @@ Review the Connection Count Deviation Analysis graph on top.
 
 Observe:
 
-- Actual connection count
-- Expected connection count
-- Upper threshold
-- Lower threshold
+  - Actual connection count
+  - Expected connection count
+  - Upper threshold
+  - Lower threshold
 
 Use the time range selector (1h, 6h, 1d, 1w) in the upper-right
 corner of the dashboard to review different time windows.
@@ -82,21 +82,21 @@ Deliverables
 
 A brief summary including:
 
-- The total number of Virtual Servers listed
-- How many are Critical
-- How many are Warning
-- How many are Good
-- The Virtual Server with the largest deviation percentage
-- Any patterns you observe in the deviation data
+  - The total number of Virtual Servers listed
+  - How many are Critical
+  - How many are Warning
+  - How many are Good
+  - The Virtual Server with the largest deviation percentage
+  - Any patterns you observe in the deviation data
 
 
 Hints
 ~~~~~
 
-- Hover over points in the graph to see exact values.
-- Try changing the time range to see if deviations are persistent.
-- Sort the Virtual Server table by deviation percentage.
-- Focus first on Critical (red) entries, then Warning (yellow).
+  - Hover over points in the graph to see exact values.
+  - Try changing the time range to see if deviations are persistent.
+  - Sort the Virtual Server table by deviation percentage.
+  - Focus first on Critical (red) entries, then Warning (yellow).
 
 This concludes Ticket 4.
 

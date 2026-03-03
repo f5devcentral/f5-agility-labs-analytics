@@ -48,17 +48,17 @@ Click the *"Apply Filters"* button.
 
 Review the following panels:
 
-- VS Data Rate
-- VS Connection Rate
+  - VS Data Rate
+  - VS Connection Rate
 
 Use the Time Range dropdown in the upper-right corner
 to expand the view to at least the Last 7 Days.
 
 After reviewing the data, answer the following:
 
-- What are the peak hours of the day?
-- What are the peak days of the week?
-- Are the traffic patterns consistent or highly variable?
+  - What are the peak hours of the day?
+  - What are the peak days of the week?
+  - Are the traffic patterns consistent or highly variable?
 
 Deliverables
 ~~~~~~~~~~~~

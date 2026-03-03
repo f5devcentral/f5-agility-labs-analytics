@@ -34,19 +34,19 @@ Use the AI Assistant and enter the following prompt:
 
 From the returned information and the TMUI on CentralRegion-bigip-01:
 
-- Navigate to: **Local Traffic >> Pools >> Pool List**
+  - Navigate to: **Local Traffic >> Pools >> Pool List**
 
-  Confirm whether bruce_wayne and oliver_twist
-  appear in the configuration.
+    Confirm whether bruce_wayne and oliver_twist
+    appear in the configuration.
 
-- Verify whether either pool is assigned as a default pool
-  (or referenced in a policy) on any virtual server.
+  - Verify whether either pool is assigned as a default pool
+    (or referenced in a policy) on any virtual server.
 
 Next, navigate to: **Local Traffic >> Nodes >> Node List**
 
-- Confirm whether clark_kent and harry_potter
-  appear in the node list.
-- Verify whether any pool members reference these nodes,
+  - Confirm whether clark_kent and harry_potter
+    appear in the node list.
+  - Verify whether any pool members reference these nodes,
   or whether they are completely unused.
 
 Summarize which of the above pools and nodes are truly
@@ -62,25 +62,25 @@ Deliverables
 
 A brief summary describing:
 
-- A clear list of which objects are confirmed to be
-  orphaned on CentralRegion-bigip-01
+  - A clear list of which objects are confirmed to be
+    orphaned on CentralRegion-bigip-01
 
 
 Hints
 ~~~~~
 
-- A pool is considered orphaned if no virtual server
-  uses it as a default pool and it is not referenced
-  by policies or iRules.
-- A node is considered orphaned if no pool member
-  references it.
-- Comparing object references (who uses what) is a key
-  step when cleaning up legacy configuration.
+  - A pool is considered orphaned if no virtual server
+    uses it as a default pool and it is not referenced
+    by policies or iRules.
+  - A node is considered orphaned if no pool member
+    references it.
+  - Comparing object references (who uses what) is a key
+    step when cleaning up legacy configuration.
 
 Suspected orphaned objects:
 
-- Pools: bruce_wayne, oliver_twist
-- Nodes: clark_kent, harry_potter
+  - Pools: bruce_wayne, oliver_twist
+  - Nodes: clark_kent, harry_potter
 
 
 This concludes Ticket 06.

@@ -8,7 +8,7 @@ Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
 The security team wants confirmation that the WAF is capable
-of detecting Apache Struts / OGNL-based exploit attempts.
+of detecting Apache Struts exploit attempts.
 
 You have been asked to run a safe test request and demonstrate
 that the WAF properly detects and blocks the attack.
@@ -42,10 +42,10 @@ as a Java/Struts/OGNL RCE attempt.
 
 In the WAF event logs, identify:
 
-- The attack signature ID
-- The attack type
-- The severity
-- Whether the request was blocked
+  - The attack signature ID
+  - The attack type
+  - The severity
+  - Whether the request was blocked
 
 
 Deliverables
