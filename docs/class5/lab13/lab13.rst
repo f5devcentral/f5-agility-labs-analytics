@@ -7,62 +7,62 @@ Title: “Security test shows WAF blocks Struts exploit attempt”
 Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
-  The security team wants confirmation that the WAF is capable
-  of detecting Apache Struts / OGNL-based exploit attempts.
+The security team wants confirmation that the WAF is capable
+of detecting Apache Struts / OGNL-based exploit attempts.
 
-  You have been asked to run a safe test request and demonstrate
-  that the WAF properly detects and blocks the attack.
+You have been asked to run a safe test request and demonstrate
+that the WAF properly detects and blocks the attack.
 
 
 Context
 ~~~~~~~
 
-  **VIP:** /Common/sslo.demo.f5
+**VIP:** /Common/sslo.demo.f5
 
-  **Policy:** /Common/pol_java_asm (Java/Struts signatures enabled)
+**Policy:** /Common/pol_java_asm (Java/Struts signatures enabled)
 
-  **Application URL:** /upload.action
+**Application URL:** /upload.action
 
 
 Tasks
 ~~~~~
 
-  From the jumphost (or using the provided lab script), send
-  the following Struts-style test request:
+From the jumphost (or using the provided lab script), send
+the following Struts-style test request:
 
-  .. code-block:: bash
+.. code-block:: bash
 
-      curl -k -v \
-        "https://sslo.demo.f5/upload.action" \
-        -H 'Content-Type: ${(#_="multipart/form-data").(#context["com.opensymphony.xwork2.dispatcher.HttpServletResponse"].addHeader("X-Struts-POC","1"))}' \
-        --data-binary 'test'
+    curl -k -v \
+      "https://sslo.demo.f5/upload.action" \
+      -H 'Content-Type: ${(#_="multipart/form-data").(#context["com.opensymphony.xwork2.dispatcher.HttpServletResponse"].addHeader("X-Struts-POC","1"))}' \
+      --data-binary 'test'
 
-  Verify that the request is blocked and logged by ASM/AWAF
-  as a Java/Struts/OGNL RCE attempt.
+Verify that the request is blocked and logged by ASM/AWAF
+as a Java/Struts/OGNL RCE attempt.
 
-  In the WAF event logs, identify:
+In the WAF event logs, identify:
 
-  - The attack signature ID
-  - The attack type
-  - The severity
-  - Whether the request was blocked
+- The attack signature ID
+- The attack type
+- The severity
+- Whether the request was blocked
 
-  
+
 Deliverables
 ~~~~~~~~~~~~
 
-  - Screenshot of the specific WAF request log entry
-    (showing attack signature, severity, and blocking status).
-  - Prepare a short explanation suitable for a non-F5 security audience describing what occurred.
+- Screenshot of the specific WAF request log entry
+  (showing attack signature, severity, and blocking status).
+- Prepare a short explanation suitable for a non-F5 security audience describing what occurred.
 
 
 Hints
 ~~~~~
 
-  - Filter events by URL ``/upload.action`` and your test client IP.
-  - Review the “Attack Type” field in the event details.
-  - Confirm that the policy pol_java_asm has relevant
-    Java/Struts signatures enabled.
+- Filter events by URL ``/upload.action`` and your test client IP.
+- Review the “Attack Type” field in the event details.
+- Confirm that the policy pol_java_asm has relevant
+  Java/Struts signatures enabled.
 
 
 This concludes Ticket 13.

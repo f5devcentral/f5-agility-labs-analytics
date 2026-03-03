@@ -7,68 +7,68 @@ Title: “Why is accounts_receivable returning 4xx errors?”
 Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
-  Users of the accounts receivable application are intermittently
-  receiving HTTP 4xx errors when accessing the service. Some users
-  report seeing 400, 401, 403, or 404 responses at different times.
+Users of the accounts receivable application are intermittently
+receiving HTTP 4xx errors when accessing the service. Some users
+report seeing 400, 401, 403, or 404 responses at different times.
 
-  You have been asked to investigate why the
-  accounts_receivable_https_vs virtual server is returning
-  these 4xx status codes and determine whether this behavior
-  is expected for the lab scenario.
+You have been asked to investigate why the
+accounts_receivable_https_vs virtual server is returning
+these 4xx status codes and determine whether this behavior
+is expected for the lab scenario.
 
 
 Context
 ~~~~~~~
 
-  Device Name: EastRegion-bigip-01
+Device Name: EastRegion-bigip-01
 
-  **Virtual Server:** accounts_receivable_https_vs
+**Virtual Server:** accounts_receivable_https_vs
 
-  **Pool:** app-3
+**Pool:** app-3
 
-  **Observed Behavior:**
+**Observed Behavior:**
 
-  - Traffic that hits any pool member listening on port 8080
-    generates an HTTP 403 response.
-  - Traffic that hits the paths /401, /403, /404, or /400
-    returns the corresponding 4xx status code.
-  - A traffic script rotates through those paths to generate
-    a variety of 4xx responses.
+- Traffic that hits any pool member listening on port 8080
+  generates an HTTP 403 response.
+- Traffic that hits the paths /401, /403, /404, or /400
+  returns the corresponding 4xx status code.
+- A traffic script rotates through those paths to generate
+  a variety of 4xx responses.
 
 
 Tasks
 ~~~~~
 
-  Use the AI Assistant and enter the following prompt:
+Use the AI Assistant and enter the following prompt:
 
-  `Show configuration details for the
-  accounts_receivable_https_vs virtual server
-  on EastRegion-bigip-01, including its default
-  pool and any attached profiles or iRules.
+`Show configuration details for the
+accounts_receivable_https_vs virtual server
+on EastRegion-bigip-01, including its default
+pool and any attached profiles or iRules.
 
-  From the returned information and the TMUI on EastRegion-bigip-01:
+From the returned information and the TMUI on EastRegion-bigip-01:
 
-  - Confirm that the default pool for
-    *accounts_receivable_https_vs* is *app-3.*
-  - Identify which port(s) the app-3 pool members are
-    listening on (for example, 8080).
-  - Check whether any iRules, local traffic policies,
-    or WAF policies attached to the virtual server
-    could influence HTTP status codes.
+- Confirm that the default pool for
+  *accounts_receivable_https_vs* is *app-3.*
+- Identify which port(s) the app-3 pool members are
+  listening on (for example, 8080).
+- Check whether any iRules, local traffic policies,
+  or WAF policies attached to the virtual server
+  could influence HTTP status codes.
 
-  In Insight, review available HTTP metrics or logs
-  associated with accounts_receivable_https_vs and app-3
-  that show:
+In Insight, review available HTTP metrics or logs
+associated with accounts_receivable_https_vs and app-3
+that show:
 
-  - The distribution of 4xx status codes.
-  - Whether certain paths are consistently associated with specific 4xx responses.
+- The distribution of 4xx status codes.
+- Whether certain paths are consistently associated with specific 4xx responses.
 
-  Based on this information, determine:
+Based on this information, determine:
 
-  - Which 4xx responses are expected behavior due to
-    the backend configuration and rotating traffic script.
-  - Whether any 4xx responses indicate a real issue,
-    or are intentionally generated for this lab exercise.
+- Which 4xx responses are expected behavior due to
+  the backend configuration and rotating traffic script.
+- Whether any 4xx responses indicate a real issue,
+  or are intentionally generated for this lab exercise.
 
 
 Deliverables
