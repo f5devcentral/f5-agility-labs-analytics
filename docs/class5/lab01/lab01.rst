@@ -27,11 +27,11 @@ Navigate to:
   **Dashboards >> BIG-IP Device >> Top N**
 
 From the Device dropdown at the top of the page,
-select a BIG-IP.
+select a BIG-IP.  You may choose any BIG-IP for this exercise.
 
 Change the Time Range (upper-right corner) to:
 
-  **Last 30 Days**
+  **Last 7 Days**
 
 Scroll through the page and review the available panels,
 including but not limited to:
@@ -61,13 +61,15 @@ rankings change.
 Deliverables
 ~~~~~~~~~~~~
 
+Consider:
+
+  - What types of operational questions could this dashboard help answer?
+
 Briefly answer the following:
 
   - Which VIP appears most frequently across Top N panels?
   - Which panel did you find most useful and why?
   - Did any objects show degraded availability?
-  - What types of operational questions could this dashboard help answer?
-
 
 Hints
 ~~~~~
