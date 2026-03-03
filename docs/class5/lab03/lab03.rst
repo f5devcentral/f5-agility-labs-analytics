@@ -78,9 +78,9 @@ Deliverables
 Hints
 ~~~~~
 
-  - Try expanding the time range (Last 24 Hours, 7 Days, 30 Days).
-  - Look for state transitions from isAvailable to unavailable.
-  - Zoom in on the graph if necessary to see shorter outages.
+- Try expanding the time range (Last 24 Hours, 7 Days, 30 Days).
+- Look for state transitions from isAvailable to unavailable.
+- Zoom in on the graph if necessary to see shorter outages.
 
 This concludes Ticket 3.
 
