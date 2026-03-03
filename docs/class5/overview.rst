@@ -88,13 +88,13 @@ Deploy blueprint and connect to F5 Insight
 From the `UDF <https://udf.f5.com/blueprints>`_ console, search for and deploy the blueprint entitled *AppWorld 2026 - F5 Insight for ADSP*. 
 Once the blueprint has finished deploying, access F5 Insight by selecting the GUI access link, (*see below*).  Credentials for this lab can be viewed by accessing the guest(s) **DOCUMENTATION** tab.
 
-.. image:: ../images/image1.png
+.. image:: ./images/image1.png
    :width: 800px
    :alt: UDF Component Page with password
 
 Upon successful login to F5 Insight, you will arrive at the home page, (see below).
 
-.. image:: ../images/image2.png
+.. image:: ./images/image2.png
    :width: 800px
    :alt: Insight Landing Page
 
