@@ -19,11 +19,11 @@ Ticket Description
 Context
 ~~~~~~~
 
-  **Device Name:** WestRegion-bigip-01
+**Device Name:** WestRegion-bigip-01
 
-  **Pool Name:** web_servers_pool
+**Pool Name:** web_servers_pool
 
-  **Pool Member:** 10.1.20.201:80
+**Pool Member:** 10.1.20.201:80
 
 Tasks
 ~~~~~
@@ -54,7 +54,6 @@ Try adjusting the range to broader views such as:
 - Last 24 hours
 - Last 7 Days
 - Last 30 Days
-- Last 90 Days
 
 Click the "Expand Panel" button in the upper-right corner of the panel to enlarge the view.
 

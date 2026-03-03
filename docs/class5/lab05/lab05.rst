@@ -7,16 +7,9 @@ Title: “Are any application pools experiencing availability degradation?”
 Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
-The operations team wants to verify that application pools
-are maintaining expected availability levels.  An anomaly category exists for *Pool Availability Ratio
-Deviation* under *Anomaly Detection*.
+The operations team wants to verify that application pools are maintaining expected availability levels.  An anomaly category exists for *Pool Availability Ratio Deviation* under *Anomaly Detection*.
 
-Before escalating any potential issue, the team needs a
-clear understanding of current pool health and whether
-any pools have deviated from expected availability ratios.
-
-Your task is to review the Pool Availability dashboard
-and determine if any pools are outside expected thresholds.
+Before escalating any potential issue, the team needs a clear understanding of current pool health and whether any pools have deviated from expected availability ratios.  Your task is to review the Pool Availability dashboard and determine if any pools are outside expected thresholds.
 
 
 Context
@@ -40,38 +33,36 @@ Tasks
 
 3. Click on: **Anomaly Detection**
 
-4. Within the expanded panel, locate: **Pool Availability Deviation**
+4. Within the expanded panel, locate: **Pool Availability Deviation** and click on: **View Details**
 
-5. Click: **View Details**
+5. Scroll down to the **Pools** table.
 
-6. Scroll down to the **Pools** table.
-
-7. Review each Pool and identify:
+6. Review each Pool and identify:
 
   - Status (Critical, Warning, Good)
   - Expected Availability Ratio
   - Current Availability Ratio
   - Deviation value and percentage
 
-8. Pay attention to severity coloring:
+7. Pay attention to severity coloring:
 
   - Red indicates Critical deviation
   - Yellow indicates Warning
   - Green indicates Normal/Good
 
-9. Select any *Pool* from the list.  The graph above will update based on your selection.
+8. Select any *Pool* from the list.  The graph above will update based on your selection.
 
-10. Review the *Pool Availability Ratio Deviation Analysis* graph.
-11. Observe:
+9. Review the *Pool Availability Ratio Deviation Analysis* graph.
+10. Observe:
 
   - Actual availability ratio
   - Expected availability ratio
   - Upper threshold
   - Lower threshold
 
-12. Determine whether the actual value crossed either threshold.
+11. Determine whether the actual value crossed either threshold.
 
-13. Use the time range selector (1h, 6h, 1d, 1w) in the upper-right corner of the dashboard to review different time windows.
+12. Use the time range selector (1h, 6h, 1d, 1w) in the upper-right corner of the dashboard to review different time windows.
 
 
 Deliverables
