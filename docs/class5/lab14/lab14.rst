@@ -44,7 +44,7 @@ Use the following prompt:
 
 Review the AI Assistant response and locate the table:
 
-  Busiest Client IP Address on **CentralRegion-bigip-01**
+  Busiest Client IP Address on CentralRegion-bigip-01
 
 Identify the busiest client IP address and record:
 
