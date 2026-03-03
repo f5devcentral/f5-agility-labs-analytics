@@ -4,8 +4,8 @@ Introduction
 F5 BIG‑IP Troubleshooting Lab: LTM & ASM/AWAF Tickets
 ---------------------------------------
 
-Audience: Intermediate F5 admins familiar with basic VS/pool/WAF concepts.
----------------------------------------
+**Audience: Intermediate F5 admins familiar with basic VS/pool/WAF concepts.**
+
 **Objectives:**
 
    Use BIG‑IP tools (GUI, tmsh, logs) to troubleshoot L4–L7 issues.
@@ -24,19 +24,19 @@ Audience: Intermediate F5 admins familiar with basic VS/pool/WAF concepts.
 How to use this lab
 ---------------------------------------
 
-    **Scenario:** You are a Tier‑2 engineer receiving tickets from users or Tier‑1.
+**Scenario:** You are a Tier‑2 engineer receiving tickets from users or Tier‑1.
 
-    Tools expected:
+Tools expected:
 
-        * tmsh, System › Logs › Local Traffic / Application, tcpdump/ssldump, curl from BIG‑IP, browser.
+    * tmsh, System › Logs › Local Traffic / Application, tcpdump/ssldump, curl from BIG‑IP, browser.
 
-    Student deliverables per ticket:
+Student deliverables per ticket:
 
-        * Root cause explanation.
+    * Root cause explanation.
 
-        * Exact fix proposed.
+    * Exact fix proposed.
 
-        * Evidence (screenshot or command output).
+    * Evidence (screenshot or command output).
 
 
 Please proceed to the first ticket.

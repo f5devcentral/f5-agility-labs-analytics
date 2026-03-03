@@ -39,30 +39,30 @@ components:
    * - East BIG-IP
      - **Management:** 10.1.1.5
 
-       **FrontEnd:** 10.1.10.5/24
+       **Clientside:** 10.1.10.5/24
 
-       **BackEnd:** 10.1.20.5/24
+       **Serverside:** 10.1.20.5/24
      - ``admin``/``f5Twister!``
    * - Central BIG-IP
      - **Management:** 10.1.1.6
 
-       **FrontEnd:** 10.1.10.6/24
+       **Clientside:** 10.1.10.6/24
 
-       **BackEnd:** 10.1.20.6/24
+       **Serverside:** 10.1.20.6/24
      - ``admin``/``f5Twister!``
    * - West BIG-IP
      - **Management:** 10.1.1.7
 
-       **FrontEnd:** 10.1.10.7/24
+       **Clientside:** 10.1.10.7/24
 
-       **BackEnd:** 10.1.20.7/24
+       **Serverside:** 10.1.20.7/24
      - ``admin``/``f5Twister!``
    * - Security BIG-IP
      - **Management:** 10.1.1.8
 
-       **FrontEnd:** 10.1.10.8/24
+       **Clientside:** 10.1.10.8/24
 
-       **BackEnd:** 10.1.20.8/24
+       **Serverside:** 10.1.20.8/24
      - ``admin``/``f5Twister!``
 
 Overview
@@ -88,15 +88,15 @@ Deploy blueprint and connect to F5 Insight
 From the `UDF <https://udf.f5.com/blueprints>`_ console, search for and deploy the blueprint entitled *AppWorld 2026 - F5 Insight for ADSP*. 
 Once the blueprint has finished deploying, access F5 Insight by selecting the GUI access link, (*see below*).  Credentials for this lab can be viewed by accessing the guest(s) **DOCUMENTATION** tab.
 
-.. image:: ../images/Picture1.png
-   :width: 750px
-   :alt: Image 1
+.. image:: ../images/image1.png
+   :width: 800px
+   :alt: UDF Component Page with password
 
 Upon successful login to F5 Insight, you will arrive at the home page, (see below).
 
-.. image:: ../images/Picture2.png
-   :width: 650px
-   :alt: Image 2
+.. image:: ../images/image2.png
+   :width: 800px
+   :alt: Insight Landing Page
 
 ---
 
