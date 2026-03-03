@@ -34,32 +34,32 @@ Context
 Tasks
 ~~~~~
 
-  Navigate to:
+Navigate to:
 
-  **AI Assistant
+**AI Assistant**
 
-  Use the following prompt:
+Use the following prompt:
 
-    `Can you tell me what the busiest client ip address is on CentralRegion-bigip-01 related to WAF events?
+  ``Can you tell me what the busiest client ip address is on CentralRegion-bigip-01 related to WAF events?``
 
-  Review the AI Assistant response and locate the table:
+Review the AI Assistant response and locate the table:
 
-    Busiest Client IP Address on **CentralRegion-bigip-01
+  Busiest Client IP Address on **CentralRegion-bigip-01**
 
-  Identify the busiest client IP address and record:
+Identify the busiest client IP address and record:
 
-  - Client IP Address
-  - WAF Events Count
+- Client IP Address
+- WAF Events Count
 
-  Review the Additional Context section (if shown) and capture:
+Review the Additional Context section (if shown) and capture:
 
-  - Total WAF events in last 24 hours
-  - The policy or application associated (if listed)
-  - Any violations detected (count and type)
-  - Any attack type detected (if listed)
+- Total WAF events in last 24 hours
+- The policy or application associated (if listed)
+- Any violations detected (count and type)
+- Any attack type detected (if listed)
 
-  Confirm the response includes a note indicating this data is based
-  on WAF/security events (not full traffic telemetry).
+Confirm the response includes a note indicating this data is based
+on WAF/security events (not full traffic telemetry).
 
 
 Deliverables

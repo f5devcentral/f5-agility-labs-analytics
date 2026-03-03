@@ -7,7 +7,7 @@ Title: “When is our application experiencing peak traffic?”
 Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
-  The application owner for primary-app-site-1 has requested
+  The application owner for *primary-app-site-1* has requested
   insight into traffic patterns for their HTTPS virtual server.
   They would like to understand when traffic volume is highest
   in order to plan scaling and maintenance windows.
@@ -19,46 +19,46 @@ Context
 
   **Virtual Server Name:** primary-app-site-1-https-vip
 
-  **Protocol: HTTPS (TCP 443)**
+  **Protocol:** HTTPS (TCP 443)
 
 Tasks
 ~~~~~
 
-  Determine which times of day and which days of the week
-  show the highest traffic for the virtual server
-  primary-app-site-1-https-vip on CentralRegion-bigip-01.1.
+Determine which times of day and which days of the week
+show the highest traffic for the virtual server
+primary-app-site-1-https-vip on CentralRegion-bigip-01.1.
 
-  Navigate to:
+Navigate to:
 
-    **Dashboards >> BIG-IP Fleet >> Virtual Servers**
+  **Dashboards >> BIG-IP Fleet >> Virtual Servers**
 
-  From "Data Center" leave the default value as:
-    
-    **default**
+From "Data Center" leave the default value as:
   
-  From "Devices" leave the default value as:
-  
-    **bigip/CentralRegion-bigip-01**
+  **default**
 
-  From the "Virtual Server" dropdown, verify only below is selected:
+From "Devices" leave the default value as:
 
-    **primary-app-site-1-https-vip**
+  **bigip/CentralRegion-bigip-01**
 
-  Click the *"Apply Filters"* button.
+From the "Virtual Server" dropdown, verify only below is selected:
 
-  Review the following panels:
+  **primary-app-site-1-https-vip**
 
-  - VS Data Rate
-  - VS Connection Rate
+Click the *"Apply Filters"* button.
 
-  Use the Time Range dropdown in the upper-right corner
-  to expand the view to at least the Last 7 Days.
+Review the following panels:
 
-  After reviewing the data, answer the following:
+- VS Data Rate
+- VS Connection Rate
 
-  - What are the peak hours of the day?
-  - What are the peak days of the week?
-  - Are the traffic patterns consistent or highly variable?
+Use the Time Range dropdown in the upper-right corner
+to expand the view to at least the Last 7 Days.
+
+After reviewing the data, answer the following:
+
+- What are the peak hours of the day?
+- What are the peak days of the week?
+- Are the traffic patterns consistent or highly variable?
 
 Deliverables
 ~~~~~~~~~~~~
