@@ -32,7 +32,7 @@ Navigate to:
 
   **Dashboards >> BIG-IP Fleet >> Virtual Servers**
 
-.. image:: ./images/image4.png
+.. image:: ../images/image4.png
     :width: 500px
     :alt: Fleet Dashboard navigation
 
