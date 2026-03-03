@@ -90,10 +90,10 @@ A brief summary including:
 Hints
 ~~~~~
 
-  - If all pools show 1.00 availability, verify that no deviation exists.
-  - Hover over graph points to see exact values.
-  - Try expanding the time range to confirm stability over time.
-  - Compare Expected vs Actual lines carefully.
+- If all pools show 1.00 availability, verify that no deviation exists.
+- Hover over graph points to see exact values.
+- Try expanding the time range to confirm stability over time.
+- Compare Expected vs Actual lines carefully.
 
 This concludes Ticket 5.
 

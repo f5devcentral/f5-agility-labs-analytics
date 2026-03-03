@@ -93,10 +93,10 @@ A brief summary including:
 Hints
 ~~~~~
 
-  - Hover over points in the graph to see exact values.
-  - Try changing the time range to see if deviations are persistent.
-  - Sort the Virtual Server table by deviation percentage.
-  - Focus first on Critical (red) entries, then Warning (yellow).
+- Hover over points in the graph to see exact values.
+- Try changing the time range to see if deviations are persistent.
+- Sort the Virtual Server table by deviation percentage.
+- Focus first on Critical (red) entries, then Warning (yellow).
 
 This concludes Ticket 4.
 
