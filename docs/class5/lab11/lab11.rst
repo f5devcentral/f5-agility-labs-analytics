@@ -1,4 +1,4 @@
-Ticket 11 – Uneven Load Balancing Due to OneConnect
+Ticket 11 – Uneven Load Balancing 
 ===================================================
 
 Title: “One pool member is overloaded”
@@ -30,7 +30,6 @@ Context
 **SNAT:** Automap
 
 **OneConnect Profile:** /Common/max_reuse_1500
-(wide source mask and high maximum reuse)
 
 **Pool:** /Common/web-pool (multiple application servers)
 
@@ -69,30 +68,15 @@ Determine whether the AI results match the TMUI data.  In Insight, navigate to:
   wide mask) with a high reuse value can result in uneven
   load distribution across pool members.
 
-Implement a configuration change to improve load
-distribution. Possible approaches include:
-
-  - Adjusting the OneConnect source mask
-  - Using a SNAT pool with multiple addresses
-  - Tuning the maximum reuse value
-
-After making the change, verify that traffic is
-distributed more evenly:
-
-  - Reset statistics as needed
-  - Generate test traffic
-  - Re-run the pool statistics command to confirm improved balance
-
 Deliverables
 ~~~~~~~~~~~~
 
-- Pre-change evidence of skewed member usage
+- Evidence of skewed member usage
   (for example, screenshot or CLI output)
-- Post-change evidence of improved load distribution
-- A brief explanation (2–3 sentences) describing:
+- Proposed solution covering:
 
-    - The root cause of the uneven distribution
-    - How the configuration change resolved the issue
+    - The root cause of the uneven distribution?
+    - What configuration change could resolve the issue?
 
 Hints
 ~~~~~

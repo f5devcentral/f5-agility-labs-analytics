@@ -21,4 +21,6 @@ Expected time to complete: **2 Hours**
    :glob:
 
    overview
+   introduction
+   api_keys
    lab*/lab*

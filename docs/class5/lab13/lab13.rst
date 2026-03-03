@@ -27,7 +27,7 @@ Context
 Tasks
 ~~~~~
 
-From the Insight guest web shell (or using the provided lab script), send
+Access the Insight guest via web shell and send
 the following Struts-style test request:
 
 .. code-block:: bash

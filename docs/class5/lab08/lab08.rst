@@ -35,7 +35,7 @@ Tasks
 
 Use the AI Assistant and enter the following prompt:
 
-  ``Show configuration details for the *Backup_app* virtual server on *CentralRegion-bigip-01*, including attached profiles.``
+  ``Show configuration details for the Backup_app virtual server on CentralRegion-bigip-01, including attached profiles.``
 
 From the returned information and the TMUI on **CentralRegion-bigip-01:**
 
@@ -46,9 +46,9 @@ From the returned information and the TMUI on **CentralRegion-bigip-01:**
 
 In Insight, review any available HTTP-related metrics or attributes
 for Backup_app and its pool app-1 that indicate HTTP protocol behavior
-(for example, headers, connection reuse, or profile details).
+(for example, headers, connection reuse, or profile details).  This can be done by going to: **Dashboards >> BIG-IP Device >> LTM-Profile** and select the **EastRegion-bigip-01** and **/common/http**
 
-Summarize whether *Backup_app* is effectively using HTTP/1.0 or a newer
+Using the charts on that page summarize whether *Backup_app* is effectively using HTTP/1.0 or a newer
 version on the client side, and whether server-side connections to the
 app-1 pool members behave differently.
 
@@ -58,13 +58,11 @@ Deliverables
 
 A brief summary describing:
 
-  - The HTTP profile attached to Backup_app and any relevant settings
-    that affect HTTP version behavior.
+  - The HTTP profile attached to Backup_app.
   - Your conclusion about the HTTP version behavior from the client
     to the Backup_app virtual server.
   - Any observations about server-side HTTP behavior to the app-1
-    pool members (for example, whether it appears to be HTTP/1.0-style
-    request/response without reuse, or if keep-alive is used).
+    pool members, is the application traffic healthy?
 
 
 Hints
@@ -72,9 +70,9 @@ Hints
 
 - Look at which HTTP profile is attached and whether it is a custom profile or the default http profile.
 
-- Some HTTP/1.0-style behavior can be inferred from how connections are opened and closed, and whether keep-alive is in use.
+- Use the charts, Luke!
 
-- Comparing what BIG-IP is configured to do on both client and server sides will help you understand where the HTTP version behavior is coming from.
+- Virtual Server HTTP Response Rate By Status
 
 This concludes Ticket 08.
 

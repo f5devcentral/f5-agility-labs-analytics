@@ -28,7 +28,7 @@ virtual servers.
 Tasks
 ~~~~~
 
-Use the AI Assistant and enter the following prompt:
+Use the AI Assistant located at the top of the home screen and enter the following prompt:
 
 ``Show all pools and nodes on CentralRegion-bigip-01, and indicate which ones are not referenced by any virtual server.``
 

@@ -32,6 +32,10 @@ Navigate to:
 
   **Dashboards >> BIG-IP Device >> Device Pools**
 
+.. image:: ../images/image5.png
+    :width: 500px
+    :alt: Device Pools Dashboard navigation
+
 From the Device dropdown, select:
 
   **WestRegion-bigip-01**

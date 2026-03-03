@@ -81,6 +81,24 @@ As illustrated above, the lab environment consists of the following:
    * **NGINX** providing web services
 
    * **Traffic Generator** configured to generate application traffic simulating users
+   
+   * **F5 Insight** with basic configuration complete
+
+What is F5 Insight?
+---------------------------------------
+
+**Key Features in GA Release**
+  * Guided Onboarding – Streamlined setup experience.
+  * F5 Compliant Dashboards – 20+ pre-built dashboards with 400+ panels.
+  * Home Page – Rules-based anomaly detection and BIG-IP metrics cards.
+  * AI Assistant – 10+ scenarios with inline dynamic charts; Using customer provided LLM (OpenAI, Anthropic and Local models ).
+  * SSLO and iRule Telemetry Log Ingestion – Dedicated dashboards and AIDF integration.
+  * Disaster Recovery – Cross data center disaster recovery with Active-Standby configuration. 
+  * Fully Functional Licensing – Complete licensing integration with JWT token support.
+  * AIDF integration as an opt-in feature.
+
+.. NOTE::
+    WARNING: This lab uses 3rd party API Keys and these are never to be shared or used outside of the lab, and what it instructs, for any reason.
 
 Deploy blueprint and connect to F5 Insight
 ---------------------------------------
@@ -88,15 +106,15 @@ Deploy blueprint and connect to F5 Insight
 From the `UDF <https://udf.f5.com/blueprints>`_ console, search for and deploy the blueprint entitled *AppWorld 2026 - F5 Insight for ADSP*. 
 Once the blueprint has finished deploying, access F5 Insight by selecting the GUI access link, (*see below*).  Credentials for this lab can be viewed by accessing the guest(s) **DOCUMENTATION** tab.
 
-.. image:: ../images/image1.png
-   :width: 800px
-   :alt: UDF Component Page with password
+  .. image:: ./images/image1.png
+    :width: 800px
+    :alt: UDF Component Page with password
 
 Upon successful login to F5 Insight, you will arrive at the home page, (see below).
 
-.. image:: ../images/image2.png
-   :width: 800px
-   :alt: Insight Landing Page
+  .. image:: ./images/image2.png
+    :width: 800px
+    :alt: Insight Landing Page
 
 ---
 
