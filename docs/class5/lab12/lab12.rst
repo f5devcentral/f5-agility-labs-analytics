@@ -7,8 +7,8 @@ Title: “Why is this virtual server only using one CPU?”
 Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
-Operations has reported that the virtual server web-app-https on
-WestRegion-bigip-01 appears to be using only a single TMM/CPU,
+Operations has reported that the virtual server *web-app-https* on
+*WestRegion-bigip-01* appears to be using only a single TMM/CPU,
 even though the device has multiple TMM instances available.
 
 This behavior is impacting throughput and scalability.

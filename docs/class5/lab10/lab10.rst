@@ -42,28 +42,23 @@ under:
 
   **Local Traffic >> Pools >> web-pool**
 
-Determine whether the AI results match the TMUI data.  If necessary, refine the prompt.
+1. Determine whether the AI results match the TMUI data.  If necessary, refine the prompt.
 
-Identify which specific pool member appears slower based on
-available metrics (for example, current connections, total
-requests, or response-time-related statistics exposed in Insight).
+2. Identify which specific pool member appears slower based on available metrics (for example, current connections, total requests, or response-time-related statistics exposed in Insight).
 
-In Insight, review additional metrics for the slower member,
-such as:
+3. In Insight, review additional metrics for the slower member, such as:
 
   - Error rates or HTTP status codes
   - Connection counts or resets
   - Health monitor status and history
 
-Based on the data observed, form a hypothesis for why this
-pool member is slower. Consider possibilities such as:
+4. Based on the data observed, form a hypothesis for why this pool member is slower. Consider possibilities such as:
 
   - Resource constraints on the server (CPU, memory)
   - Application-level issues (slow responses for certain URLs)
   - Network-related issues (packet loss, retransmissions)
 
-Document the additional checks you would perform (or request
-from the server team) on the backend server to validate your hypothesis.
+5. Document the additional checks you would perform (or request from the server team) on the backend server to validate your hypothesis.
 
 
 Deliverables
