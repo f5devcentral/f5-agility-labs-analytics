@@ -97,6 +97,9 @@ What is F5 Insight?
   * Fully Functional Licensing – Complete licensing integration with JWT token support.
   * AIDF integration as an opt-in feature.
 
+.. NOTE::
+WARNING: This lab uses 3rd party API Keys and these are never to be shared or used outside of the lab, and what it instructs, for any reason.
+
 Deploy blueprint and connect to F5 Insight
 ---------------------------------------
 

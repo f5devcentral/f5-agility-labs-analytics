@@ -17,9 +17,10 @@ F5 Insight offers customizable visualizations and dashboards to help you surface
 Expected time to complete: **2 Hours** 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
 
    overview
    introduction
+   api_keys
    lab*/lab*

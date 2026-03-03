@@ -52,4 +52,4 @@ Please proceed to the first ticket.
 
 ---
 
-Go to `Ticket 1 <./lab01/lab01.html>`_
+Go to `API Keys <./api_keys.html>`_
