@@ -78,7 +78,7 @@ This lab is intended to provide a hands-on introduction to F5 Insight for ADSP. 
 As illustrated above, the lab environment consists of the following:
    * **F5 BIG-IP(s)** providing L4/L7 ADC Services 
 
-   * **NGINX Plus** providing web services
+   * **NGINX** providing web services
 
    * **Traffic Generator** configured to generate application traffic simulating users
 
