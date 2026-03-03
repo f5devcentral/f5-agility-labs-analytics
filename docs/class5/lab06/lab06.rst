@@ -30,9 +30,9 @@ Tasks
 
 Use the AI Assistant and enter the following prompt:
 
-  `Show all pools and nodes on CentralRegion-bigip-01,
+``Show all pools and nodes on CentralRegion-bigip-01,
   and indicate which ones are not referenced by any
-  virtual server.
+  virtual server.``
 
 From the returned information and the TMUI on CentralRegion-bigip-01:
 
