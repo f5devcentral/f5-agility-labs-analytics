@@ -39,7 +39,7 @@ Review the information returned.
 Do you see any configuration differences between
 *EastRegion-bigip-01* and *WestRegion-bigip-01*?
 
-If differences are identified, validate them by navigating to: **Dashboard >> BIG-IP Device >> Device Virtual Server and Dashboard >> BIG-IP Device >> Device Pools
+If differences are identified, validate them by navigating to: **Dashboard >> BIG-IP Device >> Device Virtual Server and Dashboard >> BIG-IP Device >> Device Pools**
 
 Compare the configuration of *web-app-foo*
 on each device.

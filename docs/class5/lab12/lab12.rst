@@ -45,23 +45,19 @@ From the returned information and the TMUI on **WestRegion-bigip-01:**
 
 - Verify the CMP state for the web-app-https virtual server.
 - Identify which iRule(s) are attached.
-- Inspect the iRule code and locate any regular global variables
-using the ``::name`` syntax (for example,
-``set ::request_count 0``).
+- Inspect the iRule code and locate any regular global variables using the ``::name`` syntax (for example, ``set ::request_count 0``).
 
 Explain why using a non-static global variable (``::variable``)
 in an iRule causes CMP to be demoted:
 
 - Regular global variables are not shared correctly across TMM instances.
-- To maintain consistency, BIG-IP forces the virtual server to run
-on a single TMM, reducing parallelism.
+- To maintain consistency, BIG-IP forces the virtual server to run on a single TMM, reducing parallelism.
 
 As part of your explanation, consider:
 
 - Regular global variables (``::name``) are not shared across TMM instances.
 - CMP demotion reduces a virtual server to a single TMM/CPU.
-- Mixing CMP-compatible and CMP-incompatible iRules on the same
-virtual server still results in demotion.
+- Mixing CMP-compatible and CMP-incompatible iRules on the same virtual server still results in demotion.
 
 Describe how you would refactor the iRule to keep it CMP-safe,
 for example:
@@ -87,11 +83,8 @@ Hints
 ~~~~~
 
 - Even a single ``::variable`` usage is enough to demote CMP.
-- Attaching both CMP-safe and CMP-unsafe iRules to the same
-virtual server does not “average out” — the CMP-unsafe behavior
-still causes demotion.
-- Compare CMP mode and TMM distribution before and after
-removing the CMP-unsafe iRule.
+- Attaching both CMP-safe and CMP-unsafe iRules to the same virtual server does not “average out” — the CMP-unsafe behavior still causes demotion.
+- Compare CMP mode and TMM distribution before and after removing the CMP-unsafe iRule.
 
 
 This concludes Ticket 12.
