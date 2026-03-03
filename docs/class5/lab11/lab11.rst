@@ -40,52 +40,52 @@ Tasks
 
 Traditionally, you would examine connection and request distribution using the BIG-IP GUI or CLI, for example:
 
-    `tmsh show ltm pool /Common/web-pool members
+  ``tmsh show ltm pool /Common/web-pool members``
 
-  For this lab, use the AI Assistant and enter the following prompt:
+For this lab, use the AI Assistant and enter the following prompt:
 
-    `Show pool statistics for /Common/web-pool on
-    EastRegion-bigip-01.
+  ``Show pool statistics for /Common/web-pool on
+  EastRegion-bigip-01.``
 
-  Compare these results to the TMUI interface on
-  EastRegion-bigip-01 under:
+Compare these results to the TMUI interface on
+EastRegion-bigip-01 under:
 
-    **Local Traffic >> Pools >> web-pool**
+  **Local Traffic >> Pools >> web-pool**
 
-  Determine whether the AI results match the TMUI data.
+Determine whether the AI results match the TMUI data.
 
-  In Insight, navigate to:
+In Insight, navigate to:
 
-    **BIG-IP Device >> Device Virtual Server**
+  **BIG-IP Device >> Device Virtual Server**
 
-  Select the appropriate device and virtual server
-  */Common/web_app_42*.
+Select the appropriate device and virtual server
+*/Common/web_app_42*.
 
-  Inspect the assigned profiles and identify:
+Inspect the assigned profiles and identify:
 
-  - Which OneConnect profile is in use
-  - The source mask and maximum reuse settings
-  - The SNAT configuration (Automap vs SNAT pool)
+- Which OneConnect profile is in use
+- The source mask and maximum reuse settings
+- The SNAT configuration (Automap vs SNAT pool)
 
-  Explain why the combination of SNAT Automap and a
-  OneConnect source mask of 0.0.0.0 (or an equivalently
-  wide mask) with a high reuse value can result in uneven
-  load distribution across pool members.
+Explain why the combination of SNAT Automap and a
+OneConnect source mask of 0.0.0.0 (or an equivalently
+wide mask) with a high reuse value can result in uneven
+load distribution across pool members.
 
-  Implement a configuration change to improve load
-  distribution. Possible approaches include:
+Implement a configuration change to improve load
+distribution. Possible approaches include:
 
-  - Adjusting the OneConnect source mask
-  - Using a SNAT pool with multiple addresses
-  - Tuning the maximum reuse value
+- Adjusting the OneConnect source mask
+- Using a SNAT pool with multiple addresses
+- Tuning the maximum reuse value
 
-  After making the change, verify that traffic is
-  distributed more evenly:
+After making the change, verify that traffic is
+distributed more evenly:
 
-  - Reset statistics as needed
-  - Generate test traffic
-  - Re-run the pool statistics command to confirm
-    improved balance
+- Reset statistics as needed
+- Generate test traffic
+- Re-run the pool statistics command to confirm
+  improved balance
 
 
 Deliverables

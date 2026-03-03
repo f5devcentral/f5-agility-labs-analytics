@@ -35,9 +35,9 @@ Tasks
 
   Use the AI Assistant and enter the following prompt:
 
-  `Show configuration details for the *Backup_app*
+  ``Show configuration details for the *Backup_app*
   virtual server on *CentralRegion-bigip-01*,
-  including attached profiles.
+  including attached profiles.``
 
   From the returned information and the TMUI on **CentralRegion-bigip-01:**
 

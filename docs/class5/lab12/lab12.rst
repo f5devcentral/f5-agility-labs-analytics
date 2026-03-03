@@ -35,40 +35,40 @@ Context
 Tasks
 ~~~~~
 
-  Use the AI Assistant and enter the following prompt:
+Use the AI Assistant and enter the following prompt:
 
-    `Show full configuration details for the web-app-https
-    virtual server on WestRegion-bigip-01, including
-    assigned iRules and CMP state.
+  ``Show full configuration details for the web-app-https
+  virtual server on WestRegion-bigip-01, including
+  assigned iRules and CMP state.``
 
-  From the returned information and the TMUI on WestRegion-bigip-01:
+From the returned information and the TMUI on **WestRegion-bigip-01:**
 
-  - Verify the CMP state for the web-app-https virtual server.
-  - Identify which iRule(s) are attached.
-  - Inspect the iRule code and locate any regular global variables
-    using the ``::name`` syntax (for example,
-    ``set ::request_count 0``).
+- Verify the CMP state for the web-app-https virtual server.
+- Identify which iRule(s) are attached.
+- Inspect the iRule code and locate any regular global variables
+  using the ``::name`` syntax (for example,
+  ``set ::request_count 0``).
 
-  Explain why using a non-static global variable (``::variable``)
-  in an iRule causes CMP to be demoted:
+Explain why using a non-static global variable (``::variable``)
+in an iRule causes CMP to be demoted:
 
-  - Regular global variables are not shared correctly across TMM instances.
-  - To maintain consistency, BIG-IP forces the virtual server to run
-    on a single TMM, reducing parallelism.
+- Regular global variables are not shared correctly across TMM instances.
+- To maintain consistency, BIG-IP forces the virtual server to run
+  on a single TMM, reducing parallelism.
 
-  As part of your explanation, consider:
+As part of your explanation, consider:
 
-  - Regular global variables (``::name``) are not shared across TMM instances.
-  - CMP demotion reduces a virtual server to a single TMM/CPU.
-  - Mixing CMP-compatible and CMP-incompatible iRules on the same
-    virtual server still results in demotion.
+- Regular global variables (``::name``) are not shared across TMM instances.
+- CMP demotion reduces a virtual server to a single TMM/CPU.
+- Mixing CMP-compatible and CMP-incompatible iRules on the same
+  virtual server still results in demotion.
 
-  Describe how you would refactor the iRule to keep it CMP-safe,
-  for example:
+Describe how you would refactor the iRule to keep it CMP-safe,
+for example:
 
-  - Replace non-static globals with per-connection variables.
-  - Use ``static::`` variables only for read-only configuration data.
-  - Avoid constructs documented as CMP-incompatible.
+- Replace non-static globals with per-connection variables.
+- Use ``static::`` variables only for read-only configuration data.
+- Avoid constructs documented as CMP-incompatible.
 
 
 Deliverables
