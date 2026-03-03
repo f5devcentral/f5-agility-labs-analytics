@@ -4,6 +4,9 @@ Ticket 01 – Explore the Top N Dashboard
 Title: “What insights can you quickly gather from the Top N view?”
 -------------------------------------------------------------------
 
+.. NOTE::
+WARNING: This lab uses 3rd party API Keys and these are never to be shared or used outside of the lab, and what it instructs, for any reason.
+
 Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
