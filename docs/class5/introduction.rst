@@ -4,8 +4,8 @@ Introduction
 F5 BIG‑IP Troubleshooting Lab: LTM & ASM/AWAF Tickets
 ---------------------------------------
 
-Audience: Intermediate F5 admins familiar with basic VS/pool/WAF concepts.
----------------------------------------
+**Audience: Intermediate F5 admins familiar with basic VS/pool/WAF concepts.**
+
 **Objectives:**
 
    Use BIG‑IP tools (GUI, tmsh, logs) to troubleshoot L4–L7 issues.
