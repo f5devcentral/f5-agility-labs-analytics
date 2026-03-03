@@ -30,9 +30,9 @@ Tasks
 
   Use the AI Assistant and enter the following prompt:
 
-  ```Can you check the virtual servers named 'web-app-foo'
+  ``Can you check the virtual servers named 'web-app-foo'
   and their associated objects across all BIG-IPs
-  to verify that the configuration is the same?```
+  to verify that the configuration is the same?``
 
   Review the information returned.
 

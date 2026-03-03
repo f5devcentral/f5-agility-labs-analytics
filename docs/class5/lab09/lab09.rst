@@ -60,9 +60,8 @@ Tasks
   associated with accounts_receivable_https_vs and app-3
   that show:
 
-  - The distribution of 4xx status codes
-    (400, 401, 403, 404).
-  - Whether certain paths (for example, /401, /403, /404, /400) are consistently associated with specific 4xx responses.
+  - The distribution of 4xx status codes.
+  - Whether certain paths are consistently associated with specific 4xx responses.
 
   Based on this information, determine:
 
@@ -91,9 +90,7 @@ Hints
 
 - Review how the backend application on port 8080
   is configured to respond to different paths.
-- If a traffic script rotates through /401, /403,
-/404, and /400, seeing those 4xx codes in logs is
-  likely expected behavior.
+- If a traffic script rotates through /401, /403, /404, and /400, seeing those 4xx codes in logs is likely expected behavior.
 - Distinguishing between expected and unexpected 4xx
   responses is an important troubleshooting skill.
 
