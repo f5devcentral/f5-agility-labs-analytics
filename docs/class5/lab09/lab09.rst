@@ -1,70 +1,78 @@
-Ticket 09 – Investigating Unexpected 4xx Responses
-==================================================
+Ticket 09 – Investigating APM Session Activity Across Devices
+==============================================================
 
-Title: “How is my APM health?”
----------------------------------------------------------
+Title: “Which BIG-IPs Are Actively Handling APM Sessions?”
+-----------------------------------------------------------
 
 Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
-You have been asked to investigate the health of the APM policy protecting a virtual server.
+  The APM dashboard displays session activity across multiple BIG-IP devices.
+  You have been asked to determine which BIG-IPs are actively processing
+  APM access sessions and whether the observed session behavior is expected.
+
+  Specifically, review the "Current APM Access Sessions by State" panel
+  and identify which devices are showing active or established sessions.
+
 
 Context
 ~~~~~~~
 
-**Device Name:** CentralRegion-bigip-01
+  Dashboard: APM Overview
 
-**Virtual Server:** my_apm_protected_vs
+  **Device Name:**
+    - CentralRegion-bigip-01
+    - EastRegion-bigip-01
+    - SecurityRegion1-bigip-01
+    - WestRegion-bigip-01
 
-**Pool:** apm_pool
-
-**Observed Behavior:**
-
-  - TBD
+  Panel of Interest:
+    - Current APM Access Sessions by State
 
 
 Tasks
 ~~~~~
 
-Use the AI Assistant and enter the following prompt:
+  Navigate to:
 
-  ``Tell me about the APM sessions on bigip/CentralRegion-bigip-01?``
+    **Dashboards >> BIG-IP Fleet >> APM Sessions**
 
-From the returned information and the TMUI on CentralRegion-bigip-01:
+  Review the "Current APM Access Sessions by State" panel.
 
-  - How many sessions are connected on average?
-  - How long do users stay connected on average?
-  - Check ...
+  Identify which BIG-IP device(s) are showing:
 
-In Insight, review ABC:
+    - Active sessions
+    - Established sessions
 
-  - TBD
+  Identify which BIG-IP device(s) are processing any APM sessions.
 
-Based on this information, determine:
-
-  - TBD
-
+  Observe the timeline and determine:
+    - Did session counts fluctuate?
+    - Did sessions drop to zero at any point?
+    - If so, at approximately what time?
 
 Deliverables
 ~~~~~~~~~~~~
 
   Briefly answer the following:
-  
-    - 
+    - Which devices are actively handling APM sessions?
+    - Which devices show no session activity?
 
-  A brief summary describing:
-
-    - TBD
-
+  Review the following for additional information and trends:
+    
+    - Is APM traffic evenly distributed across devices?
+    - Does one device appear to be the primary session handler?
+    - Is there evidence of a restart, timeout, or session clearing event?
 
 Hints
 ~~~~~
 
-- TBD
+  - Use the filter to select all BIG-IPs.
+  - Adjust the Time Range to view a larger activity window.
+  - Compare active vs established session lines carefully.
 
 
-This concludes Ticket 09.
-
+ This concludes Ticket 09.
 
 Go to `Ticket 10 - Investigating a Slow Pool Member <../lab10/lab10.html>`_
 
