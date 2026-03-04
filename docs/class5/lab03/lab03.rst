@@ -19,51 +19,51 @@ Ticket Description
 Context
 ~~~~~~~
 
-**Device Name:** WestRegion-bigip-01
+  **Device Name:** WestRegion-bigip-01
 
-**Pool Name:** web_servers_pool
+  **Pool Name:** web_servers_pool
 
-**Pool Member:** 10.1.20.201:80
+  **Pool Member:** 10.1.20.201:80
 
 Tasks
 ~~~~~
 
-Navigate to:
+  Navigate to:
 
-  **Dashboards >> BIG-IP Device >> Device Pools**
+    **Dashboards >> BIG-IP Device >> Device Pools**
 
-.. image:: ../images/image5.png
-    :width: 500px
-    :alt: Device Pools Dashboard navigation
+  .. image:: ../images/image5.png
+      :width: 500px
+      :alt: Device Pools Dashboard navigation
 
-From the Device dropdown, select:
+  From the Device dropdown, select:
 
-  **WestRegion-bigip-01**
+    **WestRegion-bigip-01**
 
-From the Pool dropdown, select:
+  From the Pool dropdown, select:
 
-  **web_servers_pool**
+    **web_servers_pool**
 
-Locate the panel:
+  Locate the panel:
 
-  **Pool Member State – isAvailable**
+    **Pool Member State – isAvailable**
 
-Click the "Expand panel" button on top right of that panel
+  Click the "Expand panel" button on top right of that panel
 
-Use the Time Range dropdown in the upper-right corner of the dashboard
-to review historical availability data.
+  Use the Time Range dropdown in the upper-right corner of the dashboard
+  to review historical availability data.
 
-Try adjusting the range to broader views such as:
+  Try adjusting the range to broader views such as:
 
-  - Last 24 hours
-  - Last 7 Days
-  - Last 30 Days
+    - Last 24 hours
+    - Last 7 Days
+    - Last 30 Days
 
-Identify:
+  Identify:
 
-  - The most recent time the pool member *10.1.20.201:80*  was not available
-  - The duration of the outage (if visible)
-  - How long it has been since that outage occurred
+    - The most recent time the pool member *10.1.20.201:80*  was not available
+    - The duration of the outage (if visible)
+    - How long it has been since that outage occurred
 
 
 Deliverables
