@@ -12,9 +12,10 @@ Operations has reported that the virtual server *web-app-https* on
 even though the device has multiple TMM instances available.
 
 This behavior is impacting throughput and scalability.
-You have been asked to determine why `Clustered Multiprocessing(CMP) <https://my.f5.com/manage/s/article/K14358>`__ is demoted on this
+You have been asked to determine why Clustered Multiprocessing(CMP) is demoted on this
 virtual server and which configuration element is responsible.
 
+For information on CMP right-click this link and open in new tab: https://my.f5.com/manage/s/article/K14358
 
 Context
 ~~~~~~~
