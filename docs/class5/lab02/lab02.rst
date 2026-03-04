@@ -15,50 +15,50 @@ Ticket Description
 Context
 ~~~~~~~
 
-**Device Name:** CentralRegion-bigip-01
+  **Device Name:** CentralRegion-bigip-01
 
-**Virtual Server Name:** primary-app-site-1-https-vip
+  **Virtual Server Name:** primary-app-site-1-https-vip
 
-**Protocol:** HTTPS (TCP 443)
+  **Protocol:** HTTPS (TCP 443)
 
 Tasks
 ~~~~~
 
-Determine which times of day and which days of the week
-show the highest traffic for the virtual server
-primary-app-site-1-https-vip on CentralRegion-bigip-01.1.
+  Determine which times of day and which days of the week
+  show the highest traffic for the virtual server
+  primary-app-site-1-https-vip on CentralRegion-bigip-01.1.
 
-Navigate to:
+  Navigate to:
 
-  **Dashboards >> BIG-IP Fleet >> Virtual Servers**
+    **Dashboards >> BIG-IP Fleet >> Virtual Servers**
 
-.. image:: ../images/image4.png
-    :width: 500px
-    :alt: Fleet Dashboard navigation
+  .. image:: ../images/image4.png
+      :width: 500px
+      :alt: Fleet Dashboard navigation
 
-From "Data Center" leave the default value as:
-  
-  **default**
+  From "Data Center" leave the default value as:
+    
+    **default**
 
-From "Devices" leave the default value as:
+  From "Devices" leave the default value as:
 
-  **bigip/CentralRegion-bigip-01**
+    **bigip/CentralRegion-bigip-01**
 
-From the "Virtual Server" dropdown, verify only below is selected:
+  From the "Virtual Server" dropdown, verify only below is selected:
 
-  **primary-app-site-1-https-vip**
+    **primary-app-site-1-https-vip**
 
-Click the *"Apply Filters"* button.
+  Click the *"Apply Filters"* button.
 
-Review the following panels:
+  Review the following panels:
 
-  - VS is Available
-  - VS Connection Rate
-  - VS Data Rate
-  
+    - VS is Available
+    - VS Connection Rate
+    - VS Data Rate
+    
 
-Use the Time Range dropdown in the upper-right corner
-to expand the view to at least the Last 7 Days.
+  Use the Time Range dropdown in the upper-right corner
+  to expand the view to at least the Last 7 Days.
 
 Deliverables
 ~~~~~~~~~~~~
@@ -77,13 +77,13 @@ Deliverables
 Hints
 ~~~~~
 
-Pay close attention to:
+  Pay close attention to:
 
-  - VS is Available panel
-  - Request rate trends
-  - Throughput (bps)
-  - Connection counts
-  - Historical time-based views
+    - VS is Available panel
+    - Request rate trends
+    - Throughput (bps)
+    - Connection counts
+    - Historical time-based views
 
 This concludes Ticket 2.
 

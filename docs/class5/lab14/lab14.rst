@@ -82,11 +82,11 @@ Deliverables
 Hints
 ~~~~~
 
-- If the response looks incomplete, verify your prompt matches
-  the ticket exactly and try again.
-- If the AI returns multiple IPs, focus on the highest request count.
-- If the platform supports it, validate the time window is set to
-  the last 24 hours before interpreting results.
+  - If the response looks incomplete, verify your prompt matches
+    the ticket exactly and try again.
+  - If the AI returns multiple IPs, focus on the highest request count.
+  - If the platform supports it, validate the time window is set to
+    the last 24 hours before interpreting results.
 
 This concludes Ticket 14.
 

@@ -73,11 +73,9 @@ Deliverables
 Hints
 ~~~~~
 
-- Look at which HTTP profile is attached and whether it is a custom profile or the default http profile.
-
-- Use the charts, Luke!
-
-- Virtual Server HTTP Response Rate By Status
+  - Look at which HTTP profile is attached and whether it is a custom profile or the default http profile.
+  - Use the charts, Luke!
+  - Virtual Server HTTP Response Rate By Status
 
 This concludes Ticket 08.
 
