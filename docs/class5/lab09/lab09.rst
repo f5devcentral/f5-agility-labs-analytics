@@ -55,6 +55,7 @@ Deliverables
 ~~~~~~~~~~~~
 
   Briefly answer the following:
+    
     - Which devices are actively handling APM sessions?
     - Which devices show no session activity?
 
