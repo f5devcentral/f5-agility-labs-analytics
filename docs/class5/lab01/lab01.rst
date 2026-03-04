@@ -89,6 +89,6 @@ Hints
 This concludes Ticket 1.
 
 
-Go to `Ticket 02 - Analyze Traffic Patterns for an Application <../lab02/lab02.html>`_
+Go to `Ticket 02 - Analyze Traffic Patterns for an Application <../lab02/lab02.rst>`_
 
-Go to `Overview <../overview.html>`_
+Go to `Overview <../overview.rst>`_
