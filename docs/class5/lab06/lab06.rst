@@ -57,10 +57,14 @@ The goal is only to locate and document orphaned objects.
 Deliverables
 ~~~~~~~~~~~~
 
-A brief summary describing:
+  Briefly answer the following:
+    - How many pools are on CentralRegion-bigip-01?
+    - How many of those pools are not referenced by any Virtual Server?
 
-  - A clear list of which objects are confirmed to be
-    orphaned on CentralRegion-bigip-01
+  Review the following for additional information and trends:
+
+    - A clear list of which objects are confirmed to be
+      orphaned on CentralRegion-bigip-01
 
 
 Hints

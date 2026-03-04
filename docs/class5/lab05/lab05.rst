@@ -27,55 +27,57 @@ Context
 Tasks
 ~~~~~
 
-1. Navigate to: **Home >> System Report Cards**
+Navigate to: **Home >> System Report Cards**
 
-2. Locate the card: **Anomaly Detection**
+Locate the card: **Anomaly Detection** and click on: **Anomaly Detection**
 
-3. Click on: **Anomaly Detection**
+Within the expanded panel, locate: **Pool Availability Deviation** and click on: **View Details**
 
-4. Within the expanded panel, locate: **Pool Availability Deviation** and click on: **View Details**
+Scroll down to the **Pools** table.
 
-5. Scroll down to the **Pools** table.
-
-6. Review each Pool and identify:
+Review each Pool and identify:
 
   - Status (Critical, Warning, Good)
   - Expected Availability Ratio
   - Current Availability Ratio
   - Deviation value and percentage
 
-7. Pay attention to severity coloring:
+Pay attention to severity coloring:
 
   - Red indicates Critical deviation
   - Yellow indicates Warning
   - Green indicates Normal/Good
 
-8. Select any *Pool* from the list.  The graph above will update based on your selection.
+Select any *Pool* from the list.  The graph above will update based on your selection.
 
-9. Review the *Pool Availability Ratio Deviation Analysis* graph.
-10. Observe:
+Review the *Pool Availability Ratio Deviation Analysis* graph.
+
+Observe:
 
   - Actual availability ratio
   - Expected availability ratio
   - Upper threshold
   - Lower threshold
 
-11. Determine whether the actual value crossed either threshold.
+Determine whether the actual value crossed either threshold.
 
-12. Use the time range selector (1h, 6h, 1d, 1w) in the upper-right corner of the dashboard to review different time windows.
+Use the time range selector (1h, 6h, 1d, 1w) in the upper-right corner of the dashboard to review different time windows.
 
 
 Deliverables
 ~~~~~~~~~~~~
 
-A brief summary including:
+  Briefly answer the following:
+    - Are any pools in a critical state?
 
-  - The total number of Pools listed
-  - How many are Critical
-  - How many are Warning
-  - How many are Good
-  - Whether any pool crossed defined thresholds
-  - Any patterns you observe in availability trends
+  Review the following for additional information and trends:
+
+    - The total number of Pools listed
+    - How many are Critical
+    - How many are Warning
+    - How many are Good
+    - Whether any pool crossed defined thresholds
+    - Any patterns you observe in availability trends
 
 
 Hints

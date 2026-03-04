@@ -12,7 +12,7 @@ Operations has reported that the virtual server *web-app-https* on
 even though the device has multiple TMM instances available.
 
 This behavior is impacting throughput and scalability.
-You have been asked to determine why CMP is demoted on this
+You have been asked to determine why `Clustered Multiprocessing(CMP) <https://my.f5.com/manage/s/article/K14358>`__ is demoted on this
 virtual server and which configuration element is responsible.
 
 
@@ -61,11 +61,14 @@ for example:
 Deliverables
 ~~~~~~~~~~~~
 
-A brief summary describing:
+  Briefly answer the following:
+    - What is the issue causing CMP demotion according to the AI agent in Insight?
 
-  - The CMP state of web-app-https and how you verified it
-  - Which iRule (and which specific lines) are responsible for CMP demotion
-  - How you would rewrite the iRule to be CMP-compatible while preserving its intended behavior
+  Review the following for additional information and trends:
+
+    - The CMP state of web-app-https and how you verified it
+    - Which iRule (and which specific lines) are responsible for CMP demotion
+    - How you would rewrite the iRule to be CMP-compatible while preserving its intended behavior
 
 
 Hints

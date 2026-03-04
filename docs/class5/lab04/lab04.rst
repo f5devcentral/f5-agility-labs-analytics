@@ -44,7 +44,7 @@ Locate the card: **Anomaly Detection** and click on: **Anomaly Detection**
     :width: 500px
     :alt: Anomaly Detection Dashboard navigation
 
-Within the expanded panel, locate: **Connection Count Deviation Analysis**
+Within the expanded panel, locate: **Connection Count Deviation Analysis** and click on: **View Details**
 
 Scroll down to the **Virtual Servers** table.
 
@@ -61,7 +61,9 @@ Pay attention to severity coloring:
   - Yellow indicates Warning
   - Green indicates Normal/Good
 
-Select a Virtual Server in a "Critical" state (or any Virtual Server).
+Select a Virtual Server in a "Critical" state with highest deviation score
+(in future, browse other Virtual Servers).
+
 The graph above will update based on your selection.
 
 Review the Connection Count Deviation Analysis graph on top.
@@ -80,19 +82,23 @@ corner of the dashboard to review different time windows.
 Deliverables
 ~~~~~~~~~~~~
 
-A brief summary including:
+  Briefly answer the following:
+    - Reviewing the graph, provide the expected connection count.
 
-  - The total number of Virtual Servers listed
-  - How many are Critical
-  - How many are Warning
-  - How many are Good
-  - The Virtual Server with the largest deviation percentage
-  - Any patterns you observe in the deviation data
+  Review the following for additional information and trends:
+
+    - The total number of Virtual Servers listed
+    - How many are Critical
+    - How many are Warning
+    - How many are Good
+    - The Virtual Server with the largest deviation percentage
+    - Any patterns you observe in the deviation data
 
 
 Hints
 ~~~~~
 
+- Hover over the red expected line in graph to view associated data
 - Hover over points in the graph to see exact values.
 - Try changing the time range to see if deviations are persistent.
 - Sort the Virtual Server table by deviation percentage.

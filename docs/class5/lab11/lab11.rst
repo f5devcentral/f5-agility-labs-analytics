@@ -71,12 +71,17 @@ Determine whether the AI results match the TMUI data.  In Insight, navigate to:
 Deliverables
 ~~~~~~~~~~~~
 
-- Evidence of skewed member usage
-  (for example, screenshot or CLI output)
-- Proposed solution covering:
+  Briefly answer the following:
+    - What do you believe is the root cause of the uneven distribution?
 
-    - The root cause of the uneven distribution?
-    - What configuration change could resolve the issue?
+  Review the following for additional information and trends:
+
+    - Evidence of skewed member usage
+      (for example, screenshot or CLI output)
+    - Proposed solution covering:
+
+        - The root cause of the uneven distribution?
+        - What configuration change could resolve the issue?
 
 Hints
 ~~~~~

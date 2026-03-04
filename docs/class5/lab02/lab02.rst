@@ -52,8 +52,10 @@ Click the *"Apply Filters"* button.
 
 Review the following panels:
 
-  - VS Data Rate
+  - VS is Available
   - VS Connection Rate
+  - VS Data Rate
+  
 
 Use the Time Range dropdown in the upper-right corner
 to expand the view to at least the Last 7 Days.
@@ -61,18 +63,23 @@ to expand the view to at least the Last 7 Days.
 Deliverables
 ~~~~~~~~~~~~
 
-A brief summary describing the traffic trends:
+  Briefly answer the following:
 
-  - Peak time(s) of day
-  - Peak day(s) of week
-  - Observed traffic behavior (weekday spikes, weekend drops, steady patterns, etc.)
-  - Recommended maintenance window based on traffic analysis
+    - What day and time was this VS NOT available?
+
+  Review the following for additional information and trends:
+
+    - Peak time(s) of day
+    - Peak day(s) of week
+    - Observed traffic behavior (weekday spikes, weekend drops, steady patterns, etc.)
+    - Recommended maintenance window based on traffic analysis
 
 Hints
 ~~~~~
 
 Pay close attention to:
 
+  - VS is Available panel
   - Request rate trends
   - Throughput (bps)
   - Connection counts

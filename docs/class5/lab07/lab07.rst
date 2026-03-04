@@ -43,10 +43,13 @@ Compare the configuration of *web-app-foo* on each device:
 Deliverables
 ~~~~~~~~~~~~
 
-A brief summary describing the issue found:
+  Briefly answer the following:
+    - Provide, at least, two of the inconsistencies found by the AI agent
 
-  - A list of discrepancies found for *web-app-foo*
-  - An explanation of how each discrepancy could impact behavior
+  Review the following for additional information and trends:
+
+    - A list of discrepancies found for *web-app-foo*
+    - An explanation of how each discrepancy could impact behavior
 
 Hints
 ~~~~~

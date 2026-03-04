@@ -34,7 +34,9 @@ Navigate to:
     :alt: Top N Dashboard navigation
 
 From the Device dropdown at the top of the page,
-select a BIG-IP.  You may choose any BIG-IP for this exercise.
+select the BIG-IP specified below.
+
+  **CentralRegion-bigip-01**
 
 Change the Time Range (upper-right corner) to:
 
@@ -68,19 +70,21 @@ rankings change.
 Deliverables
 ~~~~~~~~~~~~
 
-Consider:
+  Briefly answer the following:
 
-  - What types of operational questions could this dashboard help answer?
+    - Which VIP has the highest WAF CPU Utilization?
 
-Briefly answer the following:
+  Review the following for additional information and trends:
 
-  - Which VIP appears most frequently across Top N panels?
-  - Which panel did you find most useful and why?
-  - Did any objects show degraded availability?
+    - Which VIP appears most frequently across Top N panels?
+    - What types of operational questions could this dashboard help answer?
+    - Which panel did you find most useful and why?
+    - Did any objects show degraded availability?
 
 Hints
 ~~~~~
 
+  - Pay specific attention to the Top 10 VIPs By WAF CPU Utilization panel
   - You can deselect entries in graph legends to simplify views.
   - Compare short time ranges to long time ranges.
   - Not every “Top” entry indicates a problem — some reflect normal load.

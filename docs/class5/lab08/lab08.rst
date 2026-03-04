@@ -56,13 +56,17 @@ app-1 pool members behave differently.
 Deliverables
 ~~~~~~~~~~~~
 
-A brief summary describing:
+  Briefly answer the following:
+    - Your conclusion about the HTTP version behavior from the client
+      to the Backup_app virtual server.
 
-  - The HTTP profile attached to Backup_app.
-  - Your conclusion about the HTTP version behavior from the client
-    to the Backup_app virtual server.
-  - Any observations about server-side HTTP behavior to the app-1
-    pool members, is the application traffic healthy?
+  Review the following for additional information and trends:
+
+    - The HTTP profile attached to Backup_app.
+    - Your conclusion about the HTTP version behavior from the client
+      to the Backup_app virtual server.
+    - Any observations about server-side HTTP behavior to the app-1
+      pool members, is the application traffic healthy?
 
 
 Hints
