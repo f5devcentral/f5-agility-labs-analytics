@@ -68,6 +68,7 @@ Deliverables
 ~~~~~~~~~~~~
 
   Briefly answer the following:
+
     - Are any pools in a critical state?
 
   Review the following for additional information and trends:

@@ -62,6 +62,7 @@ Deliverables
 ~~~~~~~~~~~~
 
   Briefly answer the following:
+  
     - What is the issue causing CMP demotion according to the AI agent in Insight?
 
   Review the following for additional information and trends:

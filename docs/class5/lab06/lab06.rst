@@ -58,6 +58,7 @@ Deliverables
 ~~~~~~~~~~~~
 
   Briefly answer the following:
+    
     - How many pools are on CentralRegion-bigip-01?
     - How many of those pools are not referenced by any Virtual Server?
 

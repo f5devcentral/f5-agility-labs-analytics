@@ -57,6 +57,7 @@ Deliverables
 ~~~~~~~~~~~~
 
   Briefly answer the following:
+  
     - Your conclusion about the HTTP version behavior from the client
       to the Backup_app virtual server.
 
