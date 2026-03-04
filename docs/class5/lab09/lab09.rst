@@ -48,9 +48,12 @@ Based on this information, determine:
 Deliverables
 ~~~~~~~~~~~~
 
-A brief summary describing:
+  Briefly answer the following:
+    - 
 
-  - TBD
+  A brief summary describing:
+
+    - TBD
 
 
 Hints

@@ -19,7 +19,7 @@ Context
 
 **VIP:** /Common/sslo.demo.f5
 
-**Policy:** /Common/pol_java_asm (Java/Struts signatures enabled)
+**Policy:** /Common/my_sslo_app_waf_policy (Java/Struts signatures enabled)
 
 **Application URL:** /upload.action
 
@@ -27,8 +27,11 @@ Context
 Tasks
 ~~~~~
 
-Access the Insight guest via web shell and send
-the following Struts-style test request:
+Navigate to:
+
+  **udf.f5.com GUI >> Deployment >> F5 Insight >> ACCESS >> WEB SHELL**
+
+Send the following Struts-style test request:
 
 .. code-block:: bash
 
@@ -36,6 +39,10 @@ the following Struts-style test request:
       "https://sslo.demo.f5/upload.action" \
       -H 'Content-Type: ${(#_="multipart/form-data").(#context["com.opensymphony.xwork2.dispatcher.HttpServletResponse"].addHeader("X-Struts-POC","1"))}' \
       --data-binary 'test'
+
+Gather and record the following information from that request:
+  - IP address of FQDN "sslo.demo.f5" (Can be found near the top of output)
+  - Support ID in response (Can be found in the html of the response)
 
 Verify that the request is blocked and logged by ASM/AWAF
 as a Java/Struts/OGNL RCE attempt.  In the WAF event logs, identify:
@@ -48,10 +55,15 @@ as a Java/Struts/OGNL RCE attempt.  In the WAF event logs, identify:
 
 Deliverables
 ~~~~~~~~~~~~
+  
+  Briefly answer the following:
+    - Provide the source IP address found in the WAF event
 
-- Screenshot of the specific WAF request log entry
-  (showing attack signature, severity, and blocking status).
-- Prepare a short explanation suitable for a non-F5 security audience describing what occurred.
+  Review the following for additional information and trends:
+
+  - Screenshot of the specific WAF request log entry
+    (showing attack signature, severity, and blocking status).
+  - Prepare a short explanation suitable for a non-F5 security audience describing what occurred.
 
 
 Hints

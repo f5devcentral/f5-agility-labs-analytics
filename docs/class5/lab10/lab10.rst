@@ -64,12 +64,15 @@ under:
 Deliverables
 ~~~~~~~~~~~~
 
-A brief summary describing:
+  Briefly answer the following:
+    - 
 
-  - Which pool member in web-pool is slower and how you determined this
-  - The key statistics or metrics that led to your conclusion
-  - Your working hypothesis for the root cause
-  - What you would investigate next on the backend server or application
+  Review the following for additional information and trends:
+
+    - Which pool member in web-pool is slower and how you determined this
+    - The key statistics or metrics that led to your conclusion
+    - Your working hypothesis for the root cause
+    - What you would investigate next on the backend server or application
 
 
 Hints

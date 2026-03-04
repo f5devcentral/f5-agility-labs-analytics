@@ -55,35 +55,39 @@ to review historical availability data.
 
 Try adjusting the range to broader views such as:
 
-- Last 24 hours
-- Last 7 Days
-- Last 30 Days
-
-Click the "Expand Panel" button in the upper-right corner of the panel to enlarge the view.
+  - Last 24 hours
+  - Last 7 Days
+  - Last 30 Days
 
 Identify:
 
-- The most recent time the pool member *10.1.20.201:80*  was not available
-- The duration of the outage (if visible)
-- How long it has been since that outage occurred
+  - The most recent time the pool member *10.1.20.201:80*  was not available
+  - The duration of the outage (if visible)
+  - How long it has been since that outage occurred
 
 
 Deliverables
 ~~~~~~~~~~~~
 
-  A brief summary including:
+  Briefly answer the following:
 
-  - Date and time of the last outage
-  - Approximate duration of the outage
-  - Time elapsed since the outage
-  - Any observations about stability trends
+    - What day and time was it observed that pool was less than 100% available?
+    - What percent of pool members were up at that time?
+
+  Review the following for additional information and trends:
+
+    - Date and time of the last outage
+    - Approximate duration of the outage
+    - Time elapsed since the outage
+    - Any observations about stability trends
 
 Hints
 ~~~~~
 
-- Try expanding the time range (Last 24 Hours, 7 Days, 30 Days).
-- Look for state transitions from isAvailable to unavailable.
-- Zoom in on the graph if necessary to see shorter outages.
+  - Hover over points in graph to see event day and time
+  - Try expanding the time range (Last 24 Hours, 7 Days, 30 Days).
+  - Look for state transitions from isAvailable to unavailable.
+  - Zoom in on the graph if necessary to see shorter outages.
 
 This concludes Ticket 3.
 

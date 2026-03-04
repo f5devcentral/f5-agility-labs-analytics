@@ -65,14 +65,17 @@ on WAF/security events (not full traffic telemetry).
 Deliverables
 ~~~~~~~~~~~~
 
-Briefly answer the following:
+  Briefly answer the following:
+    - 
 
-  - Busiest client IP address
-  - Request count and percentage of total WAF events
-  - Total WAF events in the last 24 hours
-  - Any violation types observed
-  - Any attack type observed (if present)
-  - Any additional observations from the AI response
+  Review the following for additional information and trends:
+
+    - Busiest client IP address
+    - Request count and percentage of total WAF events
+    - Total WAF events in the last 24 hours
+    - Any violation types observed
+    - Any attack type observed (if present)
+    - Any additional observations from the AI response
 
 
 Hints
