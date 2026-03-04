@@ -80,6 +80,6 @@ Pay close attention to:
 
 This concludes Ticket 2.
 
-Go to `Ticket 03 - Determine Last Application Outage <../lab03/lab03.html>`_
+Go to `Ticket 03 - Determine Last Application Outage <../lab03/lab03.rst>`_
 
-Go to `Overview <../overview.html>`_
+Go to `Overview <../overview.rst>`_
