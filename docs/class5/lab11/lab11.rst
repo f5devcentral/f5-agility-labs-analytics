@@ -72,6 +72,7 @@ Deliverables
 ~~~~~~~~~~~~
 
   Briefly answer the following:
+  
     - What do you believe is the root cause of the uneven distribution?
 
   Review the following for additional information and trends:

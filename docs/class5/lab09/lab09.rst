@@ -49,6 +49,7 @@ Deliverables
 ~~~~~~~~~~~~
 
   Briefly answer the following:
+  
     - 
 
   A brief summary describing:

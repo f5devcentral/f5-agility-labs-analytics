@@ -83,6 +83,7 @@ Deliverables
 ~~~~~~~~~~~~
 
   Briefly answer the following:
+  
     - Reviewing the graph, provide the expected connection count.
 
   Review the following for additional information and trends:

@@ -44,6 +44,7 @@ Deliverables
 ~~~~~~~~~~~~
 
   Briefly answer the following:
+    
     - Provide, at least, two of the inconsistencies found by the AI agent
 
   Review the following for additional information and trends:
