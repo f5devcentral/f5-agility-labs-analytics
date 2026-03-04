@@ -17,7 +17,9 @@ that the WAF properly detects and blocks the attack.
 Context
 ~~~~~~~
 
-**VIP:** /Common/sslo.demo.f5
+**Device Name:** SecurityRegion1-bigip-01
+
+**VIP:** /Common/sslo_my_policy_1
 
 **Policy:** /Common/my_sslo_app_waf_policy (Java/Struts signatures enabled)
 
