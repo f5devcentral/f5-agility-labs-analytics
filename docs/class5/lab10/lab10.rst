@@ -23,7 +23,7 @@ Context
 
   **Virtual Server:** web_app_42
 
-  **Pool:** web-pool (attached to web_app_42)
+  **Pool:** web-pool
 
   **Symptom:** It is suspected that one pool member shows higher response times and/or
   fewer completed requests compared to the others.
