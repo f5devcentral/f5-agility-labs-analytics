@@ -60,8 +60,7 @@ Tasks
     - Yellow indicates Warning
     - Green indicates Normal/Good
 
-  Select a Virtual Server in a "Critical" state with highest deviation score
-  (in future, browse other Virtual Servers).
+  Select a Virtual Server in a "Critical" state with highest deviation score.
 
   The graph above will update based on your selection.
 
