@@ -25,7 +25,7 @@ Context
 
   **Pool:** web-pool (attached to web_app_42)
 
-  **Symptom:** One pool member shows higher response times and/or
+  **Symptom:** It is suspected that one pool member shows higher response times and/or
   fewer completed requests compared to the others.
 
 Tasks
