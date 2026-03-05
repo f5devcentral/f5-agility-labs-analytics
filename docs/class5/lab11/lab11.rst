@@ -1,7 +1,7 @@
 Ticket 11 – Uneven Load Balancing 
 ===================================================
 
-Title: “One pool member is overloaded”
+Title: “Are My Profiles Well?”
 ---------------------------------------
 
 Ticket Description
@@ -10,12 +10,11 @@ Ticket Description
   Operations has noticed that one application server in
   */Common/web-pool* has significantly more connections and
   traffic than the other members. Users are reporting
-  intermittent slowness and occasional timeouts when
-  accessing the application.
+  occasional timeouts when accessing the application.
 
   You have been asked to investigate why load distribution
   is uneven and determine which configuration elements
-  may be contributing to the issue.
+  may be contributing to the issue.  While this is the same VS, it is a different issue than ticket 10.  
 
 
 Context

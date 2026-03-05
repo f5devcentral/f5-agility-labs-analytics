@@ -24,7 +24,7 @@ F5 Insight Lab
         :width: 500px
         :alt: Login screen
 
-    4. Once logged in copy the API key to your copy buffer.  **``Do not share this key with anyone else or use this key for any purpose outside of this lab.``**  
+    4. Once logged in copy the API key to your copy buffer.  **Do not share this key with anyone else or use this key for any purpose outside of this lab.**  
 
     5. Go to F5 Insight to **Manage** and then **LLM Insights**
 
