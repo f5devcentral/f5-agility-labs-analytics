@@ -49,6 +49,4 @@ F5 Insight Lab
     
 Please proceed to the first ticket.
 
----
-
 Go to `Ticket 1 <./lab01/lab01.html>`_

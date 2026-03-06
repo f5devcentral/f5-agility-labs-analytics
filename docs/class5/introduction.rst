@@ -48,8 +48,7 @@ Student deliverables per ticket:
     * Evidence (screenshot or command output) where needed.
 
 
-Please proceed to the first ticket.
+Please proceed to API Keys.
 
----
 
 Go to `API Keys <./api_keys.html>`_
