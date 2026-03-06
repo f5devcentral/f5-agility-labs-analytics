@@ -110,8 +110,7 @@ Once the blueprint has finished deploying, access F5 Insight by selecting the GU
     :width: 800px
     :alt: UDF Component Page with password
 
-***
-> Upon successful login to F5 Insight, you will arrive at the onboarding page for the LLM:
+>  Upon successful login to F5 Insight, you will arrive at the onboarding page for the LLM:
 
   .. image:: ./images/image8.png
     :width: 800px
