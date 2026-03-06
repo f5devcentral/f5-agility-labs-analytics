@@ -63,10 +63,6 @@ Deliverables
 ~~~~~~~~~~~~
 
   Briefly answer the following:
-  
-    - 
-
-  Review the following for additional information and trends:
 
     - Which pool member in web-pool is slower and how you determined this
     - The key statistics or metrics that led to your conclusion
