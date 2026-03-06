@@ -34,8 +34,19 @@ F5 Insight Lab
     6. Paste the key into the **API Tokey/Key field**
 
     7. In the **Enterprise API URL enter**: ``https://api.anthropic.com``
-    
 
+    8. Click **Test Connection**
+
+    9. Click **Next** once verified.
+  
+    10. From **Steup Method** please select **Start Fresh** and then click **Next**
+
+    .. image:: ./images/image9.png
+        :width: 500px
+        :alt: Login screen
+
+    11. Click **View the Homepage** to complete onboarding.  
+    
 Please proceed to the first ticket.
 
 ---
