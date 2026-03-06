@@ -10,77 +10,81 @@ Title: “What insights can you quickly gather from the Top N view?”
 Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
-The Top N dashboard provides a consolidated view of the
-most active and resource-intensive objects on a BIG-IP.
+  The Top N dashboard provides a consolidated view of the
+  most active and resource-intensive objects on a BIG-IP.
 
-This ticket is designed to familiarize you with what
-information is available and how it can be used to quickly
-identify busy applications, high resource consumers,
-and potential availability concerns.
+  This ticket is designed to familiarize you with what
+  information is available and how it can be used to quickly
+  identify busy applications, high resource consumers,
+  and potential availability concerns.
 
-Your goal is to explore the Top N dashboard and understand
-the types of operational insights it provides.
+  Your goal is to explore the Top N dashboard and understand
+  the types of operational insights it provides.
 
 
 Tasks
 ~~~~~
 
-Navigate to:
+  Navigate to:
 
-  **Dashboards >> BIG-IP Device >> Top N**
+    **Dashboards >> BIG-IP Device >> Top N**
 
-.. image:: ../images/image3.png
-    :width: 500px
-    :alt: Top N Dashboard navigation
+  .. image:: ../images/image3.png
+      :width: 500px
+      :alt: Top N Dashboard navigation
 
-From the Device dropdown at the top of the page,
-select a BIG-IP.  You may choose any BIG-IP for this exercise.
+  From the Device dropdown at the top of the page,
+  select the BIG-IP specified below.
 
-Change the Time Range (upper-right corner) to:
+    **CentralRegion-bigip-01**
 
-  **Last 7 Days**
+  Change the Time Range (upper-right corner) to:
 
-Scroll through the page and review the available panels,
-including but not limited to:
+    **Last 7 Days**
 
-  - Top 10 VIPs By CPU Utilization
-  - Top 10 Process By CPU
-  - Analysis, Control, Data Plane Utilization
-  - Top 10 VIPs By WAF CPU Utilization
-  - Top 10 Pools By Active Connections
-  - Top 10 VIPs By Bandwidth
-  - Top 10 VIPs By SSL TPS Utilization
-  - Top 10 Virtual Servers By Low Availability [14d]
-  - Top 10 Pools By Low Availability [14d]
+  Scroll through the page and review the available panels,
+  including but not limited to:
 
-As you review each panel, consider:
+    - Top 10 VIPs By CPU Utilization
+    - Top 10 Process By CPU
+    - Analysis, Control, Data Plane Utilization
+    - Top 10 VIPs By WAF CPU Utilization
+    - Top 10 Pools By Active Connections
+    - Top 10 VIPs By Bandwidth
+    - Top 10 VIPs By SSL TPS Utilization
+    - Top 10 Virtual Servers By Low Availability [14d]
+    - Top 10 Pools By Low Availability [14d]
 
-  - Which objects appear repeatedly across panels?
-  - Which panels show resource usage versus availability?
-  - Which panels would be useful during an incident?
-  - Which panels would be useful for capacity planning?
+  As you review each panel, consider:
 
-Try adjusting the Time Range to a shorter window
-(for example, Last 15 Minutes) and observe how the
-rankings change.
+    - Which objects appear repeatedly across panels?
+    - Which panels show resource usage versus availability?
+    - Which panels would be useful during an incident?
+    - Which panels would be useful for capacity planning?
+
+  Try adjusting the Time Range to a shorter window
+  (for example, Last 15 Minutes) and observe how the
+  rankings change.
 
 
 Deliverables
 ~~~~~~~~~~~~
 
-Consider:
+  Briefly answer the following:
 
-  - What types of operational questions could this dashboard help answer?
+    - Which VIP has the highest WAF CPU Utilization?
 
-Briefly answer the following:
+  Review the following for additional information and trends:
 
-  - Which VIP appears most frequently across Top N panels?
-  - Which panel did you find most useful and why?
-  - Did any objects show degraded availability?
+    - Which VIP appears most frequently across Top N panels?
+    - What types of operational questions could this dashboard help answer?
+    - Which panel did you find most useful and why?
+    - Did any objects show degraded availability?
 
 Hints
 ~~~~~
 
+  - Pay specific attention to the Top 10 VIPs By WAF CPU Utilization panel
   - You can deselect entries in graph legends to simplify views.
   - Compare short time ranges to long time ranges.
   - Not every “Top” entry indicates a problem — some reflect normal load.

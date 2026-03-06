@@ -7,61 +7,69 @@ Title: “Security test shows WAF blocks Struts exploit attempt”
 Ticket Description
 ~~~~~~~~~~~~~~~~~~
 
-The security team wants confirmation that the WAF is capable
-of detecting Apache Struts exploit attempts.
+  The security team wants confirmation that the WAF is capable
+  of detecting Apache Struts exploit attempts.
 
-You have been asked to run a safe test request and demonstrate
-that the WAF properly detects and blocks the attack.
+  You have been asked to run a safe test request and demonstrate
+  that the WAF properly detects and blocks the attack.
 
 
 Context
 ~~~~~~~
 
-**VIP:** /Common/sslo.demo.f5
+  **Device Name:** EastRegion1-bigip-01
 
-**Policy:** /Common/pol_java_asm (Java/Struts signatures enabled)
+  **VIP:** /Common/web_app_42
 
-**Application URL:** /upload.action
+  **Policy:** /Common/my_afm_policy (Java/Struts signatures enabled)
 
+  **Application URL:** /upload.action
 
 Tasks
 ~~~~~
 
-Access the Insight guest via web shell and send
-the following Struts-style test request:
+  Navigate to:
 
-.. code-block:: bash
+    **udf.f5.com GUI >> Deployment >> F5 Insight >> ACCESS >> WEB SHELL**
 
-    curl -k -v \
-      "https://sslo.demo.f5/upload.action" \
-      -H 'Content-Type: ${(#_="multipart/form-data").(#context["com.opensymphony.xwork2.dispatcher.HttpServletResponse"].addHeader("X-Struts-POC","1"))}' \
-      --data-binary 'test'
+  Send the following Struts-style test request:
 
-Verify that the request is blocked and logged by ASM/AWAF
-as a Java/Struts/OGNL RCE attempt.  In the WAF event logs, identify:
+  .. code-block:: bash
 
-  - The attack signature ID
-  - The attack type
-  - The severity
-  - Whether the request was blocked
+      curl -k -v \
+        "https://ast66.demo.f5/upload.action" \
+        -H 'Content-Type: ${(#_="multipart/form-data").(#context["com.opensymphony.xwork2.dispatcher.HttpServletResponse"].addHeader("X-Struts-POC","1"))}' \
+        --data-binary 'test'
 
+  Review the information returned from that request:
+    - IP address of FQDN "ast66.demo.f5" (Can be found near the top of output)
+    - Response code of 200
+    - Response html that says "Request Rejected"
+    - Support ID in response (Can be found in the html of the response)
+
+  Use the AI Assistant and enter the following prompt:
+
+    ``Have there been any WAF related events from 10.1.1.4 on EastRegion-bigip-01?``
+
+  Review the returned information.
 
 Deliverables
 ~~~~~~~~~~~~
+  
+  Briefly answer the following:
+  
+    - Provide the "Incident Severity" and number of "Requests Blocked"
 
-- Screenshot of the specific WAF request log entry
-  (showing attack signature, severity, and blocking status).
-- Prepare a short explanation suitable for a non-F5 security audience describing what occurred.
+  Review the following for additional information and trends:
+
+  - Summary of WAF-related events for that source IP
+  - Key findings summary provided by the AI agent
 
 
 Hints
 ~~~~~
 
-- Security BIG-IP
-- Filter events by URL ``/upload.action`` and your test client IP.
-- Review the “Attack Type” field in the event details.
-- Confirm that the policy pol_java_asm has relevant
-  Java/Struts signatures enabled.
+  - Review the table provided by the AI assistant
 
 
 This concludes Ticket 13.
