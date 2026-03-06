@@ -6,6 +6,9 @@ F5 Insight Lab
 
 **Accessing your Anthropic License Key**
 
+.. NOTE::
+	 This page only applies to AppWorld2026 participants. Other students will need to provide your own AI API Key for Insight.
+
 **Objectives:**
 
    - Retrieve an API key
