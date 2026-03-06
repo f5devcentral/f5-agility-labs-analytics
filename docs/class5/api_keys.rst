@@ -19,7 +19,7 @@ F5 Insight Lab
 
     1. Take note of your Lab Number - This will be assigned by the instructor and will be three digits.
     
-    2. Using your lab number appended to the end of the following link, go to:``https://appworldinsight.com/grab/AppWorld26-000`` where "000" is your lab number.
+    2. Using your lab number appended to the end of the following link, go to:``https://appworldinsight.com/grab/AppWorld26-XXXXX`` where "XXXXX" is your lab ID.  The number of characters may vary.
 
     3. Enter your passphrase which will be App+World+26-000 where "000" is your lab number. 
 
