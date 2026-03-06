@@ -117,7 +117,7 @@ Once the blueprint has finished deploying, access F5 Insight by selecting the GU
     :alt: Insight Landing Page
 
 Pause here on the configuration as the API key will be provided later.  Please proceed to the next page.
----
+--
 
 Go to `Introduction <./introduction.html>`_
 
