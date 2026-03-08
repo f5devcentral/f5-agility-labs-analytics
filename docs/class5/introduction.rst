@@ -20,7 +20,7 @@ F5 Insight Lab
 
 **Setup**
 
-    - There are 16 tickets waiting for your analysis and proposed solution
+    - There are 14 tickets waiting for your analysis and proposed solution
     
     - We strongly suggest working in teams, pairs are ideal, and it is a great opportunity to meet someone new
   
