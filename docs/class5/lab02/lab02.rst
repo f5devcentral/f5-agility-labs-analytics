@@ -65,7 +65,7 @@ Deliverables
 
   Briefly answer the following:
 
-    - What day and time was this VS NOT available?
+    - What is the graph telling you about the Virtual Server availability? What percentage has this Virtual Server been up over the last 7 days?
 
   Review the following for additional information and trends:
 

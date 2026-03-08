@@ -31,6 +31,8 @@ Context
 
   **Metric:** Connection Count – Standard Deviation Change (VS)
 
+  **Virtual Server** CentralRegion-bigip-01/Common/backup-app
+
 
 Tasks
 ~~~~~
@@ -60,7 +62,8 @@ Tasks
     - Yellow indicates Warning
     - Green indicates Normal/Good
 
-  Select a Virtual Server in a "Critical" state with highest deviation score.
+  Select a Virtual Server in a "Critical" state, select CentralRegion-bigip-01/backup-app
+  (in future, browse other Virtual Servers).
 
   The graph above will update based on your selection.
 
@@ -75,6 +78,7 @@ Tasks
 
   Use the time range selector (1h, 6h, 1d, 1w) in the upper-right
   corner of the dashboard to review different time windows.
+    - Last 1 hour (focus on this)
 
 
 Deliverables
@@ -82,7 +86,7 @@ Deliverables
 
   Briefly answer the following:
   
-    - Reviewing the graph, provide the expected connection count.
+    - Reviewing the graph, provide the expected connection count for the VS specified above.
 
   Review the following for additional information and trends:
 
@@ -99,6 +103,7 @@ Hints
 
   - Hover over the red expected line in graph to view associated data
   - Hover over points in the graph to see exact values.
+  - View the table data
   - Try changing the time range to see if deviations are persistent.
   - Sort the Virtual Server table by deviation percentage.
   - Focus first on Critical (red) entries, then Warning (yellow).
