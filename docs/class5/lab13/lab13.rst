@@ -58,7 +58,7 @@ Deliverables
   
   Briefly answer the following:
   
-    - Provide the "Incident Severity" and number of "Requests Blocked"
+    - Provide the "Incident Type" and number of "Requests Blocked"
 
   Review the following for additional information and trends:
 
