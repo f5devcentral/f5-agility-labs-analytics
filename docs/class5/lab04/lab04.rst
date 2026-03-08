@@ -1,4 +1,4 @@
-Ticket 04 – Review Connection Count Standard Deviation (VS)
+Ticket 04 – Review Connection Count Deviation (VS)
 ============================================================
 
 Title: “Why are some virtual servers showing connection count deviations?”
