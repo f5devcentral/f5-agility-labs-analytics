@@ -49,7 +49,7 @@ Tasks
 
   Use the AI Assistant and enter the following prompt:
 
-    ``Have there been any WAF related events from 10.1.1.4 on EastRegion-bigip-01 over the last 7 days?``
+    ``Have there been any WAF related events from 10.1.1.4 on EastRegion-bigip-01 over the last 14 days?``
 
   Review the returned information.
 

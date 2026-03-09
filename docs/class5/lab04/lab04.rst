@@ -62,7 +62,7 @@ Tasks
     - Yellow indicates Warning
     - Green indicates Normal/Good
 
-  Select a Virtual Server in a "Critical" state, select CentralRegion-bigip-01/backup-app
+  Select the Virtual Server **CentralRegion-bigip-01/backup-app** (It may not be in Critical)
   (in future, browse other Virtual Servers).
 
   The graph above will update based on your selection.
