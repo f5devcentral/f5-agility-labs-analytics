@@ -49,7 +49,7 @@ Tasks
 
   Use the AI Assistant and enter the following prompt:
 
-    ``Have there been any WAF related events from 10.1.1.4 on EastRegion-bigip-01?``
+    ``Have there been any WAF related events from 10.1.1.4 on EastRegion-bigip-01 over the last 14 days?``
 
   Review the returned information.
 
@@ -58,7 +58,7 @@ Deliverables
   
   Briefly answer the following:
   
-    - Provide the "Incident Severity" and number of "Requests Blocked"
+    - Provide the "Incident Type" and number of "Requests Blocked"
 
   Review the following for additional information and trends:
 

@@ -33,8 +33,8 @@ Tasks
 
   Use the AI Assistant and enter the following prompt:
 
-    ``Show full configuration details for the web-app-https virtual server on WestRegion-bigip-01, including assigned iRules and CMP state.``
-
+    ``Show full configuration details for the web-app-https virtual server on WestRegion-bigip-01, including assigned iRules and why CMP may be in a demoted state.``
+  
   From the returned information and the TMUI on **WestRegion-bigip-01:**
 
     - Identify which iRule(s) are attached.

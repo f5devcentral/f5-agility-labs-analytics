@@ -32,6 +32,8 @@ Tasks
 
     ``Can you check the virtual servers named 'web-app-foo' and their associated objects across all BIG-IPs to verify that the configuration is the same?``
 
+  (Tell the AI assistant yes to all datacenters if it asks you the scope of the question)
+  
   Review the information returned.  Do you see any configuration differences between *EastRegion-bigip-01* and *WestRegion-bigip-01*?
 
   If differences are identified, validate them by navigating to: **Dashboard >> BIG-IP Device >> Device Virtual Server and Dashboard >> BIG-IP Device >> Device Pools**
@@ -56,6 +58,7 @@ Hints
 ~~~~~
 
   - Pay specific attention to the pool members configured on each device.
+  - The Virtual Server configuration as well
 
 This concludes Ticket 7.
 

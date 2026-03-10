@@ -37,6 +37,19 @@ Tasks
 
     **Dashboards >> BIG-IP Fleet >> APM Sessions**
 
+  From the Data Center dropdown, leave default:
+
+    **default**
+
+  From the Devices dropdown, select all 4:
+
+    - **CentralRegion-bigip-01**
+    - **WestRegion-bigip-01**
+    - **EastRegion-bigip-01**
+    - **SecurityRegion1-bigip-01**
+
+  Click the *"Apply Filters"* button
+  
   Review the "Current APM Access Sessions by State" panel.
 
   Identify which BIG-IP device(s) are showing:

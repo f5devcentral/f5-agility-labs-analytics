@@ -46,7 +46,7 @@ Tasks
 
   Locate the panel:
 
-    **Pool Member State – isAvailable**
+    **Pool Member Request Rate**
 
   Click the "Expand panel" button on top right of that panel
 
@@ -55,28 +55,27 @@ Tasks
 
   Try adjusting the range to broader views such as:
 
+    - Last 1 hour (focus on this)
     - Last 24 hours
     - Last 7 Days
     - Last 30 Days
 
   Identify:
 
-    - The most recent time the pool member *10.1.20.201:80*  was not available
-    - The duration of the outage (if visible)
-    - How long it has been since that outage occurred
-
+    - Does the pool member request have any anomalies?
+    - Does there appear to be any one pool member taking more requests than another?
+    - In the graph key, de-select all members EXCEPT member *10.1.20.201:80*
 
 Deliverables
 ~~~~~~~~~~~~
 
-  Briefly answer the following:
+  Briefly answer the following focusing on *10.1.20.201:80*:
 
-    - What day and time was it observed that pool was less than 100% available?
-    - What percent of pool members were up at that time?
+    - What is the highest req p/s that you've observed?
 
-  Review the following for additional information and trends:
+  Review the following for additional information and trends (navigate back to summary page):
 
-    - Date and time of the last outage
+    - Observe date and time of the last outage (if any)
     - Approximate duration of the outage
     - Time elapsed since the outage
     - Any observations about stability trends
