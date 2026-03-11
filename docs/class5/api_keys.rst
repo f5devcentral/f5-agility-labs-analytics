@@ -17,11 +17,11 @@ F5 Insight Lab
 
 **Setup**
 
-    1. Take note of your Lab Number - This will be assigned by the instructor and will be three digits.
+    1. Take note of your Lab Number - This will be assigned by the instructor and will be two digits.
     
-    2. Using your lab number appended to the end of the following link, go to:``https://appworldinsight.com/grab/AppWorld26-XXXXX`` where "XXXXX" is your lab ID.  The number of characters may vary.
+    2. Using your lab number appended to the end of the following link, go to:``https://appworldinsight.com/grab/aw26sXX`` where "XX" is your lab ID.  The number of characters may vary.
 
-    3. Enter your passphrase which will be App+World+26-000 where "000" is your lab number. 
+    3. Enter your passphrase which will be 'aw26sXX' where "XX" is your lab number. 
 
       .. image:: ./images/image7.png
         :width: 500px
@@ -47,6 +47,5 @@ F5 Insight Lab
 
     11. Click **View the Homepage** to complete onboarding.  
     
-Please proceed to the first ticket.
 
-Go to `Ticket 1 <./lab01/lab01.html>`_
+Go to `Introduction <./introduction.html>`_
