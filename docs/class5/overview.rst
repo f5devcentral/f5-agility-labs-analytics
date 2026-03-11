@@ -116,9 +116,10 @@ Once the blueprint has finished deploying, access F5 Insight by selecting the GU
     :width: 800px
     :alt: Insight Landing Page
 
-Pause here on the configuration as the API key will be provided later.  Please proceed to the next page.
+**AppWorld 2026 Attendees** Instructions for getting an API key will be provided by instructors.
 
+Please proceed to API Keys.
 
-Go to `Introduction <./introduction.html>`_
+Go to `API Keys <./api_keys.html>`_
 
 `Back to Top <top_>`_
