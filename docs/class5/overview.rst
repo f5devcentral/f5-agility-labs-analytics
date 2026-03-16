@@ -35,35 +35,35 @@ components:
      - **Credentials**
    * - F5 Insight
      - **Management:** 10.1.1.4
-     - ``admin``/``HelloUDF``
+     - ``admin``/``<Retrieve from UDF UI>``
    * - East BIG-IP
      - **Management:** 10.1.1.5
 
        **Clientside:** 10.1.10.5/24
 
        **Serverside:** 10.1.20.5/24
-     - ``admin``/``f5Twister!``
+     - ``admin``/``<Retrieve from UDF UI>``
    * - Central BIG-IP
      - **Management:** 10.1.1.6
 
        **Clientside:** 10.1.10.6/24
 
        **Serverside:** 10.1.20.6/24
-     - ``admin``/``f5Twister!``
+     - ``admin``/``<Retrieve from UDF UI>``
    * - West BIG-IP
      - **Management:** 10.1.1.7
 
        **Clientside:** 10.1.10.7/24
 
        **Serverside:** 10.1.20.7/24
-     - ``admin``/``f5Twister!``
+     - ``admin``/``f<Retrieve from UDF UI>``
    * - Security BIG-IP
      - **Management:** 10.1.1.8
 
        **Clientside:** 10.1.10.8/24
 
        **Serverside:** 10.1.20.8/24
-     - ``admin``/``f5Twister!``
+     - ``admin``/``<Retrieve from UDF UI>``
 
 Overview
 --------------
@@ -117,9 +117,9 @@ Once the blueprint has finished deploying, access F5 Insight by selecting the GU
     :alt: Insight Landing Page
 
 .. NOTE::
-    ATTENTION: Your lab instructor will explain how to retrieve an API Key.
+    ATTENTION: Your lab instructor will explain how to retrieve an AI API Key.
 
-Apply the AI API key and complete the setup wizard.  Please proceed to the next page.
+Apply the AI API key and complete the setup wizard.  You may proceed/skip this step without having a key however the LLM functions will not be available.  Please proceed to the next page.
 
 
 Go to `Introduction <./introduction.html>`_
