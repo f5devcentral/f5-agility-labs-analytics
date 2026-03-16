@@ -35,40 +35,40 @@ components:
      - **Credentials**
    * - F5 Insight
      - **Management:** 10.1.1.4
-     - ``admin``/``HelloUDF``
+     - ``admin``/``<Retrieve from UDF UI>``
    * - East BIG-IP
      - **Management:** 10.1.1.5
 
        **Clientside:** 10.1.10.5/24
 
        **Serverside:** 10.1.20.5/24
-     - ``admin``/``f5Twister!``
+     - ``admin``/``<Retrieve from UDF UI>``
    * - Central BIG-IP
      - **Management:** 10.1.1.6
 
        **Clientside:** 10.1.10.6/24
 
        **Serverside:** 10.1.20.6/24
-     - ``admin``/``f5Twister!``
+     - ``admin``/``<Retrieve from UDF UI>``
    * - West BIG-IP
      - **Management:** 10.1.1.7
 
        **Clientside:** 10.1.10.7/24
 
        **Serverside:** 10.1.20.7/24
-     - ``admin``/``f5Twister!``
+     - ``admin``/``f<Retrieve from UDF UI>``
    * - Security BIG-IP
      - **Management:** 10.1.1.8
 
        **Clientside:** 10.1.10.8/24
 
        **Serverside:** 10.1.20.8/24
-     - ``admin``/``f5Twister!``
+     - ``admin``/``<Retrieve from UDF UI>``
 
 Overview
 --------------
 
-This lab is intended to provide a hands-on introduction to F5 Insight for ADSP.  During this lab, attendees will utilize a `UDF <https://udf.f5.com>`_ blueprint to deploy the lab infrastructure shown below to:
+This lab is intended to provide a hands-on introduction to F5 Insight for ADSP.  During this lab, attendees will utilize a UDF blueprint to deploy the lab infrastructure shown below to:
  * Discover how applications are operating
 
  * Discover how to improve application health
@@ -98,7 +98,7 @@ What is F5 Insight?
   * AIDF integration as an opt-in feature.
 
 .. NOTE::
-    WARNING: This lab uses 3rd party API Keys and these are never to be shared or used outside of the lab, and what it instructs, for any reason.
+    WARNING: This lab uses a 3rd party API key - Please secure this like a password and never share. 
 
 Deploy blueprint and connect to F5 Insight
 ---------------------------------------
@@ -110,16 +110,19 @@ Once the blueprint has finished deploying, access F5 Insight by selecting the GU
     :width: 800px
     :alt: UDF Component Page with password
 
->  Upon successful login to F5 Insight, you will arrive at the onboarding page for the LLM:
+After logging into F5 Insight, you will see the LLM setup:
+---------------------------------------
 
   .. image:: ./images/image8.png
     :width: 800px
     :alt: Insight Landing Page
 
-**AppWorld 2026 Attendees** Instructions for getting an API key will be provided by instructors.
+.. NOTE::
+    ATTENTION: Your lab instructor will explain how to retrieve an AI API Key.
 
-Please proceed to API Keys.
+Apply the AI API key and complete the setup wizard.  You may proceed/skip this step without having a key however the LLM functions will not be available.  Please proceed to the next page.
 
-Go to `API Keys <./api_keys.html>`_
+
+Go to `Introduction <./introduction.html>`_
 
 `Back to Top <top_>`_
