@@ -1,7 +1,7 @@
 
-API Key Handling 
+Appendix
 ====================================================
-F5 Insight Lab
+AppWorld 2026 Las Vegas API Keys
 ---------------------------------------
 
 **Accessing your Anthropic License Key**
@@ -19,9 +19,9 @@ F5 Insight Lab
 
     1. Take note of your Lab Number - This will be assigned by the instructor and will be two digits.
     
-    2. Using your lab number appended to the end of the following link, go to:``https://appworldinsight.com/grab/aw26sXX`` where "XX" is your lab ID.  The number of characters may vary.
+    2. Using your lab number appended to the end of the following link, go to:``https://appworldinsight.com/grab/XX`` where "XX" is your lab ID.  The number of characters may vary.
 
-    3. Enter your passphrase which will be 'aw26sXX' where "XX" is your lab number. 
+    3. Enter your passphrase provided by the instructor.
 
       .. image:: ./images/image7.png
         :width: 500px
