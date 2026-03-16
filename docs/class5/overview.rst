@@ -68,7 +68,7 @@ components:
 Overview
 --------------
 
-This lab is intended to provide a hands-on introduction to F5 Insight for ADSP.  During this lab, attendees will utilize a `UDF <https://udf.f5.com>`_ blueprint to deploy the lab infrastructure shown below to:
+This lab is intended to provide a hands-on introduction to F5 Insight for ADSP.  During this lab, attendees will utilize a UDF blueprint to deploy the lab infrastructure shown below to:
  * Discover how applications are operating
 
  * Discover how to improve application health
@@ -98,7 +98,7 @@ What is F5 Insight?
   * AIDF integration as an opt-in feature.
 
 .. NOTE::
-    WARNING: This lab uses 3rd party API Keys and these are never to be shared or used outside of the lab, and what it instructs, for any reason.
+    WARNING: This lab uses a 3rd party API key - Please secure this like a password and never share. 
 
 Deploy blueprint and connect to F5 Insight
 ---------------------------------------
@@ -116,10 +116,12 @@ Once the blueprint has finished deploying, access F5 Insight by selecting the GU
     :width: 800px
     :alt: Insight Landing Page
 
-**AppWorld 2026 Attendees** Instructions for getting an API key will be provided by instructors.
+.. NOTE::
+    ATTENTION: Your lab instructor will explain how to retrieve an API Key.
 
-Please proceed to API Keys.
+Apply the AI API key and complete the setup wizard.  Please proceed to the next page.
 
-Go to `API Keys <./api_keys.html>`_
+
+Go to `Introduction <./introduction.html>`_
 
 `Back to Top <top_>`_

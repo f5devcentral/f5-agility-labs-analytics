@@ -22,7 +22,7 @@ F5 Insight Lab
 
     - There are 14 tickets waiting for your analysis and proposed solution
     
-    - We strongly suggest working in teams, pairs are ideal, and it is a great opportunity to meet someone new
+    - This lab is designed to be worked in teams of two, plus it is a great opportunity to meet someone new, so we encourage pairs if possible
   
     - Solutions will be judged successful or the student may make a subsequent proposal
   
