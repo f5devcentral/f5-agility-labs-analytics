@@ -30,7 +30,7 @@ Tasks
 
   Use the AI Assistant and enter the following prompt:
 
-    ``Can you check the virtual servers named 'web-app-foo' and their associated objects across all BIG-IPs to verify that the configuration is the same?``
+    ``Can you check the virtual servers named 'web-app-foo' and their associated objects across all BIG-IPs in all Data Centers to verify that the configuration is the same?``
 
   (Tell the AI assistant yes to all datacenters if it asks you the scope of the question)
   
