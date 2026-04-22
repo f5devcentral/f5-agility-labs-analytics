@@ -36,9 +36,9 @@ Tasks
       :width: 500px
       :alt: Fleet Dashboard navigation
 
-  From "Data Center" leave the default value as:
+  From "Data Center" add the Data Center:
     
-    **default**
+    **Antarctica**
 
   From "Devices" leave the default value as:
 

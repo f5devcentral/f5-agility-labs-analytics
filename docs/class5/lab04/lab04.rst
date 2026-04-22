@@ -62,8 +62,7 @@ Tasks
     - Yellow indicates Warning
     - Green indicates Normal/Good
 
-  Select the Virtual Server **CentralRegion-bigip-01/backup-app** (It may not be in Critical)
-  (in future, browse other Virtual Servers).
+  Select the Virtual Server **CentralRegion-bigip-01/backup-app** (It may have the status of Needs Attention or Critical).
 
   The graph above will update based on your selection.
 
