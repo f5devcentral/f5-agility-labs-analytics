@@ -111,7 +111,7 @@ Once the blueprint has finished deploying, access F5 Insight by selecting the GU
     :alt: UDF Component Page with password
 
 .. NOTE::
-    ATTENTION: Your environment already has the Insight, ASDF, and AI LLMkeys installed.  They will appear blank and if you adjust the settings it will erase they key.
+    ATTENTION: Your environment already has the Insight, AIDF, and AI LLM keys installed.  They will appear blank and if you adjust the settings it will erase they key.
 
 .. NOTE::
     ATTENTION: The AI LLM key will automatically rotate every ~6 hours.  No action needed by the student.  
