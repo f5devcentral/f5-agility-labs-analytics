@@ -110,17 +110,11 @@ Once the blueprint has finished deploying, access F5 Insight by selecting the GU
     :width: 800px
     :alt: UDF Component Page with password
 
-After logging into F5 Insight, you will see the LLM setup:
----------------------------------------
-
-  .. image:: ./images/image8.png
-    :width: 800px
-    :alt: Insight Landing Page
+.. NOTE::
+    ATTENTION: Your environment already has the Insight, ASDF, and AI LLMkeys installed.  They will appear blank and if you adjust the settings it will erase they key.
 
 .. NOTE::
-    ATTENTION: Your lab instructor will explain how to retrieve an AI API Key.
-
-Apply the AI API key and complete the setup wizard.  You may proceed/skip this step without having a key however the LLM functions will not be available.  Please proceed to the next page.
+    ATTENTION: The AI LLM key will automatically rotate every ~6 hours.  No action needed by the student.  
 
 
 Go to `Introduction <./introduction.html>`_
