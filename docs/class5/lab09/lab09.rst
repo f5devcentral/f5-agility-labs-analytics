@@ -37,9 +37,9 @@ Tasks
 
     **Dashboards >> BIG-IP Fleet >> APM Sessions**
 
-  From the Data Center dropdown, leave default:
+  From the Data Center dropdown, select:
 
-    **default**
+    **Antarctica, Yellow Zone**
 
   From the Devices dropdown, select all 4:
 
