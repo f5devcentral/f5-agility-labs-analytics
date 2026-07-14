@@ -25,6 +25,12 @@ Lab Components
 The following table lists VLANS, IP Addresses and Credentials for all
 components:
 
+Lab Components
+--------------
+
+The following table lists VLANS, IP Addresses and Credentials for all
+components:
+
 .. list-table::
    :widths: 20 40 30
    :header-rows: 1
@@ -35,50 +41,26 @@ components:
      - **Credentials**
    * - F5 Insight
      - **Management:** 10.1.1.4
-     - ``admin``/``<Retrieve from UDF UI>``
+     - ``admin`` / ``<Retrieve from UDF UI>``
    * - East BIG-IP
-     - **Management:** 10.1.1.5
-
-       **Clientside:** 10.1.10.5/24
-
-       **Serverside:** 10.1.20.5/24
-     - ``admin``/``<Retrieve from UDF UI>``
+     - **Management:** 10.1.1.5; **Clientside:** 10.1.10.5/24; **Serverside:** 10.1.20.5/24
+     - ``admin`` / ``<Retrieve from UDF UI>``
    * - Central BIG-IP
-     - **Management:** 10.1.1.6
-
-       **Clientside:** 10.1.10.6/24
-
-       **Serverside:** 10.1.20.6/24
-     - ``admin``/``<Retrieve from UDF UI>``
+     - **Management:** 10.1.1.6; **Clientside:** 10.1.10.6/24; **Serverside:** 10.1.20.6/24
+     - ``admin`` / ``<Retrieve from UDF UI>``
    * - West BIG-IP
-     - **Management:** 10.1.1.7
-
-       **Clientside:** 10.1.10.7/24
-
-       **Serverside:** 10.1.20.7/24
-     - ``admin``/``<Retrieve from UDF UI>``
+     - **Management:** 10.1.1.7; **Clientside:** 10.1.10.7/24; **Serverside:** 10.1.20.7/24
+     - ``admin`` / ``<Retrieve from UDF UI>``
    * - Security BIG-IP
-     - **Management:** 10.1.1.8
-
-       **Clientside:** 10.1.10.8/24
-
-       **Serverside:** 10.1.20.8/24
-     - ``admin``/``<Retrieve from UDF UI>``
+     - **Management:** 10.1.1.8; **Clientside:** 10.1.10.8/24; **Serverside:** 10.1.20.8/24
+     - ``admin`` / ``<Retrieve from UDF UI>``
+   * - North BIG-IP-01
+     - **Management:** 10.1.1.11; **Clientside:** 10.1.10.11/24; **Serverside:** 10.1.20.11/24
+     - ``admin`` / ``<Retrieve from UDF UI>``
    * - North BIG-IP-02
-     - **Management:** 10.1.1.11
+     - **Management:** 10.1.1.12; **Clientside:** 10.1.10.12/24; **Serverside:** 10.1.20.12/24
+     - ``admin`` / ``<Retrieve from UDF UI>``
 
-       **Clientside:** 10.1.10.11/24
-
-       **Serverside:** 10.1.20.11/24
-     - ``admin``/``<Retrieve from UDF UI>``
-   * - North BIG-IP-02
-     - **Management:** 10.1.1.12
-
-       **Clientside:** 10.1.10.12/24
-
-       **Serverside:** 10.1.20.12/24
-     - ``admin``/``<Retrieve from UDF UI>``
-  
 Overview
 --------------
 
