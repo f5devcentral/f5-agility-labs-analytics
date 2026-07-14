@@ -15,7 +15,7 @@ Lab Topology
 
 The following components have been included in your lab environment:
 
-- 4 x F5 BIG-IP VE (v17.5 and v21.0)
+- 6 x F5 BIG-IP VE (v17.5 and v21.0)
 - 1 x F5 Insight
 - 1 x Ubuntu Noble - NGINX web services and Traffic Generation
 
@@ -64,7 +64,21 @@ components:
 
        **Serverside:** 10.1.20.8/24
      - ``admin``/``<Retrieve from UDF UI>``
+   * - North BIG-IP-02
+     - **Management:** 10.1.1.11
 
+       **Clientside:** 10.1.10.11/24
+
+       **Serverside:** 10.1.20.11/24
+     - ``admin``/``<Retrieve from UDF UI>``
+ - * - North BIG-IP-02
+     - **Management:** 10.1.1.12
+
+       **Clientside:** 10.1.10.12/24
+
+       **Serverside:** 10.1.20.12/24
+     - ``admin``/``<Retrieve from UDF UI>``
+  
 Overview
 --------------
 
@@ -111,7 +125,7 @@ Once the blueprint has finished deploying, access F5 Insight by selecting the GU
     :alt: UDF Component Page with password
 
 .. NOTE::
-    ATTENTION: Your environment already has the Insight, AIDF, and AI LLM keys installed.  They will appear blank and if you adjust the settings it will erase they key.
+    ATTENTION: Your environment already has the Insight, AIDF, and AI LLM keys installed.  They will appear blank and if you adjust the settings it may erase the key.
 
 .. NOTE::
     ATTENTION: The AI LLM key will automatically rotate every ~6 hours.  No action needed by the student.  
