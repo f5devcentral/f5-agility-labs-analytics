@@ -25,12 +25,6 @@ Lab Components
 The following table lists VLANS, IP Addresses and Credentials for all
 components:
 
-Lab Components
---------------
-
-The following table lists VLANS, IP Addresses and Credentials for all
-components:
-
 .. list-table::
    :widths: 20 40 30
    :header-rows: 1
@@ -60,6 +54,7 @@ components:
    * - North BIG-IP-02
      - **Management:** 10.1.1.12; **Clientside:** 10.1.10.12/24; **Serverside:** 10.1.20.12/24
      - ``admin`` / ``<Retrieve from UDF UI>``
+
 Overview
 --------------
 
