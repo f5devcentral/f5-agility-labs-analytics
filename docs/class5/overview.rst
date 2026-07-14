@@ -56,7 +56,7 @@ components:
        **Clientside:** 10.1.10.7/24
 
        **Serverside:** 10.1.20.7/24
-     - ``admin``/``f<Retrieve from UDF UI>``
+     - ``admin``/``<Retrieve from UDF UI>``
    * - Security BIG-IP
      - **Management:** 10.1.1.8
 
@@ -71,7 +71,7 @@ components:
 
        **Serverside:** 10.1.20.11/24
      - ``admin``/``<Retrieve from UDF UI>``
- - * - North BIG-IP-02
+   * - North BIG-IP-02
      - **Management:** 10.1.1.12
 
        **Clientside:** 10.1.10.12/24
