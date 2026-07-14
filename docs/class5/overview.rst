@@ -60,7 +60,6 @@ components:
    * - North BIG-IP-02
      - **Management:** 10.1.1.12; **Clientside:** 10.1.10.12/24; **Serverside:** 10.1.20.12/24
      - ``admin`` / ``<Retrieve from UDF UI>``
-
 Overview
 --------------
 
