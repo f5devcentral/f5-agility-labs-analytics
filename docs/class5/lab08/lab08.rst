@@ -46,7 +46,7 @@ Tasks
 
   In Insight, review any available HTTP-related metrics or attributes
   for Backup_app and its pool app-1 that indicate HTTP protocol behavior
-  (for example, headers, connection reuse, or profile details).  This can be done by going to: **Dashboards >> BIG-IP Device >> LTM-Profile** and select the **EastRegion-bigip-01** and **/common/http**
+  (for example, headers, connection reuse, or profile details).  This can be done by going to: **Dashboards >> BIG-IP Device >> LTM-Profile** and select the **CentralRegion-bigip-01** and **/common/http**
 
   Using the charts on that page summarize whether *Backup_app* is effectively using HTTP/1.0 or a newer
   version on the client side, and whether server-side connections to the
