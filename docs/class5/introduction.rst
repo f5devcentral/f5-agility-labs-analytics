@@ -47,6 +47,8 @@ Student deliverables per ticket:
 
     * Evidence (screenshot or command output) where needed.
 
+.. NOTE::
+    TIP: The pair of BIG-IP's for North are not used in this lab.   
 
 Please proceed to the first ticket.
 
