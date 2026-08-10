@@ -1,91 +1,108 @@
-Ticket 02 – Analyze Traffic Patterns for an Application
+===================================================================
+Lab 2: Software Distribution Jobs - Staging Images to Fleet Instances
+===================================================================
+
+Overview
+========
+
+In this lab, you will create and execute a **Software Distribution Job** in F5 Insight. Software distribution jobs copy software images from the F5 Insight repository onto target BIG-IP instances prior to an active maintenance window. Staging large ISO files ahead of time significantly reduces maintenance window duration and risk.
+
+Objectives
+==========
+
+* Create a new Software Distribution Job in F5 Insight.
+* Target specific fleet instances and select software images.
+* Perform pre-distribution disk space validation checks.
+* Configure execution parameters (Serial vs. Parallel Batch execution).
+* Execute the job with Change Request tracking and monitor progress.
+
+Prerequisites
+=============
+
+* Completion of **Lab 1: Software Image Management**.
+* Valid TMOS ISO image (``BIGIP-17.1.1-0.0.6.iso``) uploaded to F5 Insight.
+* Managed target instances (``bigip-01.lab.local`` and ``bigip-02.lab.local``) registered and online.
+
+Task 1: Creating a Software Distribution Job
+==============================================
+
+1. Log into the **F5 Insight** console.
+2. Navigate to **Manage** > **Automation** > **Jobs**.
+3. Click **Add Job** in the top action bar.
+4. From the job type selector, select **Software Distribution**.
+
+Task 2: Configuring Job Parameters and Target Selection
 ========================================================
 
-Title: “When is our application experiencing peak traffic?”
-------------------------------------------------------------
+1. In the **Job Name** field, enter a descriptive name:
 
-Ticket Description
-~~~~~~~~~~~~~~~~~~
+   .. code-block:: text
 
-  The application owner for *primary-app-site-1* has requested
-  insight into traffic patterns for their HTTPS virtual server.
-  They would like to understand when traffic volume is highest
-  in order to plan scaling and maintenance windows.
+      Stage_TMOS_17.1.1_Prod_Fleet
 
-Context
-~~~~~~~
+2. In the **Description** field (optional), enter:
 
-  **Device Name:** CentralRegion-bigip-01
+   .. code-block:: text
 
-  **Virtual Server Name:** primary-app-site-1-https-vip
+      Pre-staging TMOS 17.1.1 ISO to production standalone BIG-IP instances prior to maintenance window.
 
-  **Protocol:** HTTPS (TCP 443)
+3. Under **Select Instances**, search for and select your target instances:
+   * Select ``bigip-01.lab.local``
+   * Select ``bigip-02.lab.local``
+4. Under **Select Images**, check the box for ``BIGIP-17.1.1-0.0.6.iso``.
 
-Tasks
-~~~~~
+Task 3: Performing Pre-Distribution Space Checks
+=================================================
 
-  Determine which times of day and which days of the week
-  show the highest traffic for the virtual server
-  primary-app-site-1-https-vip on CentralRegion-bigip-01.1.
+F5 Insight automatically evaluates disk space on target instances before transferring large installation files.
 
-  Navigate to:
+1. Click **Check Instances**.
+2. Observe the disk space evaluation results table:
+   * Instances with sufficient disk space in ``/shared/images/`` are marked as **Ready**.
+   * Instances with insufficient disk space display an alert indicating the required vs. available storage.
+3. If an instance indicates low disk space, clean up old images on the target BIG-IP or select **Re-check Instances** after freeing space.
 
-    **Dashboards >> BIG-IP Fleet >> Virtual Servers**
+Task 4: Configuring Distribution Execution Parameters
+=====================================================
 
-  .. image:: ../images/image4.png
-      :width: 500px
-      :alt: Fleet Dashboard navigation
+Choose between **Serial** or **Parallel** distribution depending on network bandwidth and target volume:
 
-  From "Data Center" add the Data Center:
-    
-    **Antarctica**
+1. Under **Execution Type**, review the available options:
+   * **Serial (Rolling Execution)**: Transfers software to one BIG-IP instance at a time.
+   * **Parallel (Batch Execution)**: Transfers software to multiple instances concurrently.
+2. Select **Parallel (Batch Execution)**.
+3. Set the **Batch Size** to ``2`` (allowing both test instances to receive the image simultaneously).
 
-  From "Devices" leave the default value as:
+.. note::
+   F5 Insight scale limits support up to 100 instances per distribution job, with a maximum parallel batch size of 20 instances.
 
-    **bigip/CentralRegion-bigip-01**
+Task 5: Executing and Monitoring the Distribution Job
+=====================================================
 
-  From the "Virtual Server" dropdown, verify only below is selected:
+1. To run the distribution immediately, click **Execute Job**.
+2. In the confirmation modal:
+   * Enter a **Change Request #** (e.g., ``CR-98421-TMOS``) for audit compliance.
+   * Click **Execute Job**.
+3. To monitor job progress:
+   * Locate the job in the **Jobs** list under **Manage > Automation > Jobs**.
+   * Click on the value in the **Executing** or **Executions** column.
+   * Review per-instance transfer status, transfer speed, and completion progress.
 
-    **primary-app-site-1-https-vip**
+Troubleshooting Tip
+===================
 
-  Click the *"Apply Filters"* button.
+For detailed distribution transfer logs, SSH to the F5 Insight host CLI and inspect:
 
-  Review the following panels:
+.. code-block:: bash
 
-    - VS is Available
-    - VS Connection Rate
-    - VS Data Rate
-    
+   tail -f /opt/f5insight/logs/provisioning.log
 
-  Use the Time Range dropdown in the upper-right corner
-  to expand the view to at least the Last 7 Days.
+Verification Checkpoint
+=======================
 
-Deliverables
-~~~~~~~~~~~~
+* Verify the distribution job status updates to **Completed**.
+* Log into ``bigip-01.lab.local`` TMOS CLI or Web utility and confirm ``BIGIP-17.1.1-0.0.6.iso`` is present in the software image list.
 
-  Briefly answer the following:
-
-    - What is the graph telling you about the Virtual Server availability? What percentage has this Virtual Server been up over the last 7 days?
-
-  Review the following for additional information and trends:
-
-    - Peak time(s) of day
-    - Peak day(s) of week
-    - Observed traffic behavior (weekday spikes, weekend drops, steady patterns, etc.)
-    - Recommended maintenance window based on traffic analysis
-
-Hints
-~~~~~
-
-  Pay close attention to:
-
-    - VS is Available panel
-    - Request rate trends
-    - Throughput (bps)
-    - Connection counts
-    - Historical time-based views
-
-This concludes Ticket 2.
 
 Go to `Ticket 03 - Determine Last Application Outage <../lab03/lab03.html>`_
 

@@ -1,55 +1,53 @@
+============
+Introduction
+============
 
-Introduction 
-====================================================
-F5 Insight Lab
----------------------------------------
+Welcome to **Insight Fleet Mgmt Lab**. This course provides an in-depth, hands-on walkthrough of managing software lifecycles across an enterprise fleet of BIG-IP instances using F5 Insight.
 
-**F5 Troubleshooting Lab: LTM & ASM/AWAF Tickets**
+What is F5 Insight?
+===================
 
-**Audience: Intermediate F5 admins familiar with basic VS/pool/WAF concepts.**
+**F5 Insight** is a centralized management, observability, and fleet orchestration platform designed to streamline Day 2 operations for BIG-IP deployments. F5 Insight provides real-time visibility into application performance, security telemetry, configuration consistency, and automated software maintenance across high-density enterprise environments.
 
-**Objectives:**
+Key Fleet Management Capabilities
+=================================
 
-   - Use BIG‑IP tools (GUI, tmsh, logs) to troubleshoot L4–L7 issues.
+* **Centralized Image Repository**: Store, organize, and cryptographically validate TMOS software packages (`.iso`), public certificates (`.pem`), and signatures (`.sig`).
+* **Pre-Staged Image Distribution**: Stage large software images to managed BIG-IP instances prior to change windows, minimizing maintenance downtime.
+* **Orchestrated Software Upgrades**: Execute zero-downtime upgrades across High Availability (HA) pairs and controlled rolling or batch upgrades across Standalone instances.
+* **Space-Aware Disk Checks**: Automatically evaluate storage on target instances before file transfer to prevent mid-job space exhaustion.
+* **Human-In-The-Loop (HITL) Controls**: Pause upgrade jobs at critical milestones (e.g., post-Standby upgrade or pre-failover) for administrative health verification.
+* **Audit & Compliance Integration**: Attach Change Request tracking numbers (`CR-XXXXX`) to job executions for compliance logging.
 
-   - Diagnose and fix misconfigurations in LTM and ASM/AWAF.
+Lab Architecture & Topology
+===========================
 
-   - Interpret WAF events (false positives vs real attacks).
-  
-   - Complete the most trouble tickets accurately before another team
+During this lab, you will interact with an F5 Insight management node orchestrating upgrades across a representative enterprise fleet:
 
-**Setup**
+.. code-block:: text
 
-    - There are 14 tickets waiting for your analysis and proposed solution
-    
-    - This lab is designed to be worked in teams of two, plus it is a great opportunity to meet someone new, so we encourage pairs if possible
-  
-    - Solutions will be judged successful or the student may make a subsequent proposal
-  
-    - Tickets may be worked in any order, however they are ordered with the least difficult first
-  
-    - Each proposed solution will be approved by a Lab Assistant
+   +---------------------------------------------------------------------------------+
+   |                           F5 Insight Management Node                            |
+   |                       (Software Store & Job Orchestration)                      |
+   +---------------------------------------------------------------------------------+
+                                         |
+            +----------------------------+----------------------------+
+            |                                                         |
+   +-----------------------+                                 +-----------------------+
+   |   HA Pair 01 Cluster  |                                 |   Standalone Fleet    |
+   |                       |                                 |                       |
+   | ha-pair-01a (Active)  |                                 |   bigip-01.lab.local  |
+   | ha-pair-01b (Standby) |                                 |   bigip-02.lab.local  |
+   +-----------------------+                                 +-----------------------+
 
-How to use this lab
----------------------------------------
+Lab Objectives
+==============
 
-**Scenario:** You are a Tier‑2 engineer receiving tickets from users or Tier‑1.
+By completing this walkthrough, you will learn how to:
 
-Tools expected:
+1. Upload and cryptographically validate TMOS images in F5 Insight (**Lab 1**).
+2. Validate target disk space and pre-stage software images to fleet devices (**Lab 2**).
+3. Execute automated, zero-downtime software installations across HA pairs and Standalone instances (**Lab 3**).
 
-    * F5 Insight, tmsh commands, BIG-IP logs, cURL from BIG‑IP, browser concepts like network tools, and basic AI knowledge
-
-Student deliverables per ticket:
-
-    * Root cause explanation.
-
-    * Exact fix proposed.
-
-    * Evidence (screenshot or command output) where needed.
-
-.. NOTE::
-    TIP: The pair of BIG-IP's for North are not used in this lab.   
-
-Please proceed to the first ticket.
 
 Go to `Ticket 1 <./lab01/lab01.html>`_

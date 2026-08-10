@@ -92,5 +92,6 @@ This concludes Ticket 14.
 
 Thank you for taking our lab!
 
+Go to `Ticket 15 - Upload and Validate TMOS Software Images in F5 Insight <../lab15/lab15.html>`_
 
 Go to `Overview <../overview.html>`_
