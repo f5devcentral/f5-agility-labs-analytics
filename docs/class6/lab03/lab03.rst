@@ -1,0 +1,95 @@
+Ticket 03 – Determine Last Application Outage
+=============================================
+
+Title: “When was the last outage for this new web server?”
+-----------------------------------------------------------
+
+Ticket Description
+~~~~~~~~~~~~~~~~~~
+
+  The team is evaluating a newer version of the web server
+  running on node *10.1.20.201*. This node is a member of the
+  *web_servers_pool* pool on *WestRegion-bigip-01*.
+
+  Before moving forward with broader deployment, the team
+  wants to understand the stability of this node.
+
+  How long has it been since this application experienced an outage?
+
+Context
+~~~~~~~
+
+  **Device Name:** WestRegion-bigip-01
+
+  **Pool Name:** web_servers_pool
+
+  **Pool Member:** 10.1.20.201:80
+
+Tasks
+~~~~~
+
+  Navigate to:
+
+    **Dashboards >> BIG-IP Device >> Device Pools**
+
+  .. image:: ../images/image5.png
+      :width: 500px
+      :alt: Device Pools Dashboard navigation
+
+  From the Device dropdown, select:
+
+    **WestRegion-bigip-01**
+
+  From the Pool dropdown, select:
+
+    **web_servers_pool**
+
+  Locate the panel:
+
+    **Pool Member Request Rate**
+
+  Click the "Expand panel" button on top right of that panel
+
+  Use the Time Range dropdown in the upper-right corner of the dashboard
+  to review historical availability data.
+
+  Try adjusting the range to broader views such as:
+
+    - Last 1 hour (focus on this)
+    - Last 24 hours
+    - Last 7 Days
+    - Last 30 Days
+
+  Identify:
+
+    - Does the pool member request have any anomalies?
+    - Does there appear to be any one pool member taking more requests than another?
+    - In the graph key, de-select all members EXCEPT member *10.1.20.201:80*
+
+Deliverables
+~~~~~~~~~~~~
+
+  Briefly answer the following focusing on *10.1.20.201:80*:
+
+    - What is the highest req p/s that you've observed?
+
+  Review the following for additional information and trends (navigate back to summary page):
+
+    - Observe date and time of the last outage (if any)
+    - Approximate duration of the outage
+    - Time elapsed since the outage
+    - Any observations about stability trends
+
+Hints
+~~~~~
+
+  - Hover over points in graph to see event day and time
+  - Try expanding the time range (Last 24 Hours, 7 Days, 30 Days).
+  - Look for state transitions from isAvailable to unavailable.
+  - Zoom in on the graph if necessary to see shorter outages.
+
+This concludes Ticket 3.
+
+Go to `Ticket 04 - Review Connection Count Standard Deviation <../lab04/lab04.html>`_
+
+Go to `Overview <../overview.html>`_
