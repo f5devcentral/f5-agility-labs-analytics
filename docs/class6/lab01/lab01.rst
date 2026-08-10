@@ -1,96 +1,92 @@
-Ticket 01 – Explore the Top N Dashboard
-========================================
+==============================================================
+Lab 1: Software Image Management - Uploading and Validating
+==============================================================
 
-Title: “What insights can you quickly gather from the Top N view?”
--------------------------------------------------------------------
+Overview
+========
 
-.. NOTE::
-    WARNING: This lab uses 3rd party API Keys and these are never to be shared or used outside of the lab, and what it instructs, for any reason.
+In this lab, you will walk through managing software images within F5 Insight. Centralized software image management allows administrators to store, validate, and organize TMOS installation files before distributing them to BIG-IP devices across the fleet.
 
-Ticket Description
-~~~~~~~~~~~~~~~~~~
+Objectives
+==========
 
-  The Top N dashboard provides a consolidated view of the
-  most active and resource-intensive objects on a BIG-IP.
+* Access the Software Image Management repository in F5 Insight.
+* Upload a base TMOS software image (``.iso``) alongside its required validation files (``.pem`` and ``.sig``).
+* Monitor background upload progress and verify image integrity.
+* Understand scale limits and bulk image management practices.
 
-  This ticket is designed to familiarize you with what
-  information is available and how it can be used to quickly
-  identify busy applications, high resource consumers,
-  and potential availability concerns.
+Prerequisites
+=============
 
-  Your goal is to explore the Top N dashboard and understand
-  the types of operational insights it provides.
+* Local access to downloaded TMOS software files:
+  * ``BIGIP-17.1.1-0.0.6.iso``
+  * ``BIGIP-17.1.1-0.0.6.iso.pem``
+  * ``BIGIP-17.1.1-0.0.6.iso.sig``
 
+Task 1: Accessing the Software Image Store
+===========================================
 
-Tasks
-~~~~~
+1. Open a web browser and log into the **F5 Insight** management console.
+2. In the left-hand navigation menu, expand **Manage**.
+3. Select **Software**.
+4. Select **Images**.
 
-  Navigate to:
+.. note::
+   The **Software Images** table displays all previously uploaded TMOS software packages, file sizes, upload timestamps, and signature validation statuses.
 
-    **Dashboards >> BIG-IP Device >> Top N**
+Task 2: Uploading TMOS Software Images and Validation Files
+============================================================
 
-  .. image:: ../images/image3.png
-      :width: 500px
-      :alt: Top N Dashboard navigation
+To ensure software images are authentic and uncorrupted, F5 Insight validates each ``.iso`` image against its accompanying public certificate (``.pem``) and cryptographic signature (``.sig``).
 
-  From the Device dropdown at the top of the page,
-  select the BIG-IP specified below.
+1. On the upper-right corner of the **Software Images** page, click **Upload**. The upload drawer will expand from the right.
+2. Click **Upload File** to open your local system's file picker.
+3. Select all three required files simultaneously:
+   * ``BIGIP-17.1.1-0.0.6.iso``
+   * ``BIGIP-17.1.1-0.0.6.iso.pem``
+   * ``BIGIP-17.1.1-0.0.6.iso.sig``
+4. Click **Open** (or **Confirm**) to initiate the upload process.
 
-    **CentralRegion-bigip-01**
+.. important::
+   Both validation files (``.pem`` certificate and ``.sig`` signature) must be uploaded alongside the ``.iso`` image. F5 Insight uses these files to verify image authenticity according to F5 security guidelines (K24341140).
 
-  Change the Time Range (upper-right corner) to:
+Task 3: Monitoring Background Uploads
+======================================
 
-    **Last 7 Days**
+F5 Insight supports background file transfers, enabling administrators to navigate to other UI sections without interrupting active uploads.
 
-  Scroll through the page and review the available panels,
-  including but not limited to:
+1. Once the upload starts, observe the per-file upload progress bars in the upload drawer.
+2. Close the upload drawer by clicking outside or selecting the **X** icon.
+3. Notice the blue notification banner appearing at the top of the screen:
 
-    - Top 10 VIPs By CPU Utilization
-    - Top 10 Process By CPU
-    - Analysis, Control, Data Plane Utilization
-    - Top 10 VIPs By WAF CPU Utilization
-    - Top 10 Pools By Active Connections
-    - Top 10 VIPs By Bandwidth
-    - Top 10 VIPs By SSL TPS Utilization
-    - Top 10 Virtual Servers By Low Availability [14d]
-    - Top 10 Pools By Low Availability [14d]
+   .. code-block:: text
 
-  As you review each panel, consider:
+      Upload in progress: 1 or more file uploads are currently active. Click here to view details.
 
-    - Which objects appear repeatedly across panels?
-    - Which panels show resource usage versus availability?
-    - Which panels would be useful during an incident?
-    - Which panels would be useful for capacity planning?
+4. Click the banner at any time to return to the upload drawer and review progress.
+5. Once complete, verify that ``BIGIP-17.1.1-0.0.6.iso`` appears in the **Software Images** list with a status of **Ready**.
 
-  Try adjusting the Time Range to a shorter window
-  (for example, Last 15 Minutes) and observe how the
-  rankings change.
+Task 4: Managing Stored Software Files
+======================================
 
+1. To view scale limits, note the following capacity thresholds for F5 Insight:
+   * Maximum 10 GB total file size per upload operation.
+   * Maximum 10 files per single upload session.
+   * Total storage quota of 50 GB across all uploaded software packages in F5 Insight.
+2. To remove outdated or unneeded images:
+   * Select the checkbox next to the software file you wish to delete.
+   * Click **Delete** on the right side of the action bar.
+   * Confirm the deletion when prompted in the modal dialog.
 
-Deliverables
-~~~~~~~~~~~~
+.. note::
+   Deleting a software image from F5 Insight removes it from the central F5 Insight store. It does **not** delete files already distributed to or installed on managed BIG-IP instances.
 
-  Briefly answer the following:
+Verification Checkpoint
+=======================
 
-    - Which VIP has the highest WAF CPU Utilization on CentralRegion-bigip-01?
+* Verify ``BIGIP-17.1.1-0.0.6.iso`` is listed under **Manage > Software > Images**.
+* Confirm that the image status shows as **Validated / Ready**.
 
-  Review the following for additional information and trends:
-
-    - Which VIP appears most frequently across Top N panels?
-    - What types of operational questions could this dashboard help answer?
-    - Which panel did you find most useful and why?
-    - Did any objects show degraded availability?
-
-Hints
-~~~~~
-
-  - Pay specific attention to the Top 10 VIPs By WAF CPU Utilization panel
-  - You can deselect entries in graph legends to simplify views.
-  - Compare short time ranges to long time ranges.
-  - Not every “Top” entry indicates a problem — some reflect normal load.
-  - Look for patterns, not just single spikes.
-
-This concludes Ticket 1.
 
 
 Go to `Ticket 02 - Analyze Traffic Patterns for an Application <../lab02/lab02.html>`_
