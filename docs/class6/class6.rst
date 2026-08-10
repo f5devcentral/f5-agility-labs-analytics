@@ -1,26 +1,25 @@
-Class 6 - F5 Insight for ADSP (AppWorld 2026 | 2 Hours)
-=======================================================
+========================================================================
+Insight Fleet Mgmt Lab: Software Upgrades, Updates, and Patching
+========================================================================
 
-F5 Insight provides users with real-time visibility into performance, security, and resource allocation, enabling them to monitor health, detect threats, optimize operations, and better capacity plan. By leveraging predictive analytics and actionable insights, analysts can improve efficiency, scalability, and resilience while accurately forecasting resource consumption to prevent downtime during peak demand.
+Welcome to the **Insight Fleet Mgmt Lab**. This lab series guides you through the end-to-end workflow for managing, distributing, and installing TMOS software upgrades across an enterprise fleet of BIG-IP instances using F5 Insight.
 
-F5 Insight offers visualizations and dashboards to help you surface metrics and KPIs tailored to your organization. It provides access to useful telemetry data for a deeper understanding of your environment, application behaviors, and complex BIG-IP deployments, all centralized in a single location.
+Lab Overview
+============
 
- - Identification of root causes during outages/tickets.
+Software installations (upgrades, updates, and patching) in F5 Insight follow a streamlined three-step operational workflow designed to minimize downtime during change windows:
+1. **Upload & Validate**: Upload software images and cryptographic validation files (`.pem`, `.sig`) into the centralized F5 Insight image store.
+2. **Distribute**: Stage software images onto target fleet instances prior to the maintenance window.
+3. **Install & Activate**: Execute orchestrated software installation jobs across High Availability (HA) pairs or Standalone fleet instances.
 
- - Solves issues and struggles with Day 2 analysis of your BIG-IP Fleet and the applications therein. 
-
- - Mitigates the problem of a lack of detailed visual information on your BIG-IP Fleet.
-
- - Set a foundation for the utilization of open-source tools and their benefits.
-
-
-Expected time to complete: **2 Hours** 
+Expected Completion Time: **1 Hour**
 
 .. toctree::
-   :maxdepth: 1
-   :glob:
+   :maxdepth: 2
+   :caption: Walkthrough Labs:
 
    overview
    introduction
-   lab*/lab*
-   
+   lab1
+   lab2
+   lab3
